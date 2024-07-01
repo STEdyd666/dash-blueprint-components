@@ -4,7 +4,7 @@ Dash Blueprint Components (```DBPC```) is the porting for dash plotly of the blu
 
 It is optimized for building complex data-dense interfaces for desktop applications.
 
-This documentation is a replica of the official BlueprintJS website created using solely dash components. All the rights belongs to BlueprintJS team.
+All the rights belongs to BlueprintJS team.
 
 ## Installation
 
