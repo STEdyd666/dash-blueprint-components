@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdash_blueprint_components=self.webpackChunkdash_blueprint_components||[]).push([[7],{53755:(e,t,a)=>{var l=a(24994).default;Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=l(a(49037)),u=l(a(53032)),f=l(a(86346)),s=l(a(30418)),d=l(a(53558)),n={code:"zh-TW",formatDistance:o.default,formatLong:u.default,formatRelative:f.default,localize:s.default,match:d.default,options:{weekStartsOn:1,firstWeekContainsDate:4}};t.default=n,e.exports=t.default}}]);
+//# sourceMappingURL=async-date-fns-locale-zh-TW-index-js.js.map

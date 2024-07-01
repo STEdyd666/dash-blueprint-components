@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdash_blueprint_components=self.webpackChunkdash_blueprint_components||[]).push([[9528],{70760:(e,t,a)=>{var l=a(24994).default;Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var f=l(a(46367)),o=l(a(70320)),u=l(a(4112)),s=l(a(51352)),d=l(a(2407)),n={code:"fr-CA",formatDistance:f.default,formatLong:d.default,formatRelative:o.default,localize:u.default,match:s.default,options:{weekStartsOn:0,firstWeekContainsDate:1}};t.default=n,e.exports=t.default}}]);
+//# sourceMappingURL=async-date-fns-locale-fr-CA-index-js.js.map

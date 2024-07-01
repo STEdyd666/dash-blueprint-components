@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdash_blueprint_components=self.webpackChunkdash_blueprint_components||[]).push([[504],{41506:(e,t,a)=>{var l=a(24994).default;Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=l(a(7416)),u=l(a(68697)),f=l(a(63027)),s=l(a(38715)),d=l(a(60421)),n={code:"ar",formatDistance:o.default,formatLong:u.default,formatRelative:f.default,localize:s.default,match:d.default,options:{weekStartsOn:6,firstWeekContainsDate:1}};t.default=n,e.exports=t.default}}]);
+//# sourceMappingURL=async-date-fns-locale-ar-index-js.js.map

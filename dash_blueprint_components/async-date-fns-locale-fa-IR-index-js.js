@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdash_blueprint_components=self.webpackChunkdash_blueprint_components||[]).push([[3628],{9524:(e,t,a)=>{var l=a(24994).default;Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var f=l(a(56850)),o=l(a(80739)),u=l(a(55409)),s=l(a(32313)),d=l(a(98007)),n={code:"fa-IR",formatDistance:f.default,formatLong:o.default,formatRelative:u.default,localize:s.default,match:d.default,options:{weekStartsOn:6,firstWeekContainsDate:1}};t.default=n,e.exports=t.default}}]);
+//# sourceMappingURL=async-date-fns-locale-fa-IR-index-js.js.map

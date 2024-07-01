@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdash_blueprint_components=self.webpackChunkdash_blueprint_components||[]).push([[8143],{12363:(e,t,a)=>{var l=a(24994).default;Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var o=l(a(80285)),s=l(a(50488)),u=l(a(93658)),f=l(a(35394)),d=l(a(42534)),n={code:"be-tarask",formatDistance:o.default,formatLong:s.default,formatRelative:u.default,localize:f.default,match:d.default,options:{weekStartsOn:1,firstWeekContainsDate:1}};t.default=n,e.exports=t.default}}]);
+//# sourceMappingURL=async-date-fns-locale-be-tarask-index-js.js.map
