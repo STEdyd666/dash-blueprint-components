@@ -1,3 +1,14 @@
+include dash_blueprint_components/normalize.css
+include dash_blueprint_components/blueprint*.css
+include dash_blueprint_components/blueprint*.css.map
+include dash_blueprint_components/docs-theme.css
+include dash_blueprint_components/docs-theme.css.map
+include dash_blueprint_components/sidebar.css
+include dash_blueprint_components/blueprint*.eot
+include dash_blueprint_components/blueprint*.ttf
+include dash_blueprint_components/blueprint*.svg
+include dash_blueprint_components/blueprint*.woff
+include dash_blueprint_components/blueprint*.woff2
 include dash_blueprint_components/dash_blueprint_components.min.js
 include dash_blueprint_components/dash_blueprint_components.min.js.map
 include dash_blueprint_components/async-*.js
