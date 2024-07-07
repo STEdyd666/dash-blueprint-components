@@ -30,5 +30,6 @@ setup(
     project_urls={
         "Bug Reports": os.path.join(githuburl, "issues"),
         "Source": githuburl,
+        "Documentation": "https://dash-blueprint-components.com/blueprint"
     },
 )
