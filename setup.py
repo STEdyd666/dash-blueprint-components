@@ -1,6 +1,10 @@
 import json
 from setuptools import setup
 from pathlib import Path
+import os
+
+
+githuburl = 'https://github.com/STEdyd666/dash-blueprint-components'
 
 here = Path(__file__).parent
 with open('package.json') as f:
@@ -22,5 +26,9 @@ setup(
     install_requires=[],
     classifiers = [
         'Framework :: Dash',
-    ],    
+    ],
+    project_urls={
+        "Bug Reports": os.path.join(githuburl, "issues"),
+        "Source": githuburl,
+    },
 )
