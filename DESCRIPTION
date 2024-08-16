@@ -1,7 +1,7 @@
 Package: dashBlueprintComponents
-Title: Dash plotly implementation of BlueprintJS
+Title: Dash plotly porting of BlueprintJS
 Version: 0.0.1
-Description: Dash plotly implementation of BlueprintJS
+Description: Dash plotly porting of BlueprintJS
 Depends: R (>= 3.0.2)
 Imports: 
 Suggests: 

@@ -16,9 +16,9 @@ debounce=NULL, defaultValue=NULL, disabled=NULL, fill=NULL,
 inputClassName=NULL, intent=NULL, large=NULL,
 leftElement=NULL, leftIcon=NULL, locale=NULL,
 majorStepSize=NULL, max=NULL, min=NULL, minorStepSize=NULL,
-placeholder=NULL, selectAllOnFocus=NULL,
+number=NULL, placeholder=NULL, selectAllOnFocus=NULL,
 selectAllOnIncrement=NULL, small=NULL, stepSize=NULL,
-value=NULL)
+type=NULL)
 }
 
 \arguments{
@@ -73,6 +73,8 @@ in the specific locale. See MDN documentation for more info about browser locale
 
 \item{minorStepSize}{Numeric. The increment between successive values when alt is held. Pass explicit null value to disable this interaction.}
 
+\item{number}{Character | numeric. The value to display in the input field.}
+
 \item{placeholder}{Character. Placeholder text in the absence of any value.}
 
 \item{selectAllOnFocus}{Logical. Whether the entire text field should be selected on focus.}
@@ -83,7 +85,8 @@ in the specific locale. See MDN documentation for more info about browser locale
 
 \item{stepSize}{Numeric. The increment between successive values when no modifier keys are held.}
 
-\item{value}{Character | numeric. The value to display in the input field.}
+\item{type}{A value equal to: 'string', 'number'. Type of the number. Either string or number. It takes effect only when debounce is set to False.
+For debounce set to True, the type is always string.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

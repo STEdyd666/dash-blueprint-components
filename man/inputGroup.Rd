@@ -10,15 +10,19 @@ Input groups are a basic building block used to render text inputs across many B
 }
 
 \usage{
-inputGroup(id=NULL, className=NULL, debounce=NULL, defaultValue=NULL,
-disabled=NULL, fill=NULL, inputClassName=NULL, intent=NULL,
-large=NULL, leftElement=NULL, leftIcon=NULL,
-placeholder=NULL, rightElement=NULL, round=NULL, small=NULL,
-text=NULL, type=NULL)
+inputGroup(id=NULL, addOnBlur=NULL, className=NULL, debounce=NULL,
+defaultValue=NULL, disabled=NULL, fill=NULL,
+inputClassName=NULL, intent=NULL, large=NULL,
+leftElement=NULL, leftIcon=NULL, placeholder=NULL,
+rightElement=NULL, round=NULL, small=NULL, text=NULL,
+type=NULL, value=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
+
+\item{addOnBlur}{Logical. If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
+is only invoked when enter is pressed.}
 
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
 
@@ -54,9 +58,11 @@ Classes.LARGE via className on the parent control group and on the child input g
 
 \item{small}{Logical. Whether the file input should appear with small styling.}
 
-\item{text}{Character. Input text}
+\item{text}{Character. Input text updated when input loses blur or on 'Enter' key press.}
 
 \item{type}{Character. HTML input type attribute.}
+
+\item{value}{Character. Input value that changes every time a new character is inserted.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

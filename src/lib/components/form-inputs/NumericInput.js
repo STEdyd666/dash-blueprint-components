@@ -12,22 +12,31 @@ const NumericInput = props => {
       addOnBlur,
       debounce,
       disabled,
-      value,
+      number,
+      type,
       setProps,
       ...others
     } = props;
     
-    const handleOnValueChange = (...[, valueAsString]) => {
+    const handleOnValueChange = (...[valueAsNumber, valueAsString]) => {
       if (!disabled) {
         if (!debounce) {
-          handleConfirm(valueAsString);
+          if (type === 'string') {
+            handleConfirm(valueAsString);
+          } else if (type === 'number') {
+            handleConfirm(valueAsNumber)
+          }
         }
       }
     };
 
-    const handleOnButtonClick = (...[, valueAsString]) => {
+    const handleOnButtonClick = (...[valueAsNumber, valueAsString]) => {
       if (!disabled) {
-        handleConfirm(valueAsString);
+        if (type === 'string') {
+          handleConfirm(valueAsString);
+        } else if (type === 'number') {
+          handleConfirm(valueAsNumber)
+        }
       }
     };
 
@@ -38,14 +47,14 @@ const NumericInput = props => {
     };
 
     const handleKeyDown = (e) => {
-      if (e.keyCode === 'Enter') {
+      if (e.key === 'Enter') {
         handleConfirm(e.target.value);
       }
     };
 
-    const handleConfirm = (valueAsString) => {
+    const handleConfirm = (value) => {
       setProps({
-        value: valueAsString,
+        number: value,
       })
     };
 
@@ -56,7 +65,6 @@ const NumericInput = props => {
           onValueChange={handleOnValueChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
-          value={value}
           {...others}
         />
     )
@@ -205,9 +213,18 @@ NumericInput.propTypes = {
     /**
     * The value to display in the input field.
     */
-    value: PropTypes.oneOfType([
+    number: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
+    ]), 
+    
+    /**
+    * Type of the number. Either string or number. It takes effect only when debounce is set to False.
+    * For debounce set to True, the type is always string.
+    */
+    type: PropTypes.oneOf([
+      'string',
+      'number',
     ]), 
 
     /**
@@ -218,6 +235,7 @@ NumericInput.propTypes = {
 
 NumericInput.defaultProps = {
   addOnBlur: false,
+  type: 'number'
 };
 
 export default NumericInput;

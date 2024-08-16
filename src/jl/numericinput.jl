@@ -39,15 +39,17 @@ in the specific locale. See MDN documentation for more info about browser locale
 - `max` (Real; optional): The maximum value of the input. WARNING: This prop cannot be modified dynamically using callbacks.
 - `min` (Real; optional): The minimum value of the input. WARNING: This prop cannot be modified dynamically using callbacks.
 - `minorStepSize` (Real; optional): The increment between successive values when alt is held. Pass explicit null value to disable this interaction.
+- `number` (String | Real; optional): The value to display in the input field.
 - `placeholder` (String; optional): Placeholder text in the absence of any value.
 - `selectAllOnFocus` (Bool; optional): Whether the entire text field should be selected on focus.
 - `selectAllOnIncrement` (Bool; optional): Whether the entire text field should be selected on increment.
 - `small` (Bool; optional): Whether the file input should appear with small styling.
 - `stepSize` (Real; optional): The increment between successive values when no modifier keys are held.
-- `value` (String | Real; optional): The value to display in the input field.
+- `type` (a value equal to: 'string', 'number'; optional): Type of the number. Either string or number. It takes effect only when debounce is set to False.
+For debounce set to True, the type is always string.
 """
 function numericinput(; kwargs...)
-        available_props = Symbol[:id, :addOnBlur, :allowNumericCharactersOnly, :buttonPosition, :clampValueOnBlur, :className, :debounce, :defaultValue, :disabled, :fill, :inputClassName, :intent, :large, :leftElement, :leftIcon, :locale, :majorStepSize, :max, :min, :minorStepSize, :placeholder, :selectAllOnFocus, :selectAllOnIncrement, :small, :stepSize, :value]
+        available_props = Symbol[:id, :addOnBlur, :allowNumericCharactersOnly, :buttonPosition, :clampValueOnBlur, :className, :debounce, :defaultValue, :disabled, :fill, :inputClassName, :intent, :large, :leftElement, :leftIcon, :locale, :majorStepSize, :max, :min, :minorStepSize, :number, :placeholder, :selectAllOnFocus, :selectAllOnIncrement, :small, :stepSize, :type]
         wild_props = Symbol[]
         return Component("numericinput", "NumericInput", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -11,33 +11,40 @@ import { InputGroup as BPInputGroup} from "@blueprintjs/core";
 const InputGroup = props => {
 
     const {
+      addOnBlur,
       debounce,
       disabled,
+      value,
+      text,
       setProps,
       ...others
     } = props;
     
     const handleOnChange = (e) => {
       if (!disabled) {
-        if (!debounce) {
-          handleConfirm(e.target.value);
-        }
+        handleValue(e.target.value);
       }
     };
 
     const handleBlur = (e) => {
-      if (debounce) {
-        handleConfirm(e.target.value);
+      if (addOnBlur) {
+        handleText(e.target.value);
       }
     };
 
     const handleKeyDown = (e) => {
-      if (e.keyCode === 'Enter') {
-        handleConfirm(e.target.value);
+      if (e.key === 'Enter') {
+        handleText(e.target.value);
       }
     };
 
-    const handleConfirm = (value) => {
+    const handleValue = (value) => {
+      setProps({
+        value: value,
+      })
+    };
+
+    const handleText = (value) => {
       setProps({
         text: value,
       })
@@ -49,6 +56,8 @@ const InputGroup = props => {
           onChange={handleOnChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
+          value={value}
+          text={text}
           {...others}
         />
     )
@@ -65,6 +74,12 @@ InputGroup.propTypes = {
     */
     className: PropTypes.string,
     
+    /**
+    * If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
+    * is only invoked when enter is pressed.
+    */
+    addOnBlur: PropTypes.bool,
+
     /**
     * If true, changes to input will be sent back to the Dash server
     * only when the enter key is pressed or when the component loses
@@ -145,7 +160,12 @@ InputGroup.propTypes = {
     type: PropTypes.string,
 
     /**
-    * Input text
+    * Input value that changes every time a new character is inserted.
+    */
+    value: PropTypes.string,
+
+    /**
+    * Input text updated when input loses blur or on 'Enter' key press.
     */
     text: PropTypes.string,
 
@@ -153,6 +173,10 @@ InputGroup.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
+};
+
+InputGroup.defaultProps = {
+  addOnBlur: false,
 };
 
 export default InputGroup;

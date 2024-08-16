@@ -5155,6 +5155,17 @@
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
       },
+      "addOnBlur": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd \nis only invoked when enter is pressed.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "debounce": {
         "type": {
           "name": "bool"
@@ -5261,12 +5272,19 @@
         "required": false,
         "description": "HTML input type attribute."
       },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Input value that changes every time a new character is inserted."
+      },
       "text": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "Input text"
+        "description": "Input text updated when input loses blur or on 'Enter' key press."
       },
       "setProps": {
         "type": {
@@ -5481,7 +5499,7 @@
         "required": false,
         "description": "The increment between successive values when no modifier keys are held."
       },
-      "value": {
+      "number": {
         "type": {
           "name": "union",
           "value": [
@@ -5495,6 +5513,27 @@
         },
         "required": false,
         "description": "The value to display in the input field."
+      },
+      "type": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'string'",
+              "computed": false
+            },
+            {
+              "value": "'number'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Type of the number. Either string or number. It takes effect only when debounce is set to False.\nFor debounce set to True, the type is always string.",
+        "defaultValue": {
+          "value": "'number'",
+          "computed": false
+        }
       },
       "setProps": {
         "type": {

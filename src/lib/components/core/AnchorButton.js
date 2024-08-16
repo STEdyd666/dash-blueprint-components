@@ -16,7 +16,7 @@ const AnchorButton = props => {
         ...others
     } = props;
 
-    const increment = () => {
+    const handleOnClick = () => {
         if (!disabled) {
             setProps({
                 n_clicks: n_clicks + 1
@@ -25,7 +25,11 @@ const AnchorButton = props => {
     }
 
     return (
-        <BPAnchorButton onClick={increment} {...others}>
+        <BPAnchorButton 
+          onClick={handleOnClick}
+          disabled={disabled}
+          {...others}
+        >
             {children}
         </BPAnchorButton>
     )

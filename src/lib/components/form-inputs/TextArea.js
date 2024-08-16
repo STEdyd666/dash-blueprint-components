@@ -24,13 +24,11 @@ const TextArea = props => {
     };
 
     const handleBlur = (e) => {
-      if (debounce) {
-        handleConfirm(e.target.value);
-      }
+      handleConfirm(e.target.value);
     };
 
     const handleKeyDown = (e) => {
-      if (e.keyCode === 'Enter') {
+      if (e.key === 'Enter') {
         handleConfirm(e.target.value);
       }
     };

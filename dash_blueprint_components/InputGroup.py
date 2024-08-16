@@ -14,6 +14,10 @@ Keyword arguments:
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
 
+- addOnBlur (boolean; default False):
+    If True, onAdd will be invoked when the input loses focus.
+    Otherwise, onAdd  is only invoked when enter is pressed.
+
 - className (string; optional):
     A space-delimited list of class names to pass along to a child
     element.
@@ -72,19 +76,22 @@ Keyword arguments:
     Whether the file input should appear with small styling.
 
 - text (string; optional):
-    Input text.
+    Input text updated when input loses blur or on 'Enter' key press.
 
 - type (string; optional):
-    HTML input type attribute."""
+    HTML input type attribute.
+
+- value (string; optional):
+    Input value that changes every time a new character is inserted."""
     _children_props = ['leftElement', 'rightElement']
     _base_nodes = ['leftElement', 'rightElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'InputGroup'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, debounce=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inputClassName=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftElement=Component.UNDEFINED, leftIcon=Component.UNDEFINED, placeholder=Component.UNDEFINED, round=Component.UNDEFINED, rightElement=Component.UNDEFINED, small=Component.UNDEFINED, type=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'placeholder', 'rightElement', 'round', 'small', 'text', 'type']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, debounce=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inputClassName=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftElement=Component.UNDEFINED, leftIcon=Component.UNDEFINED, placeholder=Component.UNDEFINED, round=Component.UNDEFINED, rightElement=Component.UNDEFINED, small=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'addOnBlur', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'placeholder', 'rightElement', 'round', 'small', 'text', 'type', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'placeholder', 'rightElement', 'round', 'small', 'text', 'type']
+        self.available_properties = ['id', 'addOnBlur', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'placeholder', 'rightElement', 'round', 'small', 'text', 'type', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
