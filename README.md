@@ -6,6 +6,11 @@ It is optimized for building complex data-dense interfaces for desktop applicati
 
 All the rights belongs to BlueprintJS team.
 
+## Links
+- Official Blueprint documentation: https://blueprintjs.com/docs/
+- Pypi homepage: https://pypi.org/project/dash-blueprint-components/
+- Dash blueprint components docs: https://dash-blueprint-components.com/blueprint/
+
 ## Installation
 
 ```python
