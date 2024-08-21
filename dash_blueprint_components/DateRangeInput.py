@@ -97,6 +97,9 @@ Keyword arguments:
 - singleMonthOnly (boolean; optional):
     Whether to show only a single month calendar.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - timePrecision (string; optional):
     The precision of time selection that accompanies the calendar.
     Passing a TimePrecision value shows a TimePicker below the
@@ -110,10 +113,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'DateRangeInput'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, allowSingleDayRange=Component.UNDEFINED, closeOnSelection=Component.UNDEFINED, contiguousCalendarMonths=Component.UNDEFINED, className=Component.UNDEFINED, dateFnsFormat=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, invalidDateMessage=Component.UNDEFINED, locale=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, outOfRangeMessage=Component.UNDEFINED, overlappingDatesMessage=Component.UNDEFINED, placeholder=Component.UNDEFINED, range=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, singleMonthOnly=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, timePrecision=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'timePrecision', 'useAmPm']
+    def __init__(self, id=Component.UNDEFINED, allowSingleDayRange=Component.UNDEFINED, closeOnSelection=Component.UNDEFINED, contiguousCalendarMonths=Component.UNDEFINED, className=Component.UNDEFINED, dateFnsFormat=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, invalidDateMessage=Component.UNDEFINED, locale=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, outOfRangeMessage=Component.UNDEFINED, overlappingDatesMessage=Component.UNDEFINED, placeholder=Component.UNDEFINED, range=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, singleMonthOnly=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, style=Component.UNDEFINED, timePrecision=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'timePrecision', 'useAmPm']
+        self.available_properties = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

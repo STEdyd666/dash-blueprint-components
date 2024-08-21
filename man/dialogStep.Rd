@@ -11,7 +11,7 @@ Step of a MultistepDialog component
 
 \usage{
 dialogStep(id=NULL, className=NULL, panel=NULL, portalClassName=NULL,
-title=NULL)
+style=NULL, title=NULL)
 }
 
 \arguments{
@@ -22,6 +22,8 @@ title=NULL)
 \item{panel}{A list of or a singular dash component, string or number. Panel content, rendered by the parent MultistepDialog when this step is active.}
 
 \item{portalClassName}{Character. Space-delimited string of class names applied to the Portal element if usePortal={true}.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{title}{A list of or a singular dash component, string or number. Title of the dialog. If provided, an element with Classes.DIALOG_HEADER will be rendered inside the dialog before 
 any children elements.}

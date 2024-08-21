@@ -12,7 +12,7 @@ A SegmentedControl is a linear collection of buttons which allows a user to choo
 \usage{
 segmentedControl(id=NULL, className=NULL, defaultValue=NULL, fill=NULL,
 inline=NULL, intent=NULL, large=NULL, options=NULL,
-small=NULL, value=NULL)
+small=NULL, style=NULL, value=NULL)
 }
 
 \arguments{
@@ -33,6 +33,8 @@ small=NULL, value=NULL)
 \item{options}{Unnamed list. List of available options.}
 
 \item{small}{Logical. Whether this control should use small buttons.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{value}{Character. Selected value. Mutually exclusive with defaultValue prop.}
 }

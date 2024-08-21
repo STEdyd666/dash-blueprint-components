@@ -34,12 +34,6 @@ Keyword arguments:
     A space-delimited list of class names to pass along to a child
     element.
 
-- debounce (boolean; optional):
-    If True, changes to input will be sent back to the Dash server
-    only when the enter key is pressed or when the component loses
-    focus.  If it's False, it will sent the value back on every
-    change.
-
 - defaultValue (a value equal to: PropTypes.string, PropTypes.number; optional):
     In uncontrolled mode, this sets the default value of the input.
     Note that this value is  only used upon component instantiation
@@ -96,8 +90,8 @@ Keyword arguments:
     The increment between successive values when alt is held. Pass
     explicit None value to disable this interaction.
 
-- number (string | number; optional):
-    The value to display in the input field.
+- number (string; optional):
+    Input text updated when input loses blur or on 'Enter' key press.
 
 - placeholder (string; optional):
     Placeholder text in the absence of any value.
@@ -115,19 +109,20 @@ Keyword arguments:
     The increment between successive values when no modifier keys are
     held.
 
-- type (a value equal to: 'string', 'number'; default 'number'):
-    Type of the number. Either string or number. It takes effect only
-    when debounce is set to False. For debounce set to True, the type
-    is always string."""
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
+- value (string; optional):
+    Input value that changes every time a new character is inserted."""
     _children_props = ['leftElement']
     _base_nodes = ['leftElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'NumericInput'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, allowNumericCharactersOnly=Component.UNDEFINED, buttonPosition=Component.UNDEFINED, clampValueOnBlur=Component.UNDEFINED, className=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, debounce=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inputClassName=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftElement=Component.UNDEFINED, leftIcon=Component.UNDEFINED, locale=Component.UNDEFINED, majorStepSize=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, minorStepSize=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectAllOnIncrement=Component.UNDEFINED, small=Component.UNDEFINED, stepSize=Component.UNDEFINED, number=Component.UNDEFINED, type=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'type']
+    def __init__(self, id=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, allowNumericCharactersOnly=Component.UNDEFINED, buttonPosition=Component.UNDEFINED, clampValueOnBlur=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inputClassName=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftElement=Component.UNDEFINED, leftIcon=Component.UNDEFINED, locale=Component.UNDEFINED, majorStepSize=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, minorStepSize=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectAllOnIncrement=Component.UNDEFINED, small=Component.UNDEFINED, stepSize=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, number=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'style', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'debounce', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'type']
+        self.available_properties = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'style', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

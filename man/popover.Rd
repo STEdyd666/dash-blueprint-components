@@ -21,7 +21,7 @@ openOnTargetFocus=NULL, placement=NULL,
 popoverClassName=NULL, popupKind=NULL, portalClassName=NULL,
 portalContainer=NULL, position=NULL,
 positioningStrategy=NULL, shouldReturnFocusOnClose=NULL,
-transitionDuration=NULL, usePortal=NULL)
+style=NULL, transitionDuration=NULL, usePortal=NULL)
 }
 
 \arguments{
@@ -107,6 +107,8 @@ choose the best position when opened and will allow the popover to reposition it
 \item{shouldReturnFocusOnClose}{Logical. Whether the application should return focus to the last active element in the document after this popover closes. This is automatically set to false if 
 this is a hover interaction popover. If you are attaching a popover and a tooltip to the same target, you must take care to either disable this prop for 
 the popover or disable the tooltip's openOnTargetFocus prop.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{transitionDuration}{Numeric. Indicates how long (in milliseconds) the overlay's enter/leave transition takes. This is used by React CSSTransition to know when a transition completes 
 and must match the duration of the animation in CSS. Only set this prop if you override Blueprint's default transitions with new transitions of a different length.}

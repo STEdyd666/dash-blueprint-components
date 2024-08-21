@@ -22,11 +22,12 @@ Keyword arguments:
 section's header. Note that the header will only be rendered if title is provided.
 - `rightElement` (a list of or a singular dash component, string or number; optional): Element to render on the right side of the section header. Note that the header will 
 only be rendered if title is provided.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `subtitle` (String | a list of or a singular dash component, string or number; optional): Sub-title of the section. Note that the header will only be rendered if title is provided.
 - `title` (String | a list of or a singular dash component, string or number; optional): Title of the section. Note that the header will only be rendered if title is provided.
 """
 function section(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :collapsible, :compact, :defaultIsOpen, :elevation, :icon, :rightElement, :subtitle, :title]
+        available_props = Symbol[:children, :id, :className, :collapsible, :compact, :defaultIsOpen, :elevation, :icon, :rightElement, :style, :subtitle, :title]
         wild_props = Symbol[]
         return Component("section", "Section", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -11,7 +11,7 @@ Handles for a MultiSlider.
 
 \usage{
 handle(className=NULL, intentAfter=NULL, intentBefore=NULL,
-interactionKind=NULL, labelStepSize=NULL,
+interactionKind=NULL, labelStepSize=NULL, style=NULL,
 trackStyleAfter=NULL, trackStyleBefore=NULL, type=NULL,
 value=NULL)
 }
@@ -27,6 +27,8 @@ priority over intentBefore.}
 \item{interactionKind}{A value equal to: 'lock', 'push'. How this handle interacts with other handles.}
 
 \item{labelStepSize}{Numeric. Increment between successive labels. Must be greater than zero.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{trackStyleAfter}{Named list. Style to use for the track segment immediately after this handle, 
 taking priority over trackStyleBefore.}

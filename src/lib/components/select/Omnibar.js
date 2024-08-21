@@ -137,6 +137,11 @@ Omnibar.propTypes = {
     selectedItem: PropTypes.object,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Whether the active item should be reset to the first matching item every time the query changes (via prop or by user input).
     */
     resetOnQuery: PropTypes.bool,

@@ -11,7 +11,7 @@ Context menus present the user with a list of actions when right-clicking on a t
 
 \usage{
 contextMenu(children=NULL, id=NULL, className=NULL, content=NULL,
-disabled=NULL, isOpen=NULL)
+disabled=NULL, isOpen=NULL, style=NULL)
 }
 
 \arguments{
@@ -26,6 +26,8 @@ disabled=NULL, isOpen=NULL)
 \item{disabled}{Logical. Whether the context menu is disabled.}
 
 \item{isOpen}{Logical. Whether the content is open.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

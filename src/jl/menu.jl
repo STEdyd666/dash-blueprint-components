@@ -16,9 +16,10 @@ Keyword arguments:
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `large` (Bool; optional): Whether the menu items in this menu should use a large appearance.
 - `small` (Bool; optional): Whether the menu items in this menu should use a small appearance.
+- `style` (Dict; optional): CSS properties to apply to the menu.
 """
 function menu(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :large, :small]
+        available_props = Symbol[:children, :id, :className, :large, :small, :style]
         wild_props = Symbol[]
         return Component("menu", "Menu", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -71,16 +71,19 @@ Keyword arguments:
     the children.
 
 - round (boolean; optional):
-    Whether this tag should have rounded ends."""
+    Whether this tag should have rounded ends.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Tag'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, className=Component.UNDEFINED, fill=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, interactive=Component.UNDEFINED, large=Component.UNDEFINED, minimal=Component.UNDEFINED, multiline=Component.UNDEFINED, n_clicks=Component.UNDEFINED, n_clicks_remove=Component.UNDEFINED, removable=Component.UNDEFINED, rightIcon=Component.UNDEFINED, round=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'active', 'className', 'fill', 'htmlTitle', 'icon', 'intent', 'interactive', 'large', 'minimal', 'multiline', 'n_clicks', 'n_clicks_remove', 'removable', 'rightIcon', 'round']
+    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, className=Component.UNDEFINED, fill=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, interactive=Component.UNDEFINED, large=Component.UNDEFINED, minimal=Component.UNDEFINED, multiline=Component.UNDEFINED, n_clicks=Component.UNDEFINED, n_clicks_remove=Component.UNDEFINED, removable=Component.UNDEFINED, rightIcon=Component.UNDEFINED, round=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'active', 'className', 'fill', 'htmlTitle', 'icon', 'intent', 'interactive', 'large', 'minimal', 'multiline', 'n_clicks', 'n_clicks_remove', 'removable', 'rightIcon', 'round', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'active', 'className', 'fill', 'htmlTitle', 'icon', 'intent', 'interactive', 'large', 'minimal', 'multiline', 'n_clicks', 'n_clicks_remove', 'removable', 'rightIcon', 'round']
+        self.available_properties = ['children', 'id', 'active', 'className', 'fill', 'htmlTitle', 'icon', 'intent', 'interactive', 'large', 'minimal', 'multiline', 'n_clicks', 'n_clicks_remove', 'removable', 'rightIcon', 'round', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

@@ -13,9 +13,10 @@ Keyword arguments:
 - `initialRoute` (String; optional): initial route
 - `items` (Array; optional): items to be displayed in the menu.
 - `route` (String; optional): current selected route
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function sidebar(; kwargs...)
-        available_props = Symbol[:id, :className, :initialRoute, :items, :route]
+        available_props = Symbol[:id, :className, :initialRoute, :items, :route, :style]
         wild_props = Symbol[]
         return Component("sidebar", "SideBar", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

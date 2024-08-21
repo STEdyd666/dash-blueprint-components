@@ -75,6 +75,9 @@ Keyword arguments:
     Increment between successive values; amount by which the handle
     moves. Must be greater than zero.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - vertical (boolean; optional):
     Whether to show the slider in a vertical orientation."""
     _children_props = []
@@ -82,10 +85,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'MultiSlider'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, defaultTrackIntent=Component.UNDEFINED, disabled=Component.UNDEFINED, intent=Component.UNDEFINED, handles=Component.UNDEFINED, labelPrecision=Component.UNDEFINED, format=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, labelValues=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_releases=Component.UNDEFINED, showTrackFill=Component.UNDEFINED, stepSize=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'defaultTrackIntent', 'disabled', 'format', 'handles', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'vertical']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, defaultTrackIntent=Component.UNDEFINED, disabled=Component.UNDEFINED, intent=Component.UNDEFINED, handles=Component.UNDEFINED, labelPrecision=Component.UNDEFINED, format=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, labelValues=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_releases=Component.UNDEFINED, showTrackFill=Component.UNDEFINED, stepSize=Component.UNDEFINED, style=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'defaultTrackIntent', 'disabled', 'format', 'handles', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'vertical']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'defaultTrackIntent', 'disabled', 'format', 'handles', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'vertical']
+        self.available_properties = ['id', 'className', 'defaultTrackIntent', 'disabled', 'format', 'handles', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'vertical']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

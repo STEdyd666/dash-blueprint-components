@@ -52,6 +52,9 @@ Keyword arguments:
 - large (boolean; optional):
     Whether this control should use large styles.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagName (string; optional):
     Name of the HTML tag that wraps the checkbox. By default a
     <label> is used, which effectively enlarges the click target  to
@@ -63,10 +66,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Switch'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, alignIndicator=Component.UNDEFINED, checked=Component.UNDEFINED, defaultChecked=Component.UNDEFINED, disabled=Component.UNDEFINED, inline=Component.UNDEFINED, innerLabel=Component.UNDEFINED, innerLabelChecked=Component.UNDEFINED, label=Component.UNDEFINED, labelElement=Component.UNDEFINED, large=Component.UNDEFINED, tagName=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'innerLabel', 'innerLabelChecked', 'label', 'labelElement', 'large', 'tagName']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, alignIndicator=Component.UNDEFINED, checked=Component.UNDEFINED, defaultChecked=Component.UNDEFINED, disabled=Component.UNDEFINED, inline=Component.UNDEFINED, innerLabel=Component.UNDEFINED, innerLabelChecked=Component.UNDEFINED, label=Component.UNDEFINED, labelElement=Component.UNDEFINED, large=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'innerLabel', 'innerLabelChecked', 'label', 'labelElement', 'large', 'style', 'tagName']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'innerLabel', 'innerLabelChecked', 'label', 'labelElement', 'large', 'tagName']
+        self.available_properties = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'innerLabel', 'innerLabelChecked', 'label', 'labelElement', 'large', 'style', 'tagName']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

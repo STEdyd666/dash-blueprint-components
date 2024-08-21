@@ -16,13 +16,14 @@ Blueprint's <Text> component, * which inherits font size from its containing ele
 - `icon` (String; optional): Name of a Blueprint UI icon (or an icon element) to render in the section's header. 
 Note that the header will only be rendered if title is provided.
 - `loading` (Bool; optional): Whether to render as loading state.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `subtitle` (a list of or a singular dash component, string or number; optional): The content to render below the title. Defaults to render muted text.
 - `tags` (a list of or a singular dash component, string or number; optional): tags to be added on the right of the element
 - `title` (a list of or a singular dash component, string or number; required): The primary title to render.
 - `titleURL` (String; optional): If specified, the title will be wrapped in an anchor with this URL.
 """
 function entitytitle(; kwargs...)
-        available_props = Symbol[:id, :className, :ellipsize, :heading, :icon, :loading, :subtitle, :tags, :title, :titleURL]
+        available_props = Symbol[:id, :className, :ellipsize, :heading, :icon, :loading, :style, :subtitle, :tags, :title, :titleURL]
         wild_props = Symbol[]
         return Component("entitytitle", "EntityTitle", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

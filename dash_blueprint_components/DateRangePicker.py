@@ -75,6 +75,9 @@ Keyword arguments:
 - singleMonthOnly (boolean; optional):
     Whether to show only a single month calendar.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - timePrecision (string; optional):
     The precision of time selection that accompanies the calendar.
     Passing a TimePrecision value shows a TimePicker below the
@@ -88,10 +91,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'DateRangePicker'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, allowSingleDayRange=Component.UNDEFINED, contiguousCalendarMonths=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, singleMonthOnly=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, showOutsideDays=Component.UNDEFINED, showWeekNumber=Component.UNDEFINED, timePrecision=Component.UNDEFINED, useAmPm=Component.UNDEFINED, range=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'allowSingleDayRange', 'className', 'contiguousCalendarMonths', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'range', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'singleMonthOnly', 'timePrecision', 'useAmPm']
+    def __init__(self, id=Component.UNDEFINED, allowSingleDayRange=Component.UNDEFINED, contiguousCalendarMonths=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, singleMonthOnly=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, showOutsideDays=Component.UNDEFINED, showWeekNumber=Component.UNDEFINED, style=Component.UNDEFINED, timePrecision=Component.UNDEFINED, useAmPm=Component.UNDEFINED, range=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'allowSingleDayRange', 'className', 'contiguousCalendarMonths', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'range', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'allowSingleDayRange', 'className', 'contiguousCalendarMonths', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'range', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'singleMonthOnly', 'timePrecision', 'useAmPm']
+        self.available_properties = ['id', 'allowSingleDayRange', 'className', 'contiguousCalendarMonths', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'range', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

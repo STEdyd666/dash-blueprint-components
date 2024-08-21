@@ -42,13 +42,14 @@ no shortcuts will be displayed.
 - `showActionsBar` (Bool; optional): Whether the bottom bar displaying "Today" and "Clear" buttons should be shown.
 - `showTimeArrowButtons` (Bool; optional): Whether arrows for selecting the time should be shown.
 - `showTimezoneSelect` (Bool; optional): Whether to show the timezone select dropdown on the right side of the input. If timePrecision is undefined, this will always be false.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `timePrecision` (String; optional): The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'
 - `todayButtonText` (String; optional): Text for the today button in the action bar.
 - `useAmPm` (Bool; optional): Whether the time should be displayed as AM/PM
 """
 function dateinput(; kwargs...)
-        available_props = Symbol[:id, :canClearSelection, :className, :clearButtonText, :closeOnSelection, :date, :dateFnsFormat, :defaultTimezone, :defaultValue, :disableTimezoneSelect, :disabled, :fill, :footerElement, :highlightCurrentDay, :initialMonth, :invalidDateMessage, :locale, :maxDate, :minDate, :outOfRangeMessage, :placeholder, :reverseMonthAndYearMenus, :rightElement, :selectedShortcutIndex, :shortcuts, :showActionsBar, :showTimeArrowButtons, :showTimezoneSelect, :timePrecision, :todayButtonText, :useAmPm]
+        available_props = Symbol[:id, :canClearSelection, :className, :clearButtonText, :closeOnSelection, :date, :dateFnsFormat, :defaultTimezone, :defaultValue, :disableTimezoneSelect, :disabled, :fill, :footerElement, :highlightCurrentDay, :initialMonth, :invalidDateMessage, :locale, :maxDate, :minDate, :outOfRangeMessage, :placeholder, :reverseMonthAndYearMenus, :rightElement, :selectedShortcutIndex, :shortcuts, :showActionsBar, :showTimeArrowButtons, :showTimezoneSelect, :style, :timePrecision, :todayButtonText, :useAmPm]
         wild_props = Symbol[]
         return Component("dateinput", "DateInput", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

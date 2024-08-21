@@ -54,6 +54,11 @@ Breadcrumb.propTypes = {
     id: PropTypes.string,
 
     /**
+    * Whether to display all the collapsed items or just the last one
+    */
+    alwaysRenderOverflow: PropTypes.bool,
+
+    /**
     * A space-delimited list of class names to pass along to a child element.
     */
     className: PropTypes.string,
@@ -73,13 +78,13 @@ Breadcrumb.propTypes = {
     * The minimum number of visible breadcrumbs that should never 
     * collapse into the overflow menu, regardless of DOM dimensions.
     */
-    minVisibleItems: PropTypes.number,
-    
+    minVisibleItems: PropTypes.number,    
+
     /**
-    * Whether to display all the collapsed items or just the last one
+    * CSS properties to apply to the root element.
     */
-    alwaysRenderOverflow: PropTypes.bool,
-    
+    style: PropTypes.object,
+
     /**
     * Dash-assigned callback that gets fired when the value changes.
     */

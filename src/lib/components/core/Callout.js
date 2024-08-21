@@ -52,7 +52,12 @@ Callout.propTypes = {
     * prop also applies a default icon, if the icon prop is omitted.
     */
     intent: PropTypes.string,
-        
+    
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
     /**
     * String content of optional title element. Due to a conflict with the HTML prop 
     * types, to provide JSX content simply pass <H4>JSX title content</H4> as first 

@@ -10,51 +10,46 @@ const NumericInput = props => {
 
     const {
       addOnBlur,
-      debounce,
       disabled,
       number,
-      type,
       setProps,
+      value,
       ...others
     } = props;
     
-    const handleOnValueChange = (...[valueAsNumber, valueAsString]) => {
+    const handleOnValueChange = (...[, valueAsString]) => {
       if (!disabled) {
-        if (!debounce) {
-          if (type === 'string') {
-            handleConfirm(valueAsString);
-          } else if (type === 'number') {
-            handleConfirm(valueAsNumber)
-          }
-        }
+        handleValue(valueAsString);
       }
     };
 
-    const handleOnButtonClick = (...[valueAsNumber, valueAsString]) => {
+    const handleOnButtonClick = (...[, valueAsString]) => {
       if (!disabled) {
-        if (type === 'string') {
-          handleConfirm(valueAsString);
-        } else if (type === 'number') {
-          handleConfirm(valueAsNumber)
-        }
+        handleValue(valueAsString);
       }
     };
 
     const handleBlur = (e) => {
       if (addOnBlur) {
-        handleConfirm(e.target.value);
+        handleNumber(e.target.value);
       }
     };
 
     const handleKeyDown = (e) => {
       if (e.key === 'Enter') {
-        handleConfirm(e.target.value);
+        handleNumber(e.target.value);
       }
     };
 
-    const handleConfirm = (value) => {
+    const handleNumber = (value) => {
       setProps({
         number: value,
+      })
+    };
+    
+    const handleValue = (value) => {
+      setProps({
+        value: value,
       })
     };
 
@@ -65,6 +60,7 @@ const NumericInput = props => {
           onValueChange={handleOnValueChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
+          value={value}
           {...others}
         />
     )
@@ -76,6 +72,12 @@ NumericInput.propTypes = {
      */
     id: PropTypes.string,
     
+    /**
+    * If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
+    * is only invoked when enter is pressed.
+    */
+    addOnBlur: PropTypes.bool,
+
     /**
     * Whether to allow only floating-point number characters in the field, 
     * mimicking the native input[type="number"].
@@ -99,20 +101,6 @@ NumericInput.propTypes = {
     */
     className: PropTypes.string,
     
-    /**
-    * If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
-    * is only invoked when enter is pressed.
-    */
-    addOnBlur: PropTypes.bool,
-
-    /**
-    * If true, changes to input will be sent back to the Dash server
-    * only when the enter key is pressed or when the component loses
-    * focus.  If it's false, it will sent the value back on every
-    * change.
-    */
-    debounce: PropTypes.bool,
-
     /**
     * In uncontrolled mode, this sets the default value of the input. Note that this value is 
     * only used upon component instantiation and changes to this prop during the component 
@@ -211,21 +199,19 @@ NumericInput.propTypes = {
     stepSize: PropTypes.number,
 
     /**
-    * The value to display in the input field.
+    * CSS properties to apply to the root element.
     */
-    number: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]), 
+    style: PropTypes.object,
+
+    /**
+    * Input value that changes every time a new character is inserted.
+    */
+    value: PropTypes.string,
     
     /**
-    * Type of the number. Either string or number. It takes effect only when debounce is set to False.
-    * For debounce set to True, the type is always string.
+    * Input text updated when input loses blur or on 'Enter' key press.
     */
-    type: PropTypes.oneOf([
-      'string',
-      'number',
-    ]), 
+    number: PropTypes.string,
 
     /**
     * Dash-assigned callback that gets fired when the value changes.
@@ -235,7 +221,6 @@ NumericInput.propTypes = {
 
 NumericInput.defaultProps = {
   addOnBlur: false,
-  type: 'number'
 };
 
 export default NumericInput;

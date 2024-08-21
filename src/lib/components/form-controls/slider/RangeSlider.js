@@ -174,6 +174,11 @@ RangeSlider.propTypes = {
     stepSize: PropTypes.number,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Value of slider.
     */
     value: PropTypes.array,

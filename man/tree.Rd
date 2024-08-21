@@ -12,7 +12,7 @@ Trees display hierarchical data.
 \usage{
 tree(id=NULL, className=NULL, clicked_node=NULL,
 collapsed_node=NULL, contents=NULL, current_contents=NULL,
-expanded_node=NULL)
+expanded_node=NULL, style=NULL)
 }
 
 \arguments{
@@ -29,6 +29,8 @@ expanded_node=NULL)
 \item{current_contents}{Unnamed list. Tree content updated after user interaction}
 
 \item{expanded_node}{Unnamed list. Array of numbers representing a node's position in the tree when expanded}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

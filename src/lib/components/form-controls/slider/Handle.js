@@ -51,6 +51,11 @@ Handle.propTypes = {
     labelStepSize: PropTypes.number,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Style to use for the track segment immediately after this handle, 
     * taking priority over trackStyleBefore.
     */

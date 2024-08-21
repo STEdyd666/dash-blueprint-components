@@ -26,6 +26,7 @@ HTMLAttributes only allows strings.
 consumers as the type definition for label only accepts strings. 
 JavaScript consumers can provide a JSX element directly to label.
 - `large` (Bool; optional): Whether this control should use large styles.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (String; optional): Name of the HTML tag that wraps the checkbox. By default a <label> is used, 
 which effectively enlarges the click target to include all of its children. 
 Supply a different tag name if this behavior is undesirable or you're listening 
@@ -33,7 +34,7 @@ to click events from a parent element (as the label can register duplicate click
 - `value` (String; optional): Value of the radio
 """
 function radio(; kwargs...)
-        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :defaultChecked, :disabled, :inline, :label, :labelElement, :large, :tagName, :value]
+        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :defaultChecked, :disabled, :inline, :label, :labelElement, :large, :style, :tagName, :value]
         wild_props = Symbol[]
         return Component("radio", "Radio", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

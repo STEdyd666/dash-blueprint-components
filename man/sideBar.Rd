@@ -11,7 +11,7 @@ Component for creating interactive Sidebars
 
 \usage{
 sideBar(id=NULL, className=NULL, initialRoute=NULL, items=NULL,
-route=NULL)
+route=NULL, style=NULL)
 }
 
 \arguments{
@@ -24,6 +24,8 @@ route=NULL)
 \item{items}{Unnamed list. items to be displayed in the menu.}
 
 \item{route}{Character. current selected route}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

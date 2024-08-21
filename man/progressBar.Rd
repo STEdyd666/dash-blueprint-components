@@ -11,7 +11,7 @@ Progress bars indicate progress towards the completion of a task or an indetermi
 
 \usage{
 progressBar(id=NULL, animate=NULL, className=NULL, intent=NULL,
-stripes=NULL, value=NULL)
+stripes=NULL, style=NULL, value=NULL)
 }
 
 \arguments{
@@ -24,6 +24,8 @@ stripes=NULL, value=NULL)
 \item{intent}{Character. Visual intent color to apply to element.}
 
 \item{stripes}{Logical. Whether the background should be striped.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{value}{Numeric. A value between 0 and 1 (inclusive) representing how far along the 
 operation is. Values below 0 or above 1 will be interpreted as 0 or 1, 

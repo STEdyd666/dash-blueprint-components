@@ -17,9 +17,10 @@ Keyword arguments:
 - `content` (a list of or a singular dash component, string or number; optional): The content that will be displayed inside of the tooltip.
 - `disabled` (Bool; optional): Whether the context menu is disabled.
 - `isOpen` (Bool; optional): Whether the content is open.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function contextmenu(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :content, :disabled, :isOpen]
+        available_props = Symbol[:children, :id, :className, :content, :disabled, :isOpen, :style]
         wild_props = Symbol[]
         return Component("contextmenu", "ContextMenu", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

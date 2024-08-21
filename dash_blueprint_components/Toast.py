@@ -29,6 +29,9 @@ Keyword arguments:
 - message (a list of or a singular dash component, string or number; optional):
     Message to display in the body of the toast.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - timeout (number; optional):
     Milliseconds to wait before automatically dismissing toast.
     Providing a value less than or equal  to 0 will disable the
@@ -38,10 +41,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Toast'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, isCloseButtonShown=Component.UNDEFINED, message=Component.UNDEFINED, timeout=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'timeout']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, isCloseButtonShown=Component.UNDEFINED, message=Component.UNDEFINED, timeout=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'style', 'timeout']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'timeout']
+        self.available_properties = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'style', 'timeout']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

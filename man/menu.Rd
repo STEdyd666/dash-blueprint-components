@@ -11,7 +11,7 @@ Menus display lists of interactive items.
 
 \usage{
 menu(children=NULL, id=NULL, className=NULL, large=NULL,
-small=NULL)
+small=NULL, style=NULL)
 }
 
 \arguments{
@@ -24,6 +24,8 @@ small=NULL)
 \item{large}{Logical. Whether the menu items in this menu should use a large appearance.}
 
 \item{small}{Logical. Whether the menu items in this menu should use a small appearance.}
+
+\item{style}{Named list. CSS properties to apply to the menu.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

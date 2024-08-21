@@ -13,7 +13,7 @@ A radio button typically represents a single option in a mutually exclusive list
 radio(children=NULL, id=NULL, alignIndicator=NULL, checked=NULL,
 className=NULL, defaultChecked=NULL, disabled=NULL,
 inline=NULL, label=NULL, labelElement=NULL, large=NULL,
-tagName=NULL, value=NULL)
+style=NULL, tagName=NULL, value=NULL)
 }
 
 \arguments{
@@ -42,6 +42,8 @@ consumers as the type definition for label only accepts strings.
 JavaScript consumers can provide a JSX element directly to label.}
 
 \item{large}{Logical. Whether this control should use large styles.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{Character. Name of the HTML tag that wraps the checkbox. By default a <label> is used, 
 which effectively enlarges the click target to include all of its children. 

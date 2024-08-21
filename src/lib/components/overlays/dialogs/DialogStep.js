@@ -45,6 +45,11 @@ DialogStep.propTypes = {
     portalClassName: PropTypes.string,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Title of the dialog. If provided, an element with Classes.DIALOG_HEADER will be rendered inside the dialog before 
     * any children elements.
     */

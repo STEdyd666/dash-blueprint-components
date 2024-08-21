@@ -10,11 +10,13 @@ Divider visually separate contents with a thin line and margin on all sides. Div
 }
 
 \usage{
-divider(className=NULL, tagName=NULL)
+divider(className=NULL, style=NULL, tagName=NULL)
 }
 
 \arguments{
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{HTML tag to use for element.}
 }

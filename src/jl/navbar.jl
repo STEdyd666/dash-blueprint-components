@@ -16,9 +16,10 @@ Keyword arguments:
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `fixedToTop` (Bool; optional): Whether this navbar should be fixed to the top of the viewport 
 (using CSS position: fixed)
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function navbar(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :fixedToTop]
+        available_props = Symbol[:children, :id, :className, :fixedToTop, :style]
         wild_props = Symbol[]
         return Component("navbar", "Navbar", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

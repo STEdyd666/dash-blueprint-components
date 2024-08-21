@@ -17,7 +17,8 @@ initialMonth=NULL, maxDate=NULL, minDate=NULL, range=NULL,
 reverseMonthAndYearMenus=NULL, selectedShortcutIndex=NULL,
 shortcuts=NULL, showOutsideDays=NULL,
 showTimeArrowButtons=NULL, showWeekNumber=NULL,
-singleMonthOnly=NULL, timePrecision=NULL, useAmPm=NULL)
+singleMonthOnly=NULL, style=NULL, timePrecision=NULL,
+useAmPm=NULL)
 }
 
 \arguments{
@@ -60,6 +61,8 @@ no shortcuts will be displayed.}
 \item{showWeekNumber}{Logical. Whether to show week numbers}
 
 \item{singleMonthOnly}{Logical. Whether to show only a single month calendar.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{timePrecision}{Character. The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'}

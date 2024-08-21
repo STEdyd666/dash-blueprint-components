@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-spinner <- function(id=NULL, className=NULL, intent=NULL, size=NULL, tagName=NULL, value=NULL) {
+spinner <- function(id=NULL, className=NULL, intent=NULL, size=NULL, style=NULL, tagName=NULL, value=NULL) {
     
-    props <- list(id=id, className=className, intent=intent, size=size, tagName=tagName, value=value)
+    props <- list(id=id, className=className, intent=intent, size=size, style=style, tagName=tagName, value=value)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ spinner <- function(id=NULL, className=NULL, intent=NULL, size=NULL, tagName=NUL
         props = props,
         type = 'Spinner',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'intent', 'size', 'tagName', 'value'),
+        propNames = c('id', 'className', 'intent', 'size', 'style', 'tagName', 'value'),
         package = 'dashBlueprintComponents'
         )
 

@@ -3,7 +3,7 @@ module DashBlueprintComponents
 using Dash
 
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
-const version = "0.0.1"
+const version = "0.1.0"
 
 include("jl/anchorbutton.jl")
 include("jl/breadcrumb.jl")
@@ -87,42 +87,42 @@ function __init__()
             [
                 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-all-paths-loader.js",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-all-paths-loader.js",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-all-paths-loader.js",
     dynamic = nothing,
     async = :true,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-all-paths.js",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-all-paths.js",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-all-paths.js",
     dynamic = nothing,
     async = :true,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-split-paths-by-size-loader.js",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-split-paths-by-size-loader.js",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-split-paths-by-size-loader.js",
     dynamic = nothing,
     async = :true,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-all-paths-loader.js.map",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-all-paths-loader.js.map",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-all-paths-loader.js.map",
     dynamic = true,
     async = nothing,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-all-paths.js.map",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-all-paths.js.map",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-all-paths.js.map",
     dynamic = true,
     async = nothing,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-blueprint-icons-split-paths-by-size-loader.js.map",
-    external_url = "https://unpkg.com/dash_blueprint_components@0.0.1/dash_blueprint_components/async-blueprint-icons-split-paths-by-size-loader.js.map",
+    external_url = "https://unpkg.com/dash_blueprint_components@0.1.0/dash_blueprint_components/async-blueprint-icons-split-paths-by-size-loader.js.map",
     dynamic = true,
     async = nothing,
     type = :js

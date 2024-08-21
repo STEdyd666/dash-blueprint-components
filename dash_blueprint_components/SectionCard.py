@@ -22,16 +22,19 @@ Keyword arguments:
 
 - padded (boolean; optional):
     Whether to apply visual padding inside the content container
-    element."""
+    element.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'SectionCard'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, padded=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'padded']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, padded=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'padded', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'padded']
+        self.available_properties = ['children', 'id', 'className', 'padded', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

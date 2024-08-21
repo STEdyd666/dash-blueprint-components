@@ -67,6 +67,9 @@ Keyword arguments:
     splits on commas and newlines. Explicit False value disables
     splitting.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagAdded (list; optional):
     Value updated when a new tag is added. Object with value and index
     of the tag.
@@ -91,10 +94,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'TagInput'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, addOnPaste=Component.UNDEFINED, autoResize=Component.UNDEFINED, className=Component.UNDEFINED, tagIntents=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftIcon=Component.UNDEFINED, placeholder=Component.UNDEFINED, separator=Component.UNDEFINED, tagAdded=Component.UNDEFINED, tagRemoved=Component.UNDEFINED, tagLarge=Component.UNDEFINED, tagMinimal=Component.UNDEFINED, values=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'addOnBlur', 'addOnPaste', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'leftIcon', 'placeholder', 'separator', 'tagAdded', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved', 'values']
+    def __init__(self, children=None, id=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, addOnPaste=Component.UNDEFINED, autoResize=Component.UNDEFINED, className=Component.UNDEFINED, tagIntents=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftIcon=Component.UNDEFINED, placeholder=Component.UNDEFINED, separator=Component.UNDEFINED, style=Component.UNDEFINED, tagAdded=Component.UNDEFINED, tagRemoved=Component.UNDEFINED, tagLarge=Component.UNDEFINED, tagMinimal=Component.UNDEFINED, values=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'addOnBlur', 'addOnPaste', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'leftIcon', 'placeholder', 'separator', 'style', 'tagAdded', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved', 'values']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'addOnBlur', 'addOnPaste', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'leftIcon', 'placeholder', 'separator', 'tagAdded', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved', 'values']
+        self.available_properties = ['children', 'id', 'addOnBlur', 'addOnPaste', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'leftIcon', 'placeholder', 'separator', 'style', 'tagAdded', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved', 'values']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

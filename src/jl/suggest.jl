@@ -26,9 +26,10 @@ after a mouse click or TAB key interaction focuses the component's TagInput.
 - `resetOnQuery` (Bool; optional): Whether the active item should be reset to the first matching item every time the query changes (via prop or by user input).
 - `resetOnSelect` (Bool; optional): Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.
 - `selectedItem` (Dict; optional): Selected item
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function suggest(; kwargs...)
-        available_props = Symbol[:id, :className, :closeOnSelect, :disabled, :fill, :initialContent, :items, :matchTargetWidth, :minimal, :openOnKeyDown, :resetOnClose, :resetOnQuery, :resetOnSelect, :selectedItem]
+        available_props = Symbol[:id, :className, :closeOnSelect, :disabled, :fill, :initialContent, :items, :matchTargetWidth, :minimal, :openOnKeyDown, :resetOnClose, :resetOnQuery, :resetOnSelect, :selectedItem, :style]
         wild_props = Symbol[]
         return Component("suggest", "Suggest", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

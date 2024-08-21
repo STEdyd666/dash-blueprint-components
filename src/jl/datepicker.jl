@@ -29,13 +29,14 @@ no shortcuts will be displayed.
 - `showOutsideDays` (Bool; optional): Whether to show in muted format the days not belonging to the current month
 - `showTimeArrowButtons` (Bool; optional): Whether arrows for selecting the time should be shown.
 - `showWeekNumber` (Bool; optional): Whether to show week numbers
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `timePrecision` (String; optional): The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'
 - `todayButtonText` (String; optional): Text for the today button in the action bar.
 - `useAmPm` (Bool; optional): Whether the time should be displayed as AM/PM
 """
 function datepicker(; kwargs...)
-        available_props = Symbol[:id, :canClearSelection, :className, :clearButtonText, :date, :defaultValue, :footerElement, :highlightCurrentDay, :initialMonth, :maxDate, :minDate, :reverseMonthAndYearMenus, :selectedShortcutIndex, :shortcuts, :showActionsBar, :showOutsideDays, :showTimeArrowButtons, :showWeekNumber, :timePrecision, :todayButtonText, :useAmPm]
+        available_props = Symbol[:id, :canClearSelection, :className, :clearButtonText, :date, :defaultValue, :footerElement, :highlightCurrentDay, :initialMonth, :maxDate, :minDate, :reverseMonthAndYearMenus, :selectedShortcutIndex, :shortcuts, :showActionsBar, :showOutsideDays, :showTimeArrowButtons, :showWeekNumber, :style, :timePrecision, :todayButtonText, :useAmPm]
         wild_props = Symbol[]
         return Component("datepicker", "DatePicker", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

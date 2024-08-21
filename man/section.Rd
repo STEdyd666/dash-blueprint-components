@@ -12,7 +12,7 @@ The Section component can be used to contain, structure, and create hierarchy fo
 \usage{
 section(children=NULL, id=NULL, className=NULL, collapsible=NULL,
 compact=NULL, defaultIsOpen=NULL, elevation=NULL, icon=NULL,
-rightElement=NULL, subtitle=NULL, title=NULL)
+rightElement=NULL, style=NULL, subtitle=NULL, title=NULL)
 }
 
 \arguments{
@@ -35,6 +35,8 @@ section's header. Note that the header will only be rendered if title is provide
 
 \item{rightElement}{A list of or a singular dash component, string or number. Element to render on the right side of the section header. Note that the header will 
 only be rendered if title is provided.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{subtitle}{Character | a list of or a singular dash component, string or number. Sub-title of the section. Note that the header will only be rendered if title is provided.}
 

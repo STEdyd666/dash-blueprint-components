@@ -17,7 +17,7 @@ enforceFocus=NULL, fill=NULL, hoverCloseDelay=NULL,
 hoverOpenDelay=NULL, inheritDarkTheme=NULL, intent=NULL,
 interactionKind=NULL, isOpen=NULL, matchTargetWidth=NULL,
 minimal=NULL, openOnTargetFocus=NULL, placement=NULL,
-popoverClassName=NULL, position=NULL,
+popoverClassName=NULL, position=NULL, style=NULL,
 transitionDuration=NULL)
 }
 
@@ -79,6 +79,8 @@ and will allow the popover to reposition itself to remain onscreen as the user s
 \item{position}{Character. The position (relative to the target) at which the popover should appear. Mutually exclusive with placement prop. The default value of 
 "auto" will choose the best position when opened and will allow the popover to reposition itself to remain onscreen as the user scrolls 
 around.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{transitionDuration}{Numeric. Indicates how long (in milliseconds) the tooltip's appear/disappear transition takes. This is used by React CSSTransition 
 to know when a transition completes and must match the duration of the animation in CSS. Only set this prop if you override 

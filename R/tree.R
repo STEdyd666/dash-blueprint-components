@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-tree <- function(id=NULL, className=NULL, clicked_node=NULL, collapsed_node=NULL, contents=NULL, current_contents=NULL, expanded_node=NULL) {
+tree <- function(id=NULL, className=NULL, clicked_node=NULL, collapsed_node=NULL, contents=NULL, current_contents=NULL, expanded_node=NULL, style=NULL) {
     
-    props <- list(id=id, className=className, clicked_node=clicked_node, collapsed_node=collapsed_node, contents=contents, current_contents=current_contents, expanded_node=expanded_node)
+    props <- list(id=id, className=className, clicked_node=clicked_node, collapsed_node=collapsed_node, contents=contents, current_contents=current_contents, expanded_node=expanded_node, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ tree <- function(id=NULL, className=NULL, clicked_node=NULL, collapsed_node=NULL
         props = props,
         type = 'Tree',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'clicked_node', 'collapsed_node', 'contents', 'current_contents', 'expanded_node'),
+        propNames = c('id', 'className', 'clicked_node', 'collapsed_node', 'contents', 'current_contents', 'expanded_node', 'style'),
         package = 'dashBlueprintComponents'
         )
 

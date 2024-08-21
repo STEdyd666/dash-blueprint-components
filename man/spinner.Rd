@@ -10,7 +10,7 @@ Spinners indicate progress in a circular fashion. They're great for ongoing oper
 }
 
 \usage{
-spinner(id=NULL, className=NULL, intent=NULL, size=NULL,
+spinner(id=NULL, className=NULL, intent=NULL, size=NULL, style=NULL,
 tagName=NULL, value=NULL)
 }
 
@@ -22,6 +22,8 @@ tagName=NULL, value=NULL)
 \item{intent}{Character. Visual intent color to apply to element.}
 
 \item{size}{Numeric. Width and height of the spinner in pixels. The size cannot be less than 10px.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{HTML tag for the two wrapper elements. If rendering a <Spinner> inside an <svg>, 
 change this to an SVG element like "g".}

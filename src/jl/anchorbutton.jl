@@ -39,13 +39,14 @@ which button was changed most recently.
 - `outlined` (Real; optional): Whether this button should use outlined styles.
 - `rightIcon` (a list of or a singular dash component, string or number; optional): Name of a Blueprint UI icon (or an icon element) to render after the text.
 - `small` (Bool; optional): Whether this button should use small styles.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `text` (a list of or a singular dash component, string or number; optional): Action text. Can be any single React renderable.
 - `type` (a value equal to: 'submit', 'reset', 'button'; optional): HTML type attribute of button. Accepted values are "button", 
 "submit", and "reset". Note that this prop has no effect 
 on AnchorButton; it only affects Button
 """
 function anchorbutton(; kwargs...)
-        available_props = Symbol[:children, :id, :active, :alignText, :className, :disabled, :fill, :href, :icon, :intent, :large, :loading, :minimal, :n_clicks, :outlined, :rightIcon, :small, :text, :type]
+        available_props = Symbol[:children, :id, :active, :alignText, :className, :disabled, :fill, :href, :icon, :intent, :large, :loading, :minimal, :n_clicks, :outlined, :rightIcon, :small, :style, :text, :type]
         wild_props = Symbol[]
         return Component("anchorbutton", "AnchorButton", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

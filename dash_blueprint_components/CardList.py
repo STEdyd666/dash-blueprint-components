@@ -34,16 +34,19 @@ Keyword arguments:
     Whether this component should use compact styles with reduced
     visual padding. Note that this prop  affects styling for all Cards
     within this CardList and you do not need to set the compact prop
-    individually on those child Cards."""
+    individually on those child Cards.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'CardList'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, bordered=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'bordered', 'className', 'compact']
+    def __init__(self, children=None, id=Component.UNDEFINED, bordered=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'bordered', 'className', 'compact', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'bordered', 'className', 'compact']
+        self.available_properties = ['children', 'id', 'bordered', 'className', 'compact', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

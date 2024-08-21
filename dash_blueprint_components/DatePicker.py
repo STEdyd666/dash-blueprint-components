@@ -74,6 +74,9 @@ Keyword arguments:
 - showWeekNumber (boolean; optional):
     Whether to show week numbers.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - timePrecision (string; optional):
     The precision of time selection that accompanies the calendar.
     Passing a TimePrecision value shows a TimePicker below the
@@ -90,10 +93,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'DatePicker'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, canClearSelection=Component.UNDEFINED, className=Component.UNDEFINED, clearButtonText=Component.UNDEFINED, date=Component.UNDEFINED, defaultValue=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, showActionsBar=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, showOutsideDays=Component.UNDEFINED, showWeekNumber=Component.UNDEFINED, timePrecision=Component.UNDEFINED, todayButtonText=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'timePrecision', 'todayButtonText', 'useAmPm']
+    def __init__(self, id=Component.UNDEFINED, canClearSelection=Component.UNDEFINED, className=Component.UNDEFINED, clearButtonText=Component.UNDEFINED, date=Component.UNDEFINED, defaultValue=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, showActionsBar=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, showOutsideDays=Component.UNDEFINED, showWeekNumber=Component.UNDEFINED, style=Component.UNDEFINED, timePrecision=Component.UNDEFINED, todayButtonText=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'style', 'timePrecision', 'todayButtonText', 'useAmPm']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'timePrecision', 'todayButtonText', 'useAmPm']
+        self.available_properties = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'style', 'timePrecision', 'todayButtonText', 'useAmPm']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

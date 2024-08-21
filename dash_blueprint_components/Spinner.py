@@ -24,6 +24,9 @@ Keyword arguments:
     Width and height of the spinner in pixels. The size cannot be less
     than 10px.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagName (optional):
     HTML tag for the two wrapper elements. If rendering a <Spinner>
     inside an <svg>,  change this to an SVG element like \"g\".
@@ -38,10 +41,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Spinner'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, intent=Component.UNDEFINED, size=Component.UNDEFINED, tagName=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'intent', 'size', 'tagName', 'value']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, intent=Component.UNDEFINED, size=Component.UNDEFINED, tagName=Component.UNDEFINED, value=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'intent', 'size', 'style', 'tagName', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'intent', 'size', 'tagName', 'value']
+        self.available_properties = ['id', 'className', 'intent', 'size', 'style', 'tagName', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

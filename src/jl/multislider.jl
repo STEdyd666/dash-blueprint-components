@@ -39,10 +39,11 @@ releases.
 initial values, or between handles for RangeSlider..
 - `stepSize` (Real; optional): Increment between successive values; amount by which the handle
 moves. Must be greater than zero.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `vertical` (Bool; optional): Whether to show the slider in a vertical orientation.
 """
 function multislider(; kwargs...)
-        available_props = Symbol[:id, :className, :defaultTrackIntent, :disabled, :format, :handles, :intent, :labelPrecision, :labelStepSize, :labelValues, :max, :min, :n_changes, :n_releases, :showTrackFill, :stepSize, :vertical]
+        available_props = Symbol[:id, :className, :defaultTrackIntent, :disabled, :format, :handles, :intent, :labelPrecision, :labelStepSize, :labelValues, :max, :min, :n_changes, :n_releases, :showTrackFill, :stepSize, :style, :vertical]
         wild_props = Symbol[]
         return Component("multislider", "MultiSlider", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -48,16 +48,19 @@ Keyword arguments:
     empty string.
 
 - selectedItem (dict; optional):
-    Selected item."""
+    Selected item.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = ['initialContent']
     _base_nodes = ['initialContent', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Omnibar'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, overlayHasBackdrop=Component.UNDEFINED, initialContent=Component.UNDEFINED, isOpen=Component.UNDEFINED, items=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, selectedItem=Component.UNDEFINED, resetOnQuery=Component.UNDEFINED, resetOnSelect=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'initialContent', 'isOpen', 'items', 'matchTargetWidth', 'minimal', 'overlayHasBackdrop', 'resetOnQuery', 'resetOnSelect', 'selectedItem']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, overlayHasBackdrop=Component.UNDEFINED, initialContent=Component.UNDEFINED, isOpen=Component.UNDEFINED, items=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, selectedItem=Component.UNDEFINED, style=Component.UNDEFINED, resetOnQuery=Component.UNDEFINED, resetOnSelect=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'initialContent', 'isOpen', 'items', 'matchTargetWidth', 'minimal', 'overlayHasBackdrop', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'initialContent', 'isOpen', 'items', 'matchTargetWidth', 'minimal', 'overlayHasBackdrop', 'resetOnQuery', 'resetOnSelect', 'selectedItem']
+        self.available_properties = ['id', 'className', 'initialContent', 'isOpen', 'items', 'matchTargetWidth', 'minimal', 'overlayHasBackdrop', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

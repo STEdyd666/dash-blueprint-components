@@ -40,6 +40,9 @@ Keyword arguments:
 - small (boolean; optional):
     Whether this control should use small buttons.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - value (string; optional):
     Selected value. Mutually exclusive with defaultValue prop."""
     _children_props = []
@@ -47,10 +50,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'SegmentedControl'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, fill=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, options=Component.UNDEFINED, small=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'value']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, fill=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, options=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'value']
+        self.available_properties = ['id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

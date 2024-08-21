@@ -11,7 +11,8 @@ Button groups arrange multiple buttons in a horizontal or vertical group.
 
 \usage{
 buttonGroup(children=NULL, id=NULL, alignText=NULL, className=NULL,
-fill=NULL, large=NULL, minimal=NULL, vertical=NULL)
+fill=NULL, large=NULL, minimal=NULL, style=NULL,
+vertical=NULL)
 }
 
 \arguments{
@@ -32,6 +33,8 @@ text and icons together.}
 \item{large}{Logical. Whether this button should use large styles.}
 
 \item{minimal}{Logical. Whether this button should use minimal styles.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{vertical}{Logical. Whether the button group should appear with vertical styling.}
 }

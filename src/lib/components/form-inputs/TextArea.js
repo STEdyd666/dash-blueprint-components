@@ -9,33 +9,41 @@ import { TextArea as BPTextArea} from "@blueprintjs/core";
 const TextArea = props => {
 
     const {
-      debounce,
+      addOnBlur,
       disabled,
+      value,
+      text,
       setProps,
       ...others
     } = props;
     
     const handleOnChange = (e) => {
       if (!disabled) {
-        if (!debounce) {
-          handleConfirm(e.target.value);
-        }
+        handleValue(e.target.value);
       }
     };
 
     const handleBlur = (e) => {
-      handleConfirm(e.target.value);
+      if (addOnBlur) {
+        handleText(e.target.value);
+      }
     };
 
     const handleKeyDown = (e) => {
       if (e.key === 'Enter') {
-        handleConfirm(e.target.value);
+        handleText(e.target.value);
       }
     };
 
-    const handleConfirm = (value) => {
+    const handleText = (value) => {
       setProps({
         text: value,
+      })
+    };
+    
+    const handleValue = (value) => {
+      setProps({
+        value: value,
       })
     };
 
@@ -45,6 +53,7 @@ const TextArea = props => {
           onChange={handleOnChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
+          value={value}
           {...others}
         />
     )
@@ -57,6 +66,12 @@ TextArea.propTypes = {
     id: PropTypes.string,
     
     /**
+    * If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
+    * is only invoked when enter is pressed.
+    */
+    addOnBlur: PropTypes.bool,
+
+    /**
     * Whether the component should automatically resize vertically as a user types in the text input. 
     * This will disable manual resizing in the vertical dimension.
     */
@@ -66,14 +81,6 @@ TextArea.propTypes = {
     * A space-delimited list of class names to pass along to a child element.
     */
     className: PropTypes.string,
-    
-    /**
-    * If true, changes to input will be sent back to the Dash server
-    * only when the enter key is pressed or when the component loses
-    * focus.  If it's false, it will sent the value back on every
-    * change.
-    */
-    debounce: PropTypes.bool,
     
     /**
     * Whether the input is non-interactive.
@@ -112,7 +119,17 @@ TextArea.propTypes = {
     small: PropTypes.bool,
 
     /**
-    * Input text
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
+    * Input value that changes every time a new character is inserted.
+    */
+    value: PropTypes.string,
+    
+    /**
+    * Input text updated when input loses blur or on 'Enter' key press.
     */
     text: PropTypes.string,
 

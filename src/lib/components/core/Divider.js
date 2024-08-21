@@ -27,6 +27,11 @@ Divider.propTypes = {
     className: PropTypes.string,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+    
+    /**
     * HTML tag to use for element.
     */
     tagName: PropTypes.elementType,

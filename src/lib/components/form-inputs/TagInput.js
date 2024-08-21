@@ -163,6 +163,11 @@ TagInput.propTypes = {
     separator: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Value updated when a new tag is added. Object with value and index of the tag
     */
     tagAdded: PropTypes.array,

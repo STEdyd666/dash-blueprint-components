@@ -21,9 +21,10 @@ Note that this is the default behavior when using the CSS API, since that's how 
 so these styles are applied without a "modifier" class.
 When using the JS component API, minimal is false by default.
 Show the footer close from the content. Do not use with scroll body Use for small dialogs (confirm)
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function dialogfooter(; kwargs...)
-        available_props = Symbol[:children, :id, :actions, :className, :minimal]
+        available_props = Symbol[:children, :id, :actions, :className, :minimal, :style]
         wild_props = Symbol[]
         return Component("dialogfooter", "DialogFooter", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

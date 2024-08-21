@@ -4,6 +4,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import { useReducer } from 'react';
 import { useEffect } from 'react';
 import { Tree as BPTree } from "@blueprintjs/core";
+import { TreeNode } from '@blueprintjs/core';
 
 
 /**
@@ -21,6 +22,18 @@ const Tree = props => {
         setProps,
         ...others
     } = props
+    
+    const renderContents = (children) => {
+        // return contents.map((node) => {
+        //     console.log(node)
+        //     return <TreeNode {...node.props._dashprivate_layout.props}/>
+        // })
+        return contents.map((node) => {
+            // console.log(node.props)
+            return <TreeNode label={'sono io'}/>
+        })
+    }
+
 
     const [nodes, dispatch] = useReducer(treeReducer, contents)
 
@@ -158,6 +171,11 @@ Tree.propTypes = {
     */
     current_contents: PropTypes.array,
     
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
     /**
     * Dash-assigned callback that gets fired when the value changes.
     */

@@ -31,6 +31,9 @@ Keyword arguments:
 - position (string; optional):
     Position of Toaster within its container.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - toasts (list; optional):
     The maximum number of active toasts that can be displayed at once.
     When the limit is  about to be exceeded, the oldest active toast
@@ -45,10 +48,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'OverlayToaster'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, className=Component.UNDEFINED, canEscapeKeyClear=Component.UNDEFINED, toasts=Component.UNDEFINED, maxToasts=Component.UNDEFINED, position=Component.UNDEFINED, usePortal=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'toasts', 'usePortal']
+    def __init__(self, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, className=Component.UNDEFINED, canEscapeKeyClear=Component.UNDEFINED, toasts=Component.UNDEFINED, maxToasts=Component.UNDEFINED, position=Component.UNDEFINED, usePortal=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'style', 'toasts', 'usePortal']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'toasts', 'usePortal']
+        self.available_properties = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'style', 'toasts', 'usePortal']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

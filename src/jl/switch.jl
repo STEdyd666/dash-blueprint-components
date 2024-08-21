@@ -27,6 +27,7 @@ innerLabel will be used for both states.
 - `label` (String; optional): Text label for the control.
 - `labelElement` (a list of or a singular dash component, string or number; optional): Element label for the control.
 - `large` (Bool; optional): Whether this control should use large styles.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (String; optional): Name of the HTML tag that wraps the checkbox. By default a 
 <label> is used, which effectively enlarges the click target 
 to include all of its children. Supply a different tag name if 
@@ -35,7 +36,7 @@ events from a parent element (as the label can register
 duplicate clicks).
 """
 function switch(; kwargs...)
-        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :defaultChecked, :disabled, :inline, :innerLabel, :innerLabelChecked, :label, :labelElement, :large, :tagName]
+        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :defaultChecked, :disabled, :inline, :innerLabel, :innerLabelChecked, :label, :labelElement, :large, :style, :tagName]
         wild_props = Symbol[]
         return Component("switch", "Switch", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

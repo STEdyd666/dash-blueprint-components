@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-suggest <- function(id=NULL, className=NULL, closeOnSelect=NULL, disabled=NULL, fill=NULL, initialContent=NULL, items=NULL, matchTargetWidth=NULL, minimal=NULL, openOnKeyDown=NULL, resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL) {
+suggest <- function(id=NULL, className=NULL, closeOnSelect=NULL, disabled=NULL, fill=NULL, initialContent=NULL, items=NULL, matchTargetWidth=NULL, minimal=NULL, openOnKeyDown=NULL, resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL, style=NULL) {
     
-    props <- list(id=id, className=className, closeOnSelect=closeOnSelect, disabled=disabled, fill=fill, initialContent=initialContent, items=items, matchTargetWidth=matchTargetWidth, minimal=minimal, openOnKeyDown=openOnKeyDown, resetOnClose=resetOnClose, resetOnQuery=resetOnQuery, resetOnSelect=resetOnSelect, selectedItem=selectedItem)
+    props <- list(id=id, className=className, closeOnSelect=closeOnSelect, disabled=disabled, fill=fill, initialContent=initialContent, items=items, matchTargetWidth=matchTargetWidth, minimal=minimal, openOnKeyDown=openOnKeyDown, resetOnClose=resetOnClose, resetOnQuery=resetOnQuery, resetOnSelect=resetOnSelect, selectedItem=selectedItem, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ suggest <- function(id=NULL, className=NULL, closeOnSelect=NULL, disabled=NULL, 
         props = props,
         type = 'Suggest',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'closeOnSelect', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem'),
+        propNames = c('id', 'className', 'closeOnSelect', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style'),
         package = 'dashBlueprintComponents'
         )
 

@@ -83,6 +83,11 @@ TimezoneSelect.propTypes = {
     showLocalTimezone: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * The currently selected timezone UTC identifier, e.g. "Pacific/Honolulu". See: https://www.iana.org/time-zones
     */
     value: PropTypes.string,

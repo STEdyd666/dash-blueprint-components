@@ -16,7 +16,7 @@ footerElement=NULL, highlightCurrentDay=NULL,
 initialMonth=NULL, maxDate=NULL, minDate=NULL,
 reverseMonthAndYearMenus=NULL, selectedShortcutIndex=NULL,
 shortcuts=NULL, showActionsBar=NULL, showOutsideDays=NULL,
-showTimeArrowButtons=NULL, showWeekNumber=NULL,
+showTimeArrowButtons=NULL, showWeekNumber=NULL, style=NULL,
 timePrecision=NULL, todayButtonText=NULL, useAmPm=NULL)
 }
 
@@ -59,6 +59,8 @@ no shortcuts will be displayed.}
 \item{showTimeArrowButtons}{Logical. Whether arrows for selecting the time should be shown.}
 
 \item{showWeekNumber}{Logical. Whether to show week numbers}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{timePrecision}{Character. The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'}

@@ -37,6 +37,9 @@ Keyword arguments:
     Whether to show the local timezone at the top of the list of
     initial timezone suggestions.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - value (string; optional):
     The currently selected timezone UTC identifier, e.g.
     \"Pacific/Honolulu\". See: https://www.iana.org/time-zones.
@@ -51,10 +54,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'TimezoneSelect'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, placeholder=Component.UNDEFINED, showLocalTimezone=Component.UNDEFINED, value=Component.UNDEFINED, valueDisplayFormat=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'value', 'valueDisplayFormat']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, placeholder=Component.UNDEFINED, showLocalTimezone=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, valueDisplayFormat=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'style', 'value', 'valueDisplayFormat']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'value', 'valueDisplayFormat']
+        self.available_properties = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'style', 'value', 'valueDisplayFormat']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

@@ -15,8 +15,8 @@ confirmOnEnterKey=NULL, defaultValue=NULL, disabled=NULL,
 intent=NULL, lastOnCancel=NULL, maxLength=NULL,
 maxLines=NULL, minLines=NULL, minWidth=NULL, multiline=NULL,
 n_changes=NULL, n_confirms=NULL, n_edits=NULL,
-placeholder=NULL, selectAllOnFocus=NULL, type=NULL,
-value=NULL)
+placeholder=NULL, selectAllOnFocus=NULL, style=NULL,
+type=NULL, value=NULL)
 }
 
 \arguments{
@@ -70,6 +70,8 @@ This prop should not be changed during the component's lifetime.}
 the cursor is placed at the end of the text. This prop is ignored on 
 inputs with type other then text, search, url, tel and password. 
 See https://html.spec.whatwg.org/multipage/input.html#do-not-apply for details.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{type}{Character. The type of input that should be shown, when not multiline.}
 

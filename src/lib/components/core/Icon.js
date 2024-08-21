@@ -86,7 +86,7 @@ Icon.propTypes = {
     size: PropTypes.number,
 
     /**
-    * CSS style properties.
+    * CSS properties to apply to the root element.
     */
     style: PropTypes.object,
     

@@ -15,10 +15,11 @@ Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `fill` (Bool; optional): Whether the control group should take up the full width of its container.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `vertical` (Bool; optional): Whether the control group should appear with vertical styling.
 """
 function controlgroup(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :fill, :vertical]
+        available_props = Symbol[:children, :id, :className, :fill, :style, :vertical]
         wild_props = Symbol[]
         return Component("controlgroup", "ControlGroup", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

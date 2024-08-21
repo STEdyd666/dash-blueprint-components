@@ -11,7 +11,7 @@ The Text component adds accessible overflow behavior to a line of text by condit
 
 \usage{
 text(children=NULL, id=NULL, className=NULL, ellipsize=NULL,
-tagName=NULL, title=NULL)
+style=NULL, tagName=NULL, title=NULL)
 }
 
 \arguments{
@@ -24,6 +24,8 @@ tagName=NULL, title=NULL)
 \item{ellipsize}{Logical. Indicates that this component should be truncated with an ellipsis if it 
 overflows its container. The title attribute will also be added when content 
 overflows to show the full text of the children on hover.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{HTML tag name to use for rendered element.}
 

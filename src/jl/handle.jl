@@ -14,6 +14,7 @@ priority over intentBefore.
 - `intentBefore` (String; optional): Intent for the track segment immediately before this handle.
 - `interactionKind` (a value equal to: 'lock', 'push'; optional): How this handle interacts with other handles.
 - `labelStepSize` (Real; optional): Increment between successive labels. Must be greater than zero.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `trackStyleAfter` (Dict; optional): Style to use for the track segment immediately after this handle, 
 taking priority over trackStyleBefore.
 - `trackStyleBefore` (Dict; optional): Style to use for the track segment immediately before this handle
@@ -21,7 +22,7 @@ taking priority over trackStyleBefore.
 - `value` (Real; required): Numeric value of this handle.
 """
 function handle(; kwargs...)
-        available_props = Symbol[:className, :intentAfter, :intentBefore, :interactionKind, :labelStepSize, :trackStyleAfter, :trackStyleBefore, :type, :value]
+        available_props = Symbol[:className, :intentAfter, :intentBefore, :interactionKind, :labelStepSize, :style, :trackStyleAfter, :trackStyleBefore, :type, :value]
         wild_props = Symbol[]
         return Component("handle", "Handle", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -39,11 +39,12 @@ releases.
 initial values, or between handles for RangeSlider.
 - `stepSize` (Real; optional): Increment between successive values; amount by which the handle moves. 
 Must be greater than zero.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `value` (Real; optional): Value of slider.
 - `vertical` (Bool; optional): Whether to show the slider in a vertical orientation.
 """
 function slider(; kwargs...)
-        available_props = Symbol[:id, :className, :disabled, :format, :initialValue, :intent, :labelPrecision, :labelStepSize, :labelValues, :max, :min, :n_changes, :n_releases, :showTrackFill, :stepSize, :value, :vertical]
+        available_props = Symbol[:id, :className, :disabled, :format, :initialValue, :intent, :labelPrecision, :labelStepSize, :labelValues, :max, :min, :n_changes, :n_releases, :showTrackFill, :stepSize, :style, :value, :vertical]
         wild_props = Symbol[]
         return Component("slider", "Slider", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

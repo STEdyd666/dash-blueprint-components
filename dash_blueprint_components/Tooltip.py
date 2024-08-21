@@ -115,6 +115,9 @@ Keyword arguments:
     allow the popover to reposition itself to remain onscreen as the
     user scrolls  around.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - transitionDuration (number; optional):
     Indicates how long (in milliseconds) the tooltip's
     appear/disappear transition takes. This is used by React
@@ -127,10 +130,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Tooltip'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, captureDismiss=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, content=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, fill=Component.UNDEFINED, hoverCloseDelay=Component.UNDEFINED, hoverOpenDelay=Component.UNDEFINED, inheritDarkTheme=Component.UNDEFINED, intent=Component.UNDEFINED, interactionKind=Component.UNDEFINED, isOpen=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnTargetFocus=Component.UNDEFINED, placement=Component.UNDEFINED, popoverClassName=Component.UNDEFINED, position=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'transitionDuration']
+    def __init__(self, children=None, id=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, captureDismiss=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, content=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, fill=Component.UNDEFINED, hoverCloseDelay=Component.UNDEFINED, hoverOpenDelay=Component.UNDEFINED, inheritDarkTheme=Component.UNDEFINED, intent=Component.UNDEFINED, interactionKind=Component.UNDEFINED, isOpen=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnTargetFocus=Component.UNDEFINED, placement=Component.UNDEFINED, popoverClassName=Component.UNDEFINED, position=Component.UNDEFINED, style=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'style', 'transitionDuration']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'transitionDuration']
+        self.available_properties = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'style', 'transitionDuration']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

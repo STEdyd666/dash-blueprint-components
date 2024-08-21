@@ -11,7 +11,8 @@ Breadcrumbs identify the path to the current resource in an application.
 
 \usage{
 breadcrumb(id=NULL, alwaysRenderOverflow=NULL, className=NULL,
-collapseFrom=NULL, items=NULL, minVisibleItems=NULL)
+collapseFrom=NULL, items=NULL, minVisibleItems=NULL,
+style=NULL)
 }
 
 \arguments{
@@ -28,6 +29,8 @@ in the container will be rendered in an overflow menu instead.}
 
 \item{minVisibleItems}{Numeric. The minimum number of visible breadcrumbs that should never 
 collapse into the overflow menu, regardless of DOM dimensions.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

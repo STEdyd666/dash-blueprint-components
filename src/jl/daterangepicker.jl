@@ -30,12 +30,13 @@ no shortcuts will be displayed.
 - `showTimeArrowButtons` (Bool; optional): Whether arrows for selecting the time should be shown.
 - `showWeekNumber` (Bool; optional): Whether to show week numbers
 - `singleMonthOnly` (Bool; optional): Whether to show only a single month calendar.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `timePrecision` (String; optional): The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'
 - `useAmPm` (Bool; optional): Whether the time should be displayed as AM/PM
 """
 function daterangepicker(; kwargs...)
-        available_props = Symbol[:id, :allowSingleDayRange, :className, :contiguousCalendarMonths, :defaultValue, :footerElement, :highlightCurrentDay, :initialMonth, :maxDate, :minDate, :range, :reverseMonthAndYearMenus, :selectedShortcutIndex, :shortcuts, :showOutsideDays, :showTimeArrowButtons, :showWeekNumber, :singleMonthOnly, :timePrecision, :useAmPm]
+        available_props = Symbol[:id, :allowSingleDayRange, :className, :contiguousCalendarMonths, :defaultValue, :footerElement, :highlightCurrentDay, :initialMonth, :maxDate, :minDate, :range, :reverseMonthAndYearMenus, :selectedShortcutIndex, :shortcuts, :showOutsideDays, :showTimeArrowButtons, :showWeekNumber, :singleMonthOnly, :style, :timePrecision, :useAmPm]
         wild_props = Symbol[]
         return Component("daterangepicker", "DateRangePicker", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

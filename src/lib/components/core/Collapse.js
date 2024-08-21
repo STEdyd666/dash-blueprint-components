@@ -59,6 +59,11 @@ Collapse.propTypes = {
     keepChildrenMounted: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * The length of time the transition takes, in milliseconds. This must 
     * match the duration of the animation in CSS. Only set this prop if you 
     * override Blueprint's default transitions with new transitions of a 

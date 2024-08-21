@@ -11,7 +11,7 @@ A control group renders multiple distinct form controls as one unit, with a smal
 
 \usage{
 controlGroup(children=NULL, id=NULL, className=NULL, fill=NULL,
-vertical=NULL)
+style=NULL, vertical=NULL)
 }
 
 \arguments{
@@ -22,6 +22,8 @@ vertical=NULL)
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
 
 \item{fill}{Logical. Whether the control group should take up the full width of its container.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{vertical}{Logical. Whether the control group should appear with vertical styling.}
 }

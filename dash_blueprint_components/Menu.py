@@ -23,16 +23,19 @@ Keyword arguments:
     Whether the menu items in this menu should use a large appearance.
 
 - small (boolean; optional):
-    Whether the menu items in this menu should use a small appearance."""
+    Whether the menu items in this menu should use a small appearance.
+
+- style (dict; optional):
+    CSS properties to apply to the menu."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Menu'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, large=Component.UNDEFINED, small=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'large', 'small']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, large=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'large', 'small', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'large', 'small']
+        self.available_properties = ['children', 'id', 'className', 'large', 'small', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

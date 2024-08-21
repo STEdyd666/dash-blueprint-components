@@ -64,6 +64,7 @@ choose the best position when opened and will allow the popover to reposition it
 - `shouldReturnFocusOnClose` (Bool; optional): Whether the application should return focus to the last active element in the document after this popover closes. This is automatically set to false if 
 this is a hover interaction popover. If you are attaching a popover and a tooltip to the same target, you must take care to either disable this prop for 
 the popover or disable the tooltip's openOnTargetFocus prop.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `transitionDuration` (Real; optional): Indicates how long (in milliseconds) the overlay's enter/leave transition takes. This is used by React CSSTransition to know when a transition completes 
 and must match the duration of the animation in CSS. Only set this prop if you override Blueprint's default transitions with new transitions of a different length.
 - `usePortal` (Bool; optional): Whether the popover should be rendered inside a Portal attached to portalContainer prop.
@@ -73,7 +74,7 @@ Not using a Portal can result in smoother performance when scrolling and allows 
 but it remains subject to the overflow bounds of its ancestors.
 """
 function popover(; kwargs...)
-        available_props = Symbol[:children, :id, :autoFocus, :boundary, :canEscapeKeyClose, :captureDismiss, :className, :content, :defaultIsOpen, :disabled, :enforceFocus, :fill, :hasBackdrop, :hoverCloseDelay, :hoverOpenDelay, :inheritDarkTheme, :interactionKind, :isOpen, :lazy, :matchTargetWidth, :minimal, :openOnTargetFocus, :placement, :popoverClassName, :popupKind, :portalClassName, :portalContainer, :position, :positioningStrategy, :shouldReturnFocusOnClose, :transitionDuration, :usePortal]
+        available_props = Symbol[:children, :id, :autoFocus, :boundary, :canEscapeKeyClose, :captureDismiss, :className, :content, :defaultIsOpen, :disabled, :enforceFocus, :fill, :hasBackdrop, :hoverCloseDelay, :hoverOpenDelay, :inheritDarkTheme, :interactionKind, :isOpen, :lazy, :matchTargetWidth, :minimal, :openOnTargetFocus, :placement, :popoverClassName, :popupKind, :portalClassName, :portalContainer, :position, :positioningStrategy, :shouldReturnFocusOnClose, :style, :transitionDuration, :usePortal]
         wild_props = Symbol[]
         return Component("popover", "Popover", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

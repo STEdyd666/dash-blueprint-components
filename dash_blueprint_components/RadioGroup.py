@@ -42,16 +42,19 @@ Keyword arguments:
 
 - selectedValue (string | number; optional):
     Value of the selected radio. The child with this value will be
-    :checked."""
+    :checked.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'RadioGroup'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, asCard=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, inline=Component.UNDEFINED, label=Component.UNDEFINED, name=Component.UNDEFINED, options=Component.UNDEFINED, selectedValue=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'asCard', 'className', 'disabled', 'inline', 'label', 'name', 'options', 'selectedValue']
+    def __init__(self, children=None, id=Component.UNDEFINED, asCard=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, inline=Component.UNDEFINED, label=Component.UNDEFINED, name=Component.UNDEFINED, options=Component.UNDEFINED, selectedValue=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'asCard', 'className', 'disabled', 'inline', 'label', 'name', 'options', 'selectedValue', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'asCard', 'className', 'disabled', 'inline', 'label', 'name', 'options', 'selectedValue']
+        self.available_properties = ['children', 'id', 'asCard', 'className', 'disabled', 'inline', 'label', 'name', 'options', 'selectedValue', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

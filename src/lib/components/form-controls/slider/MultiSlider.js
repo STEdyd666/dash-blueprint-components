@@ -188,6 +188,11 @@ MultiSlider.propTypes = {
     * moves. Must be greater than zero.
     */
     stepSize: PropTypes.number,
+    
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
 
     /**
     * Whether to show the slider in a vertical orientation.

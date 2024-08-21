@@ -22,13 +22,14 @@ Collapse inside a <table>, for instance.
 - `keepChildrenMounted` (Bool; optional): Whether the child components will remain mounted when the Collapse is 
 closed. Setting to true may improve performance by avoiding re-mounting 
 children.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `transitionDuration` (Real; optional): The length of time the transition takes, in milliseconds. This must 
 match the duration of the animation in CSS. Only set this prop if you 
 override Blueprint's default transitions with new transitions of a 
 different length.
 """
 function collapse(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :component, :isOpen, :keepChildrenMounted, :transitionDuration]
+        available_props = Symbol[:children, :id, :className, :component, :isOpen, :keepChildrenMounted, :style, :transitionDuration]
         wild_props = Symbol[]
         return Component("collapse", "Collapse", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

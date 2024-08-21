@@ -11,7 +11,8 @@ A toast is a lightweight, ephemeral notice from an application in direct respons
 
 \usage{
 toast(id=NULL, className=NULL, icon=NULL, intent=NULL,
-isCloseButtonShown=NULL, message=NULL, timeout=NULL)
+isCloseButtonShown=NULL, message=NULL, style=NULL,
+timeout=NULL)
 }
 
 \arguments{
@@ -27,6 +28,8 @@ isCloseButtonShown=NULL, message=NULL, timeout=NULL)
 rendered if title is provided.}
 
 \item{message}{A list of or a singular dash component, string or number. Message to display in the body of the toast.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{timeout}{Numeric. Milliseconds to wait before automatically dismissing toast. Providing a value less than or equal 
 to 0 will disable the timeout (this is discouraged).}

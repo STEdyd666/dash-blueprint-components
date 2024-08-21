@@ -13,7 +13,8 @@ Switch is a form control for toggling between boolean states. It is similar to C
 switch(children=NULL, id=NULL, alignIndicator=NULL, checked=NULL,
 className=NULL, defaultChecked=NULL, disabled=NULL,
 inline=NULL, innerLabel=NULL, innerLabelChecked=NULL,
-label=NULL, labelElement=NULL, large=NULL, tagName=NULL)
+label=NULL, labelElement=NULL, large=NULL, style=NULL,
+tagName=NULL)
 }
 
 \arguments{
@@ -44,6 +45,8 @@ innerLabel will be used for both states.}
 \item{labelElement}{A list of or a singular dash component, string or number. Element label for the control.}
 
 \item{large}{Logical. Whether this control should use large styles.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{Character. Name of the HTML tag that wraps the checkbox. By default a 
 <label> is used, which effectively enlarges the click target 

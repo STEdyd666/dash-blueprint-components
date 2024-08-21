@@ -33,16 +33,19 @@ Keyword arguments:
     applied without a \"modifier\" class. When using the JS component
     API, minimal is False by default. Show the footer close from the
     content. Do not use with scroll body Use for small dialogs
-    (confirm)."""
+    (confirm).
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = ['actions']
     _base_nodes = ['actions', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'DialogFooter'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, actions=Component.UNDEFINED, className=Component.UNDEFINED, minimal=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'actions', 'className', 'minimal']
+    def __init__(self, children=None, id=Component.UNDEFINED, actions=Component.UNDEFINED, className=Component.UNDEFINED, minimal=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'actions', 'className', 'minimal', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'actions', 'className', 'minimal']
+        self.available_properties = ['children', 'id', 'actions', 'className', 'minimal', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

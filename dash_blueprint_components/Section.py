@@ -40,6 +40,9 @@ Keyword arguments:
     Element to render on the right side of the section header. Note
     that the header will  only be rendered if title is provided.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - subtitle (string | a list of or a singular dash component, string or number; optional):
     Sub-title of the section. Note that the header will only be
     rendered if title is provided.
@@ -52,10 +55,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Section'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, collapsible=Component.UNDEFINED, compact=Component.UNDEFINED, elevation=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, icon=Component.UNDEFINED, rightElement=Component.UNDEFINED, subtitle=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'collapsible', 'compact', 'defaultIsOpen', 'elevation', 'icon', 'rightElement', 'subtitle', 'title']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, collapsible=Component.UNDEFINED, compact=Component.UNDEFINED, elevation=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, icon=Component.UNDEFINED, rightElement=Component.UNDEFINED, subtitle=Component.UNDEFINED, style=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'collapsible', 'compact', 'defaultIsOpen', 'elevation', 'icon', 'rightElement', 'style', 'subtitle', 'title']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'collapsible', 'compact', 'defaultIsOpen', 'elevation', 'icon', 'rightElement', 'subtitle', 'title']
+        self.available_properties = ['children', 'id', 'className', 'collapsible', 'compact', 'defaultIsOpen', 'elevation', 'icon', 'rightElement', 'style', 'subtitle', 'title']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

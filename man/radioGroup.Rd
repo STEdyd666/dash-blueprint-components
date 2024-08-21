@@ -12,7 +12,7 @@ A radio button typically represents a single option in a mutually exclusive list
 \usage{
 radioGroup(children=NULL, id=NULL, asCard=NULL, className=NULL,
 disabled=NULL, inline=NULL, label=NULL, name=NULL,
-options=NULL, selectedValue=NULL)
+options=NULL, selectedValue=NULL, style=NULL)
 }
 
 \arguments{
@@ -37,6 +37,8 @@ unique name will be generated internally.}
 \item{options}{Unnamed list. Array of options to render in the group.}
 
 \item{selectedValue}{Character | numeric. Value of the selected radio. The child with this value will be :checked.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

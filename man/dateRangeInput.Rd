@@ -19,7 +19,7 @@ maxDate=NULL, minDate=NULL, outOfRangeMessage=NULL,
 overlappingDatesMessage=NULL, placeholder=NULL, range=NULL,
 reverseMonthAndYearMenus=NULL, selectAllOnFocus=NULL,
 selectedShortcutIndex=NULL, shortcuts=NULL,
-showTimeArrowButtons=NULL, singleMonthOnly=NULL,
+showTimeArrowButtons=NULL, singleMonthOnly=NULL, style=NULL,
 timePrecision=NULL, useAmPm=NULL)
 }
 
@@ -79,6 +79,8 @@ no shortcuts will be displayed.}
 \item{showTimeArrowButtons}{Logical. Whether arrows for selecting the time should be shown.}
 
 \item{singleMonthOnly}{Logical. Whether to show only a single month calendar.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{timePrecision}{Character. The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'}

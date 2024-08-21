@@ -22,10 +22,11 @@ text and icons together.
 - `fill` (Bool; optional): Whether the button group should take up the full width of its container.
 - `large` (Bool; optional): Whether this button should use large styles.
 - `minimal` (Bool; optional): Whether this button should use minimal styles.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `vertical` (Bool; optional): Whether the button group should appear with vertical styling.
 """
 function buttongroup(; kwargs...)
-        available_props = Symbol[:children, :id, :alignText, :className, :fill, :large, :minimal, :vertical]
+        available_props = Symbol[:children, :id, :alignText, :className, :fill, :large, :minimal, :style, :vertical]
         wild_props = Symbol[]
         return Component("buttongroup", "ButtonGroup", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

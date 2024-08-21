@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-handle <- function(className=NULL, intentAfter=NULL, intentBefore=NULL, interactionKind=NULL, labelStepSize=NULL, trackStyleAfter=NULL, trackStyleBefore=NULL, type=NULL, value=NULL) {
+handle <- function(className=NULL, intentAfter=NULL, intentBefore=NULL, interactionKind=NULL, labelStepSize=NULL, style=NULL, trackStyleAfter=NULL, trackStyleBefore=NULL, type=NULL, value=NULL) {
     
-    props <- list(className=className, intentAfter=intentAfter, intentBefore=intentBefore, interactionKind=interactionKind, labelStepSize=labelStepSize, trackStyleAfter=trackStyleAfter, trackStyleBefore=trackStyleBefore, type=type, value=value)
+    props <- list(className=className, intentAfter=intentAfter, intentBefore=intentBefore, interactionKind=interactionKind, labelStepSize=labelStepSize, style=style, trackStyleAfter=trackStyleAfter, trackStyleBefore=trackStyleBefore, type=type, value=value)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ handle <- function(className=NULL, intentAfter=NULL, intentBefore=NULL, interact
         props = props,
         type = 'Handle',
         namespace = 'dash_blueprint_components',
-        propNames = c('className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value'),
+        propNames = c('className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'style', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value'),
         package = 'dashBlueprintComponents'
         )
 

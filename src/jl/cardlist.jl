@@ -24,9 +24,10 @@ design system. Be sure to test your UI in both light and dark theme if you modif
 - `compact` (Bool; optional): Whether this component should use compact styles with reduced visual padding. Note that this prop 
 affects styling for all Cards within this CardList and you do not need to set the compact prop 
 individually on those child Cards.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function cardlist(; kwargs...)
-        available_props = Symbol[:children, :id, :bordered, :className, :compact]
+        available_props = Symbol[:children, :id, :bordered, :className, :compact, :style]
         wild_props = Symbol[]
         return Component("cardlist", "CardList", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

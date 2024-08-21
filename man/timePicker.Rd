@@ -12,8 +12,8 @@ A TimePicker allows the user to specify a time.
 \usage{
 timePicker(id=NULL, autoFocus=NULL, defaultValue=NULL, disabled=NULL,
 maxTime=NULL, minTime=NULL, precision=NULL,
-selectAllOnFocus=NULL, showArrowButtons=NULL, useAmPm=NULL,
-value=NULL)
+selectAllOnFocus=NULL, showArrowButtons=NULL, style=NULL,
+useAmPm=NULL, value=NULL)
 }
 
 \arguments{
@@ -40,6 +40,8 @@ are equal, then the valid time range is constrained to only that one value.}
 \item{selectAllOnFocus}{Logical. Whether all the text in each input should be selected on focus.}
 
 \item{showArrowButtons}{Logical. Whether to show arrows buttons for changing the time.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{useAmPm}{Logical. Whether to use a 12 hour format with an AM/PM dropdown.}
 

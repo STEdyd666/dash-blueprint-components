@@ -14,7 +14,7 @@ alert(children=NULL, id=NULL, canEscapeKeyCancel=NULL,
 canOutsideClickCancel=NULL, cancelButtonText=NULL,
 className=NULL, confirmButtonText=NULL, fill=NULL,
 icon=NULL, intent=NULL, isCanceled=NULL, isClosed=NULL,
-isConfirmed=NULL, isOpen=NULL, loading=NULL)
+isConfirmed=NULL, isOpen=NULL, loading=NULL, style=NULL)
 }
 
 \arguments{
@@ -52,6 +52,8 @@ and uses the value of the intent prop below.}
 
 \item{loading}{Logical. If set to true, the confirm button will be set to its loading state. The cancel button, 
 if visible, will be disabled.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

@@ -14,10 +14,11 @@ Keyword arguments:
 - `children` (a list of or a singular dash component, string or number; optional): DialogBody contents.
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `useOverflowScrollContainer` (Bool; optional): Enable scrolling for the container
 """
 function dialogbody(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :useOverflowScrollContainer]
+        available_props = Symbol[:children, :id, :className, :style, :useOverflowScrollContainer]
         wild_props = Symbol[]
         return Component("dialogbody", "DialogBody", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

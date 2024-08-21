@@ -11,8 +11,8 @@ The OverlayToaster component (previously named Toaster) is a stateful container 
 
 \usage{
 overlayToaster(id=NULL, autoFocus=NULL, canEscapeKeyClear=NULL,
-className=NULL, maxToasts=NULL, position=NULL, toasts=NULL,
-usePortal=NULL)
+className=NULL, maxToasts=NULL, position=NULL, style=NULL,
+toasts=NULL, usePortal=NULL)
 }
 
 \arguments{
@@ -28,6 +28,8 @@ that toasts do not interrupt the user's flow. Note that enforceFocus is always d
 \item{maxToasts}{Numeric. Toasts to be displayed}
 
 \item{position}{Character. Position of Toaster within its container.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{toasts}{Unnamed list. The maximum number of active toasts that can be displayed at once. When the limit is
  about to be exceeded, the oldest active toast is removed.}

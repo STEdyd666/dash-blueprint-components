@@ -183,6 +183,11 @@ DatePicker.propTypes = {
     showWeekNumber: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * The precision of time selection that accompanies the calendar. Passing a TimePrecision value
     * shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'
     */

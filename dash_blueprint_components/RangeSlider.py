@@ -70,6 +70,9 @@ Keyword arguments:
     Increment between successive values; amount by which the handle
     moves.  Must be greater than zero.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - value (list; optional):
     Value of slider.
 
@@ -80,10 +83,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'RangeSlider'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, initialValue=Component.UNDEFINED, intent=Component.UNDEFINED, labelPrecision=Component.UNDEFINED, format=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, labelValues=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_releases=Component.UNDEFINED, showTrackFill=Component.UNDEFINED, stepSize=Component.UNDEFINED, value=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'value', 'vertical']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, initialValue=Component.UNDEFINED, intent=Component.UNDEFINED, labelPrecision=Component.UNDEFINED, format=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, labelValues=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_releases=Component.UNDEFINED, showTrackFill=Component.UNDEFINED, stepSize=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'value', 'vertical']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'value', 'vertical']
+        self.available_properties = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'value', 'vertical']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

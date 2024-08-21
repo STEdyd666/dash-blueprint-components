@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-navbarHeading <- function(children=NULL, id=NULL, className=NULL) {
+navbarHeading <- function(children=NULL, id=NULL, className=NULL, style=NULL) {
     
-    props <- list(children=children, id=id, className=className)
+    props <- list(children=children, id=id, className=className, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ navbarHeading <- function(children=NULL, id=NULL, className=NULL) {
         props = props,
         type = 'NavbarHeading',
         namespace = 'dash_blueprint_components',
-        propNames = c('children', 'id', 'className'),
+        propNames = c('children', 'id', 'className', 'style'),
         package = 'dashBlueprintComponents'
         )
 

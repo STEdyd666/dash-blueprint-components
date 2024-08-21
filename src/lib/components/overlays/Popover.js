@@ -218,6 +218,11 @@ Popover.propTypes = {
     shouldReturnFocusOnClose: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Indicates how long (in milliseconds) the overlay's enter/leave transition takes. This is used by React CSSTransition to know when a transition completes 
     * and must match the duration of the animation in CSS. Only set this prop if you override Blueprint's default transitions with new transitions of a different length.
     */

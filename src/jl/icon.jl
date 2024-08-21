@@ -30,7 +30,7 @@ at which n_clicks changed. This can be used to tell
 which button was changed most recently.
 - `size` (Real; optional): Size of the icon, in pixels. Blueprint contains 16px and 20px SVG icon images, 
 and chooses the appropriate resolution based on this prop.
-- `style` (Dict; optional): CSS style properties.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (optional): HTML tag to use for the rendered element.
 - `title` (String; optional): Description string. This string does not appear in normal browsers, but it 
 increases accessibility. For instance, screen readers will use it for aural 

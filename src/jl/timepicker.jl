@@ -23,11 +23,12 @@ are equal, then the valid time range is constrained to only that one value.
 - `precision` (String; optional): The precision of time the user can set.
 - `selectAllOnFocus` (Bool; optional): Whether all the text in each input should be selected on focus.
 - `showArrowButtons` (Bool; optional): Whether to show arrows buttons for changing the time.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `useAmPm` (Bool; optional): Whether to use a 12 hour format with an AM/PM dropdown.
 - `value` (String; optional): The currently set time.
 """
 function timepicker(; kwargs...)
-        available_props = Symbol[:id, :autoFocus, :defaultValue, :disabled, :maxTime, :minTime, :precision, :selectAllOnFocus, :showArrowButtons, :useAmPm, :value]
+        available_props = Symbol[:id, :autoFocus, :defaultValue, :disabled, :maxTime, :minTime, :precision, :selectAllOnFocus, :showArrowButtons, :style, :useAmPm, :value]
         wild_props = Symbol[]
         return Component("timepicker", "TimePicker", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -25,6 +25,9 @@ Keyword arguments:
 - stripes (boolean; optional):
     Whether the background should be striped.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - value (number; optional):
     A value between 0 and 1 (inclusive) representing how far along the
     operation is. Values below 0 or above 1 will be interpreted as 0
@@ -35,10 +38,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'ProgressBar'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, animate=Component.UNDEFINED, className=Component.UNDEFINED, intent=Component.UNDEFINED, stripes=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'animate', 'className', 'intent', 'stripes', 'value']
+    def __init__(self, id=Component.UNDEFINED, animate=Component.UNDEFINED, className=Component.UNDEFINED, intent=Component.UNDEFINED, stripes=Component.UNDEFINED, value=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'animate', 'className', 'intent', 'stripes', 'style', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'animate', 'className', 'intent', 'stripes', 'value']
+        self.available_properties = ['id', 'animate', 'className', 'intent', 'stripes', 'style', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

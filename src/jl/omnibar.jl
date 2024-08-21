@@ -21,9 +21,10 @@ behind the contents.
 - `resetOnQuery` (Bool; optional): Whether the active item should be reset to the first matching item every time the query changes (via prop or by user input).
 - `resetOnSelect` (Bool; optional): Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.
 - `selectedItem` (Dict; optional): Selected item
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function omnibar(; kwargs...)
-        available_props = Symbol[:id, :className, :initialContent, :isOpen, :items, :matchTargetWidth, :minimal, :overlayHasBackdrop, :resetOnQuery, :resetOnSelect, :selectedItem]
+        available_props = Symbol[:id, :className, :initialContent, :isOpen, :items, :matchTargetWidth, :minimal, :overlayHasBackdrop, :resetOnQuery, :resetOnSelect, :selectedItem, :style]
         wild_props = Symbol[]
         return Component("omnibar", "Omnibar", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

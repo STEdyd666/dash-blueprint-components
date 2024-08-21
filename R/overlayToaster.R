@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-overlayToaster <- function(id=NULL, autoFocus=NULL, canEscapeKeyClear=NULL, className=NULL, maxToasts=NULL, position=NULL, toasts=NULL, usePortal=NULL) {
+overlayToaster <- function(id=NULL, autoFocus=NULL, canEscapeKeyClear=NULL, className=NULL, maxToasts=NULL, position=NULL, style=NULL, toasts=NULL, usePortal=NULL) {
     
-    props <- list(id=id, autoFocus=autoFocus, canEscapeKeyClear=canEscapeKeyClear, className=className, maxToasts=maxToasts, position=position, toasts=toasts, usePortal=usePortal)
+    props <- list(id=id, autoFocus=autoFocus, canEscapeKeyClear=canEscapeKeyClear, className=className, maxToasts=maxToasts, position=position, style=style, toasts=toasts, usePortal=usePortal)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ overlayToaster <- function(id=NULL, autoFocus=NULL, canEscapeKeyClear=NULL, clas
         props = props,
         type = 'OverlayToaster',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'toasts', 'usePortal'),
+        propNames = c('id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'style', 'toasts', 'usePortal'),
         package = 'dashBlueprintComponents'
         )
 

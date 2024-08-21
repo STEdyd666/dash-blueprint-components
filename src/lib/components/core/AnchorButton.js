@@ -133,6 +133,11 @@ AnchorButton.propTypes = {
     small: PropTypes.bool,
     
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Action text. Can be any single React renderable.
     */
     text: PropTypes.node,

@@ -12,13 +12,13 @@ The NumericInput component provides controls for easily inputting, incrementing,
 \usage{
 numericInput(id=NULL, addOnBlur=NULL, allowNumericCharactersOnly=NULL,
 buttonPosition=NULL, clampValueOnBlur=NULL, className=NULL,
-debounce=NULL, defaultValue=NULL, disabled=NULL, fill=NULL,
+defaultValue=NULL, disabled=NULL, fill=NULL,
 inputClassName=NULL, intent=NULL, large=NULL,
 leftElement=NULL, leftIcon=NULL, locale=NULL,
 majorStepSize=NULL, max=NULL, min=NULL, minorStepSize=NULL,
 number=NULL, placeholder=NULL, selectAllOnFocus=NULL,
 selectAllOnIncrement=NULL, small=NULL, stepSize=NULL,
-type=NULL)
+style=NULL, value=NULL)
 }
 
 \arguments{
@@ -37,11 +37,6 @@ to each bound only if the bound is defined. Note that native input[type="number"
 do NOT clamp on blur.}
 
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
-
-\item{debounce}{Logical. If true, changes to input will be sent back to the Dash server
-only when the enter key is pressed or when the component loses
-focus.  If it's false, it will sent the value back on every
-change.}
 
 \item{defaultValue}{A value equal to: proptypes.string, proptypes.number. In uncontrolled mode, this sets the default value of the input. Note that this value is 
 only used upon component instantiation and changes to this prop during the component 
@@ -73,7 +68,7 @@ in the specific locale. See MDN documentation for more info about browser locale
 
 \item{minorStepSize}{Numeric. The increment between successive values when alt is held. Pass explicit null value to disable this interaction.}
 
-\item{number}{Character | numeric. The value to display in the input field.}
+\item{number}{Character. Input text updated when input loses blur or on 'Enter' key press.}
 
 \item{placeholder}{Character. Placeholder text in the absence of any value.}
 
@@ -85,8 +80,9 @@ in the specific locale. See MDN documentation for more info about browser locale
 
 \item{stepSize}{Numeric. The increment between successive values when no modifier keys are held.}
 
-\item{type}{A value equal to: 'string', 'number'. Type of the number. Either string or number. It takes effect only when debounce is set to False.
-For debounce set to True, the type is always string.}
+\item{style}{Named list. CSS properties to apply to the root element.}
+
+\item{value}{Character. Input value that changes every time a new character is inserted.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

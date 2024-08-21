@@ -10,11 +10,13 @@ Use to divide components of the navbar
 }
 
 \usage{
-navbarDivider(className=NULL)
+navbarDivider(className=NULL, style=NULL)
 }
 
 \arguments{
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

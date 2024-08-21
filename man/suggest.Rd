@@ -14,7 +14,7 @@ suggest(id=NULL, className=NULL, closeOnSelect=NULL, disabled=NULL,
 fill=NULL, initialContent=NULL, items=NULL,
 matchTargetWidth=NULL, minimal=NULL, openOnKeyDown=NULL,
 resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL,
-selectedItem=NULL)
+selectedItem=NULL, style=NULL)
 }
 
 \arguments{
@@ -48,6 +48,8 @@ after a mouse click or TAB key interaction focuses the component's TagInput.}
 \item{resetOnSelect}{Logical. Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.}
 
 \item{selectedItem}{Named list. Selected item}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

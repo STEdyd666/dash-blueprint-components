@@ -11,8 +11,8 @@ EntityTitle is a component that handles rendering a common UI pattern consisting
 
 \usage{
 entityTitle(id=NULL, className=NULL, ellipsize=NULL, heading=NULL,
-icon=NULL, loading=NULL, subtitle=NULL, tags=NULL,
-title=NULL, titleURL=NULL)
+icon=NULL, loading=NULL, style=NULL, subtitle=NULL,
+tags=NULL, title=NULL, titleURL=NULL)
 }
 
 \arguments{
@@ -29,6 +29,8 @@ Blueprint's <Text> component, * which inherits font size from its containing ele
 Note that the header will only be rendered if title is provided.}
 
 \item{loading}{Logical. Whether to render as loading state.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{subtitle}{A list of or a singular dash component, string or number. The content to render below the title. Defaults to render muted text.}
 

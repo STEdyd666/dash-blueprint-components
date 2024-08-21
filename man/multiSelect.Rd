@@ -14,8 +14,9 @@ multiSelect(id=NULL, className=NULL, disabled=NULL, fill=NULL,
 initialContent=NULL, items=NULL, matchTargetWidth=NULL,
 minimal=NULL, openOnKeyDown=NULL, placeholder=NULL,
 resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL,
-selectedItems=NULL, showClearButton=NULL, tagIntents=NULL,
-tagLarge=NULL, tagMinimal=NULL, tagRemoved=NULL)
+selectedItems=NULL, showClearButton=NULL, style=NULL,
+tagIntents=NULL, tagLarge=NULL, tagMinimal=NULL,
+tagRemoved=NULL)
 }
 
 \arguments{
@@ -52,6 +53,8 @@ after a mouse click focuses the component's TagInput.}
 \item{selectedItems}{Unnamed list. Selected items}
 
 \item{showClearButton}{Logical. Whether to show the clear button on Input}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagIntents}{Logical. cycle tags intents}
 

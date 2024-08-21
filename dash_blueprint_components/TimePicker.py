@@ -49,6 +49,9 @@ Keyword arguments:
 - showArrowButtons (boolean; optional):
     Whether to show arrows buttons for changing the time.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - useAmPm (boolean; optional):
     Whether to use a 12 hour format with an AM/PM dropdown.
 
@@ -59,10 +62,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'TimePicker'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, maxTime=Component.UNDEFINED, minTime=Component.UNDEFINED, precision=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, showArrowButtons=Component.UNDEFINED, useAmPm=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'autoFocus', 'defaultValue', 'disabled', 'maxTime', 'minTime', 'precision', 'selectAllOnFocus', 'showArrowButtons', 'useAmPm', 'value']
+    def __init__(self, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, maxTime=Component.UNDEFINED, minTime=Component.UNDEFINED, precision=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, showArrowButtons=Component.UNDEFINED, style=Component.UNDEFINED, useAmPm=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'autoFocus', 'defaultValue', 'disabled', 'maxTime', 'minTime', 'precision', 'selectAllOnFocus', 'showArrowButtons', 'style', 'useAmPm', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'autoFocus', 'defaultValue', 'disabled', 'maxTime', 'minTime', 'precision', 'selectAllOnFocus', 'showArrowButtons', 'useAmPm', 'value']
+        self.available_properties = ['id', 'autoFocus', 'defaultValue', 'disabled', 'maxTime', 'minTime', 'precision', 'selectAllOnFocus', 'showArrowButtons', 'style', 'useAmPm', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

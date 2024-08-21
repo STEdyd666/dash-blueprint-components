@@ -46,12 +46,13 @@ and will allow the popover to reposition itself to remain onscreen as the user s
 - `position` (String; optional): The position (relative to the target) at which the popover should appear. Mutually exclusive with placement prop. The default value of 
 "auto" will choose the best position when opened and will allow the popover to reposition itself to remain onscreen as the user scrolls 
 around.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `transitionDuration` (Real; optional): Indicates how long (in milliseconds) the tooltip's appear/disappear transition takes. This is used by React CSSTransition 
 to know when a transition completes and must match the duration of the animation in CSS. Only set this prop if you override 
 Blueprint's default transitions with new transitions of a different length.
 """
 function tooltip(; kwargs...)
-        available_props = Symbol[:children, :id, :canEscapeKeyClose, :captureDismiss, :className, :compact, :content, :defaultIsOpen, :disabled, :enforceFocus, :fill, :hoverCloseDelay, :hoverOpenDelay, :inheritDarkTheme, :intent, :interactionKind, :isOpen, :matchTargetWidth, :minimal, :openOnTargetFocus, :placement, :popoverClassName, :position, :transitionDuration]
+        available_props = Symbol[:children, :id, :canEscapeKeyClose, :captureDismiss, :className, :compact, :content, :defaultIsOpen, :disabled, :enforceFocus, :fill, :hoverCloseDelay, :hoverOpenDelay, :inheritDarkTheme, :intent, :interactionKind, :isOpen, :matchTargetWidth, :minimal, :openOnTargetFocus, :placement, :popoverClassName, :position, :style, :transitionDuration]
         wild_props = Symbol[]
         return Component("tooltip", "Tooltip", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

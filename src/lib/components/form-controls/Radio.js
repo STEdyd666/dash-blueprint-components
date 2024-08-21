@@ -93,6 +93,11 @@ Radio.propTypes = {
     large: PropTypes.bool,
     
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Name of the HTML tag that wraps the checkbox. By default a <label> is used, 
     * which effectively enlarges the click target to include all of its children. 
     * Supply a different tag name if this behavior is undesirable or you're listening 

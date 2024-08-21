@@ -11,7 +11,7 @@ Callouts visually highlight important content for the user. They can contain a t
 
 \usage{
 callout(children=NULL, id=NULL, className=NULL, icon=NULL,
-intent=NULL, title=NULL)
+intent=NULL, style=NULL, title=NULL)
 }
 
 \arguments{
@@ -28,6 +28,8 @@ a default icon. If this prop is explicitly null, no icon will be displayed
 
 \item{intent}{Character. Visual intent color to apply to background, title, and icon. Defining this 
 prop also applies a default icon, if the icon prop is omitted.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{title}{Character. String content of optional title element. Due to a conflict with the HTML prop 
 types, to provide JSX content simply pass <H4>JSX title content</H4> as first 

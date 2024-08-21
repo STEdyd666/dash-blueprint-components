@@ -32,6 +32,9 @@ Keyword arguments:
 - loading (boolean; optional):
     Whether to render as loading state.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - subtitle (a list of or a singular dash component, string or number; optional):
     The content to render below the title. Defaults to render muted
     text.
@@ -50,10 +53,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'EntityTitle'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, ellipsize=Component.UNDEFINED, heading=Component.UNDEFINED, icon=Component.UNDEFINED, loading=Component.UNDEFINED, subtitle=Component.UNDEFINED, tags=Component.UNDEFINED, title=Component.REQUIRED, titleURL=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'subtitle', 'tags', 'title', 'titleURL']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, ellipsize=Component.UNDEFINED, heading=Component.UNDEFINED, icon=Component.UNDEFINED, loading=Component.UNDEFINED, subtitle=Component.UNDEFINED, style=Component.UNDEFINED, tags=Component.UNDEFINED, title=Component.REQUIRED, titleURL=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'style', 'subtitle', 'tags', 'title', 'titleURL']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'subtitle', 'tags', 'title', 'titleURL']
+        self.available_properties = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'style', 'subtitle', 'tags', 'title', 'titleURL']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

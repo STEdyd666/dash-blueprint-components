@@ -46,6 +46,11 @@ Text.propTypes = {
     ellipsize: PropTypes.bool,
     
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * HTML tag name to use for rendered element.
     */
     tagName: PropTypes.elementType,

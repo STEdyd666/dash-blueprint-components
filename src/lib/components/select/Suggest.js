@@ -159,6 +159,11 @@ Suggest.propTypes = {
     selectedItem: PropTypes.object,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Whether the active item should be reset to the first matching item when the popover closes. The query will also be reset to the empty string.
     */
     resetOnClose: PropTypes.bool,

@@ -70,24 +70,16 @@ InputGroup.propTypes = {
     id: PropTypes.string,
     
     /**
-    * A space-delimited list of class names to pass along to a child element.
-    */
-    className: PropTypes.string,
-    
-    /**
     * If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd 
     * is only invoked when enter is pressed.
     */
     addOnBlur: PropTypes.bool,
 
     /**
-    * If true, changes to input will be sent back to the Dash server
-    * only when the enter key is pressed or when the component loses
-    * focus.  If it's false, it will sent the value back on every
-    * change.
+    * A space-delimited list of class names to pass along to a child element.
     */
-    debounce: PropTypes.bool,
-
+    className: PropTypes.string,
+    
     /**
     * In uncontrolled mode, this sets the default value of the input. Note that this value is 
     * only used upon component instantiation and changes to this prop during the component 
@@ -164,6 +156,11 @@ InputGroup.propTypes = {
     */
     value: PropTypes.string,
 
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+    
     /**
     * Input text updated when input loses blur or on 'Enter' key press.
     */

@@ -12,7 +12,7 @@ TimezoneSelect allows the user to select from a list of timezones.
 \usage{
 timezoneSelect(children=NULL, id=NULL, className=NULL, disabled=NULL,
 fill=NULL, placeholder=NULL, showLocalTimezone=NULL,
-value=NULL, valueDisplayFormat=NULL)
+style=NULL, value=NULL, valueDisplayFormat=NULL)
 }
 
 \arguments{
@@ -30,6 +30,8 @@ render a <Button> which shows the currently selected timezone.}
 \item{placeholder}{Character. Text to show when no timezone has been selected (value === undefined). This prop will be ignored if children is provided.}
 
 \item{showLocalTimezone}{Logical. Whether to show the local timezone at the top of the list of initial timezone suggestions.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{value}{Character. The currently selected timezone UTC identifier, e.g. "Pacific/Honolulu". See: https://www.iana.org/time-zones}
 

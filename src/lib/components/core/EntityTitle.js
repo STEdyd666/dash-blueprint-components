@@ -89,6 +89,11 @@ EntityTitle.propTypes = {
     subtitle: PropTypes.node,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * tags to be added on the right of the element
     */
     tags: PropTypes.node,

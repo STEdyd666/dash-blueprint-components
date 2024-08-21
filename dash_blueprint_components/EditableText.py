@@ -81,6 +81,9 @@ Keyword arguments:
     https://html.spec.whatwg.org/multipage/input.html#do-not-apply for
     details.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - type (string; optional):
     The type of input that should be shown, when not multiline.
 
@@ -91,10 +94,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'EditableText'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, alwaysRenderInput=Component.UNDEFINED, className=Component.UNDEFINED, confirmOnEnterKey=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, intent=Component.UNDEFINED, maxLength=Component.UNDEFINED, maxLines=Component.UNDEFINED, minLines=Component.UNDEFINED, minWidth=Component.UNDEFINED, multiline=Component.UNDEFINED, lastOnCancel=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_confirms=Component.UNDEFINED, n_edits=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'type', 'value']
+    def __init__(self, id=Component.UNDEFINED, alwaysRenderInput=Component.UNDEFINED, className=Component.UNDEFINED, confirmOnEnterKey=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, intent=Component.UNDEFINED, maxLength=Component.UNDEFINED, maxLines=Component.UNDEFINED, minLines=Component.UNDEFINED, minWidth=Component.UNDEFINED, multiline=Component.UNDEFINED, lastOnCancel=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_confirms=Component.UNDEFINED, n_edits=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, style=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'style', 'type', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'type', 'value']
+        self.available_properties = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'style', 'type', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

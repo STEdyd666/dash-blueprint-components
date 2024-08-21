@@ -69,6 +69,9 @@ Keyword arguments:
 - showClearButton (boolean; optional):
     Whether to show the clear button on Input.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagIntents (boolean; optional):
     cycle tags intents.
 
@@ -86,10 +89,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'MultiSelect'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, initialContent=Component.UNDEFINED, items=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnKeyDown=Component.UNDEFINED, placeholder=Component.UNDEFINED, resetOnClose=Component.UNDEFINED, resetOnQuery=Component.UNDEFINED, resetOnSelect=Component.UNDEFINED, selectedItems=Component.UNDEFINED, showClearButton=Component.UNDEFINED, tagRemoved=Component.UNDEFINED, tagLarge=Component.UNDEFINED, tagMinimal=Component.UNDEFINED, tagIntents=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'placeholder', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItems', 'showClearButton', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, initialContent=Component.UNDEFINED, items=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnKeyDown=Component.UNDEFINED, placeholder=Component.UNDEFINED, resetOnClose=Component.UNDEFINED, resetOnQuery=Component.UNDEFINED, resetOnSelect=Component.UNDEFINED, selectedItems=Component.UNDEFINED, showClearButton=Component.UNDEFINED, style=Component.UNDEFINED, tagRemoved=Component.UNDEFINED, tagLarge=Component.UNDEFINED, tagMinimal=Component.UNDEFINED, tagIntents=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'placeholder', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItems', 'showClearButton', 'style', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'placeholder', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItems', 'showClearButton', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved']
+        self.available_properties = ['id', 'className', 'disabled', 'fill', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'openOnKeyDown', 'placeholder', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItems', 'showClearButton', 'style', 'tagIntents', 'tagLarge', 'tagMinimal', 'tagRemoved']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

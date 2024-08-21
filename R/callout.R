@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-callout <- function(children=NULL, id=NULL, className=NULL, icon=NULL, intent=NULL, title=NULL) {
+callout <- function(children=NULL, id=NULL, className=NULL, icon=NULL, intent=NULL, style=NULL, title=NULL) {
     
-    props <- list(children=children, id=id, className=className, icon=icon, intent=intent, title=title)
+    props <- list(children=children, id=id, className=className, icon=icon, intent=intent, style=style, title=title)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ callout <- function(children=NULL, id=NULL, className=NULL, icon=NULL, intent=NU
         props = props,
         type = 'Callout',
         namespace = 'dash_blueprint_components',
-        propNames = c('children', 'id', 'className', 'icon', 'intent', 'title'),
+        propNames = c('children', 'id', 'className', 'icon', 'intent', 'style', 'title'),
         package = 'dashBlueprintComponents'
         )
 

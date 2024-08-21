@@ -24,6 +24,9 @@ Keyword arguments:
     Space-delimited string of class names applied to the Portal
     element if usePortal={True}.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - title (a list of or a singular dash component, string or number; optional):
     Title of the dialog. If provided, an element with
     Classes.DIALOG_HEADER will be rendered inside the dialog before
@@ -33,10 +36,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'DialogStep'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, panel=Component.UNDEFINED, portalClassName=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'panel', 'portalClassName', 'title']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, panel=Component.UNDEFINED, portalClassName=Component.UNDEFINED, style=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'panel', 'portalClassName', 'style', 'title']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'panel', 'portalClassName', 'title']
+        self.available_properties = ['id', 'className', 'panel', 'portalClassName', 'style', 'title']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

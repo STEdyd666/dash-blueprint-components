@@ -31,9 +31,10 @@ and uses the value of the intent prop below.
 - `isOpen` (Bool; optional): Toggles the visibility of the alert.
 - `loading` (Bool; optional): If set to true, the confirm button will be set to its loading state. The cancel button, 
 if visible, will be disabled.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function alert(; kwargs...)
-        available_props = Symbol[:children, :id, :canEscapeKeyCancel, :canOutsideClickCancel, :cancelButtonText, :className, :confirmButtonText, :fill, :icon, :intent, :isCanceled, :isClosed, :isConfirmed, :isOpen, :loading]
+        available_props = Symbol[:children, :id, :canEscapeKeyCancel, :canOutsideClickCancel, :cancelButtonText, :className, :confirmButtonText, :fill, :icon, :intent, :isCanceled, :isClosed, :isConfirmed, :isOpen, :loading, :style]
         wild_props = Symbol[]
         return Component("alert", "Alert", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

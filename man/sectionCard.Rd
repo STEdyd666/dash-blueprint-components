@@ -10,7 +10,8 @@ Multiple SectionCard child components can be added under one Section, they will 
 }
 
 \usage{
-sectionCard(children=NULL, id=NULL, className=NULL, padded=NULL)
+sectionCard(children=NULL, id=NULL, className=NULL, padded=NULL,
+style=NULL)
 }
 
 \arguments{
@@ -21,6 +22,8 @@ sectionCard(children=NULL, id=NULL, className=NULL, padded=NULL)
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
 
 \item{padded}{Logical. Whether to apply visual padding inside the content container element.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

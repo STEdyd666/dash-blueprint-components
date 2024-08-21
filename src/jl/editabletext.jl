@@ -41,11 +41,12 @@ This prop should not be changed during the component's lifetime.
 the cursor is placed at the end of the text. This prop is ignored on 
 inputs with type other then text, search, url, tel and password. 
 See https://html.spec.whatwg.org/multipage/input.html#do-not-apply for details.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `type` (String; optional): The type of input that should be shown, when not multiline.
 - `value` (String; optional): Text value of controlled input.
 """
 function editabletext(; kwargs...)
-        available_props = Symbol[:id, :alwaysRenderInput, :className, :confirmOnEnterKey, :defaultValue, :disabled, :intent, :lastOnCancel, :maxLength, :maxLines, :minLines, :minWidth, :multiline, :n_changes, :n_confirms, :n_edits, :placeholder, :selectAllOnFocus, :type, :value]
+        available_props = Symbol[:id, :alwaysRenderInput, :className, :confirmOnEnterKey, :defaultValue, :disabled, :intent, :lastOnCancel, :maxLength, :maxLines, :minLines, :minWidth, :multiline, :n_changes, :n_confirms, :n_edits, :placeholder, :selectAllOnFocus, :style, :type, :value]
         wild_props = Symbol[]
         return Component("editabletext", "EditableText", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

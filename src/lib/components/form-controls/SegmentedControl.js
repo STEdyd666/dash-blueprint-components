@@ -84,6 +84,11 @@ SegmentedControl.propTypes = {
     small: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Selected value. Mutually exclusive with defaultValue prop.
     */
     value: PropTypes.string,

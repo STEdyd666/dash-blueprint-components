@@ -10,7 +10,7 @@ Body of the dialog, optionally with a constrained container height which allows 
 }
 
 \usage{
-dialogBody(children=NULL, id=NULL, className=NULL,
+dialogBody(children=NULL, id=NULL, className=NULL, style=NULL,
 useOverflowScrollContainer=NULL)
 }
 
@@ -20,6 +20,8 @@ useOverflowScrollContainer=NULL)
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{useOverflowScrollContainer}{Logical. Enable scrolling for the container}
 }

@@ -16,9 +16,10 @@ Keyword arguments:
 in the container will be rendered in an overflow menu instead.
 - `minVisibleItems` (Real; optional): The minimum number of visible breadcrumbs that should never 
 collapse into the overflow menu, regardless of DOM dimensions.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function breadcrumb(; kwargs...)
-        available_props = Symbol[:id, :alwaysRenderOverflow, :className, :collapseFrom, :items, :minVisibleItems]
+        available_props = Symbol[:id, :alwaysRenderOverflow, :className, :collapseFrom, :items, :minVisibleItems, :style]
         wild_props = Symbol[]
         return Component("breadcrumb", "Breadcrumb", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

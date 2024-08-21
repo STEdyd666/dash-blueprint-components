@@ -156,6 +156,11 @@ MenuItem.propTypes = {
     shouldDismissPopover: PropTypes.bool,
     
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Name of the HTML tag that wraps the MenuItem.
     */
     tagName: PropTypes.elementType,

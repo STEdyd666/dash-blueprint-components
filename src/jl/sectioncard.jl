@@ -16,9 +16,10 @@ Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `padded` (Bool; optional): Whether to apply visual padding inside the content container element.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function sectioncard(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :padded]
+        available_props = Symbol[:children, :id, :className, :padded, :style]
         wild_props = Symbol[]
         return Component("sectioncard", "SectionCard", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

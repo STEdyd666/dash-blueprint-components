@@ -15,8 +15,8 @@ disabled=NULL, href=NULL, htmlTitle=NULL, icon=NULL,
 intent=NULL, label=NULL, labelClassName=NULL,
 labelElement=NULL, multiline=NULL, n_clicks=NULL,
 roleStructure=NULL, selected=NULL,
-shouldDismissPopover=NULL, tagName=NULL, target=NULL,
-text=NULL, textClassName=NULL)
+shouldDismissPopover=NULL, style=NULL, tagName=NULL,
+target=NULL, text=NULL, textClassName=NULL)
 }
 
 \arguments{
@@ -78,6 +78,8 @@ item (unless the icon prop is set, which always takes precedence).}
 
 \item{shouldDismissPopover}{Logical. Whether an enabled item without a submenu should automatically close 
 its parent popover when clicked.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{Name of the HTML tag that wraps the MenuItem.}
 

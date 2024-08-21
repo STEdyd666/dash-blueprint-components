@@ -45,6 +45,11 @@ Menu.propTypes = {
     small: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the menu.
+    */
+    style: PropTypes.object,
+
+    /**
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func

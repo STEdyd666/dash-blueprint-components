@@ -14,7 +14,7 @@ rangeSlider(id=NULL, className=NULL, disabled=NULL, format=NULL,
 initialValue=NULL, intent=NULL, labelPrecision=NULL,
 labelStepSize=NULL, labelValues=NULL, max=NULL, min=NULL,
 n_changes=NULL, n_releases=NULL, showTrackFill=NULL,
-stepSize=NULL, value=NULL, vertical=NULL)
+stepSize=NULL, style=NULL, value=NULL, vertical=NULL)
 }
 
 \arguments{
@@ -62,6 +62,8 @@ initial values, or between handles for RangeSlider.}
 
 \item{stepSize}{Numeric. Increment between successive values; amount by which the handle moves. 
 Must be greater than zero.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{value}{Unnamed list. Value of slider.}
 

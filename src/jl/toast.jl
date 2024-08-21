@@ -15,11 +15,12 @@ Keyword arguments:
 - `isCloseButtonShown` (Bool; optional): Whether to show the close button in the dialog's header. Note that the header will only be 
 rendered if title is provided.
 - `message` (a list of or a singular dash component, string or number; optional): Message to display in the body of the toast.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `timeout` (Real; optional): Milliseconds to wait before automatically dismissing toast. Providing a value less than or equal 
 to 0 will disable the timeout (this is discouraged).
 """
 function toast(; kwargs...)
-        available_props = Symbol[:id, :className, :icon, :intent, :isCloseButtonShown, :message, :timeout]
+        available_props = Symbol[:id, :className, :icon, :intent, :isCloseButtonShown, :message, :style, :timeout]
         wild_props = Symbol[]
         return Component("toast", "Toast", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

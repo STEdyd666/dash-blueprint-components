@@ -87,6 +87,11 @@ Section.propTypes = {
     ]),
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Title of the section. Note that the header will only be rendered if title is provided.
     */
     title: PropTypes.oneOfType([

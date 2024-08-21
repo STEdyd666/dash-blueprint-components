@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-select <- function(id=NULL, className=NULL, disabled=NULL, fill=NULL, filterable=NULL, initialContent=NULL, items=NULL, matchTargetWidth=NULL, minimal=NULL, resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL) {
+select <- function(id=NULL, className=NULL, disabled=NULL, fill=NULL, filterable=NULL, initialContent=NULL, items=NULL, matchTargetWidth=NULL, minimal=NULL, resetOnClose=NULL, resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL, style=NULL) {
     
-    props <- list(id=id, className=className, disabled=disabled, fill=fill, filterable=filterable, initialContent=initialContent, items=items, matchTargetWidth=matchTargetWidth, minimal=minimal, resetOnClose=resetOnClose, resetOnQuery=resetOnQuery, resetOnSelect=resetOnSelect, selectedItem=selectedItem)
+    props <- list(id=id, className=className, disabled=disabled, fill=fill, filterable=filterable, initialContent=initialContent, items=items, matchTargetWidth=matchTargetWidth, minimal=minimal, resetOnClose=resetOnClose, resetOnQuery=resetOnQuery, resetOnSelect=resetOnSelect, selectedItem=selectedItem, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ select <- function(id=NULL, className=NULL, disabled=NULL, fill=NULL, filterable
         props = props,
         type = 'Select',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'disabled', 'fill', 'filterable', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem'),
+        propNames = c('id', 'className', 'disabled', 'fill', 'filterable', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style'),
         package = 'dashBlueprintComponents'
         )
 

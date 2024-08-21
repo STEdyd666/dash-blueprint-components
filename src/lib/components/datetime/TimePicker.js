@@ -108,6 +108,11 @@ TimePicker.propTypes = {
     showArrowButtons: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Whether to use a 12 hour format with an AM/PM dropdown.
     */
     useAmPm: PropTypes.bool,

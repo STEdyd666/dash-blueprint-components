@@ -27,13 +27,14 @@ after a mouse click focuses the component's TagInput.
 - `resetOnSelect` (Bool; optional): Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.
 - `selectedItems` (Array; optional): Selected items
 - `showClearButton` (Bool; optional): Whether to show the clear button on Input
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagIntents` (Bool; optional): cycle tags intents
 - `tagLarge` (Bool; optional): Apply large style to tags
 - `tagMinimal` (Bool; optional): Apply minimal style to tags
 - `tagRemoved` (Dict; optional): Value updated when a tag is removed. Object with value and index of the tag
 """
 function multiselect(; kwargs...)
-        available_props = Symbol[:id, :className, :disabled, :fill, :initialContent, :items, :matchTargetWidth, :minimal, :openOnKeyDown, :placeholder, :resetOnClose, :resetOnQuery, :resetOnSelect, :selectedItems, :showClearButton, :tagIntents, :tagLarge, :tagMinimal, :tagRemoved]
+        available_props = Symbol[:id, :className, :disabled, :fill, :initialContent, :items, :matchTargetWidth, :minimal, :openOnKeyDown, :placeholder, :resetOnClose, :resetOnQuery, :resetOnSelect, :selectedItems, :showClearButton, :style, :tagIntents, :tagLarge, :tagMinimal, :tagRemoved]
         wild_props = Symbol[]
         return Component("multiselect", "MultiSelect", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

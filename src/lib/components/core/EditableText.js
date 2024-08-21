@@ -157,6 +157,11 @@ EditableText.propTypes = {
     selectAllOnFocus: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * The type of input that should be shown, when not multiline.
     */
     type: PropTypes.string,

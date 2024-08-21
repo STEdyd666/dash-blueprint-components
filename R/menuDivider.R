@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-menuDivider <- function(id=NULL, className=NULL, title=NULL) {
+menuDivider <- function(id=NULL, className=NULL, style=NULL, title=NULL) {
     
-    props <- list(id=id, className=className, title=title)
+    props <- list(id=id, className=className, style=style, title=title)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ menuDivider <- function(id=NULL, className=NULL, title=NULL) {
         props = props,
         type = 'MenuDivider',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'title'),
+        propNames = c('id', 'className', 'style', 'title'),
         package = 'dashBlueprintComponents'
         )
 

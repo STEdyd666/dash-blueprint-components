@@ -26,6 +26,9 @@ Keyword arguments:
     added when content  overflows to show the full text of the
     children on hover.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagName (optional):
     HTML tag name to use for rendered element.
 
@@ -36,10 +39,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Text'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, ellipsize=Component.UNDEFINED, tagName=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'ellipsize', 'tagName', 'title']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, ellipsize=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'ellipsize', 'style', 'tagName', 'title']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'ellipsize', 'tagName', 'title']
+        self.available_properties = ['children', 'id', 'className', 'ellipsize', 'style', 'tagName', 'title']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

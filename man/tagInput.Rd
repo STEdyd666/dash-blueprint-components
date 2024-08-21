@@ -13,7 +13,7 @@ Tag inputs render Tags inside an input, followed by an actual text input.  The c
 tagInput(children=NULL, id=NULL, addOnBlur=NULL, addOnPaste=NULL,
 autoResize=NULL, className=NULL, disabled=NULL, fill=NULL,
 intent=NULL, large=NULL, leftIcon=NULL, placeholder=NULL,
-separator=NULL, tagAdded=NULL, tagIntents=NULL,
+separator=NULL, style=NULL, tagAdded=NULL, tagIntents=NULL,
 tagLarge=NULL, tagMinimal=NULL, tagRemoved=NULL, values=NULL)
 }
 
@@ -54,6 +54,8 @@ Classes.LARGE via className on the parent control group and on the child input g
 
 \item{separator}{Logical. Whether to split input text into multiple values. Default value 
 splits on commas and newlines. Explicit false value disables splitting}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagAdded}{Unnamed list. Value updated when a new tag is added. Object with value and index of the tag}
 

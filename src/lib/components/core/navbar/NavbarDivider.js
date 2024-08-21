@@ -23,6 +23,11 @@ NavbarDivider.propTypes = {
     * A space-delimited list of class names to pass along to a child element.
     */
     className: PropTypes.string,
+
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
 };
 
 export default NavbarDivider;

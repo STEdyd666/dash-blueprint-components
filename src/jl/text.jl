@@ -18,11 +18,12 @@ Keyword arguments:
 - `ellipsize` (Bool; optional): Indicates that this component should be truncated with an ellipsis if it 
 overflows its container. The title attribute will also be added when content 
 overflows to show the full text of the children on hover.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (optional): HTML tag name to use for rendered element.
 - `title` (String; optional): HTML title of the element
 """
 function text(; kwargs...)
-        available_props = Symbol[:children, :id, :className, :ellipsize, :tagName, :title]
+        available_props = Symbol[:children, :id, :className, :ellipsize, :style, :tagName, :title]
         wild_props = Symbol[]
         return Component("text", "Text", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

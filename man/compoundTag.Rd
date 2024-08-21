@@ -14,7 +14,7 @@ compoundTag(children=NULL, id=NULL, active=NULL, className=NULL,
 fill=NULL, icon=NULL, intent=NULL, interactive=NULL,
 large=NULL, leftContent=NULL, minimal=NULL, n_clicks=NULL,
 n_clicks_remove=NULL, removable=NULL, rightIcon=NULL,
-round=NULL)
+round=NULL, style=NULL)
 }
 
 \arguments{
@@ -56,6 +56,8 @@ n_clicks_remove}
 \item{rightIcon}{Character. Name of a Blueprint UI icon (or an icon element) to render after the children.}
 
 \item{round}{Logical. Whether this tag should have rounded ends.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

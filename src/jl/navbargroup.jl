@@ -16,9 +16,10 @@ Keyword arguments:
 - `align` (String; optional): The side of the navbar on which the group should appear. The 
 Alignment enum provides constants for these values.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function navbargroup(; kwargs...)
-        available_props = Symbol[:children, :id, :align, :className]
+        available_props = Symbol[:children, :id, :align, :className, :style]
         wild_props = Symbol[]
         return Component("navbargroup", "NavbarGroup", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

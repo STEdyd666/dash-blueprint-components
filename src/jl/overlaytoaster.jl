@@ -15,13 +15,14 @@ that toasts do not interrupt the user's flow. Note that enforceFocus is always d
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `maxToasts` (Real; optional): Toasts to be displayed
 - `position` (String; optional): Position of Toaster within its container.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `toasts` (Array; optional): The maximum number of active toasts that can be displayed at once. When the limit is
  about to be exceeded, the oldest active toast is removed.
 - `usePortal` (Bool; optional): Whether the toaster should be rendered into a new element attached to document.body. If false, 
 then positioning will be relative to the parent element.
 """
 function overlaytoaster(; kwargs...)
-        available_props = Symbol[:id, :autoFocus, :canEscapeKeyClear, :className, :maxToasts, :position, :toasts, :usePortal]
+        available_props = Symbol[:id, :autoFocus, :canEscapeKeyClear, :className, :maxToasts, :position, :style, :toasts, :usePortal]
         wild_props = Symbol[]
         return Component("overlaytoaster", "OverlayToaster", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

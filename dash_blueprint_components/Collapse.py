@@ -33,6 +33,9 @@ Keyword arguments:
     is  closed. Setting to True may improve performance by avoiding
     re-mounting  children.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - transitionDuration (number; optional):
     The length of time the transition takes, in milliseconds. This
     must  match the duration of the animation in CSS. Only set this
@@ -43,10 +46,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Collapse'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, component=Component.UNDEFINED, isOpen=Component.UNDEFINED, keepChildrenMounted=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'className', 'component', 'isOpen', 'keepChildrenMounted', 'transitionDuration']
+    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, component=Component.UNDEFINED, isOpen=Component.UNDEFINED, keepChildrenMounted=Component.UNDEFINED, style=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'className', 'component', 'isOpen', 'keepChildrenMounted', 'style', 'transitionDuration']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'className', 'component', 'isOpen', 'keepChildrenMounted', 'transitionDuration']
+        self.available_properties = ['children', 'id', 'className', 'component', 'isOpen', 'keepChildrenMounted', 'style', 'transitionDuration']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

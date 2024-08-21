@@ -26,6 +26,9 @@ Keyword arguments:
 - labelStepSize (number; optional):
     Increment between successive labels. Must be greater than zero.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - trackStyleAfter (dict; optional):
     Style to use for the track segment immediately after this handle,
     taking priority over trackStyleBefore.
@@ -43,10 +46,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Handle'
     @_explicitize_args
-    def __init__(self, className=Component.UNDEFINED, intentAfter=Component.UNDEFINED, intentBefore=Component.UNDEFINED, interactionKind=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, trackStyleAfter=Component.UNDEFINED, trackStyleBefore=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.REQUIRED, **kwargs):
-        self._prop_names = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']
+    def __init__(self, className=Component.UNDEFINED, intentAfter=Component.UNDEFINED, intentBefore=Component.UNDEFINED, interactionKind=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, style=Component.UNDEFINED, trackStyleAfter=Component.UNDEFINED, trackStyleBefore=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.REQUIRED, **kwargs):
+        self._prop_names = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'style', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']
+        self.available_properties = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'style', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

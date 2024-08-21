@@ -43,6 +43,11 @@ ControlGroup.propTypes = {
     fill: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Whether the control group should appear with vertical styling.
     */
     vertical: PropTypes.bool,

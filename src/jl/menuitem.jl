@@ -53,13 +53,14 @@ aria-selected attribute and apply a "check" or "blank" icon on the
 item (unless the icon prop is set, which always takes precedence).
 - `shouldDismissPopover` (Bool; optional): Whether an enabled item without a submenu should automatically close 
 its parent popover when clicked.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (optional): Name of the HTML tag that wraps the MenuItem.
 - `target` (String; optional): Link target attribute. Use "_blank" to open in a new window.
 - `text` (a list of or a singular dash component, string or number; optional): Item text, required for usability.
 - `textClassName` (String; optional): A space-delimited list of class names to pass along to the text wrapper element.
 """
 function menuitem(; kwargs...)
-        available_props = Symbol[:children, :id, :active, :className, :disabled, :href, :htmlTitle, :icon, :intent, :label, :labelClassName, :labelElement, :multiline, :n_clicks, :roleStructure, :selected, :shouldDismissPopover, :tagName, :target, :text, :textClassName]
+        available_props = Symbol[:children, :id, :active, :className, :disabled, :href, :htmlTitle, :icon, :intent, :label, :labelClassName, :labelElement, :multiline, :n_clicks, :roleStructure, :selected, :shouldDismissPopover, :style, :tagName, :target, :text, :textClassName]
         wild_props = Symbol[]
         return Component("menuitem", "MenuItem", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

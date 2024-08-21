@@ -62,16 +62,19 @@ Keyword arguments:
 
 - loading (boolean; optional):
     If set to True, the confirm button will be set to its loading
-    state. The cancel button,  if visible, will be disabled."""
+    state. The cancel button,  if visible, will be disabled.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Alert'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, cancelButtonText=Component.UNDEFINED, canEscapeKeyCancel=Component.UNDEFINED, canOutsideClickCancel=Component.UNDEFINED, className=Component.UNDEFINED, confirmButtonText=Component.UNDEFINED, icon=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, isOpen=Component.UNDEFINED, loading=Component.UNDEFINED, isCanceled=Component.UNDEFINED, isConfirmed=Component.UNDEFINED, isClosed=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading']
+    def __init__(self, children=None, id=Component.UNDEFINED, cancelButtonText=Component.UNDEFINED, canEscapeKeyCancel=Component.UNDEFINED, canOutsideClickCancel=Component.UNDEFINED, className=Component.UNDEFINED, confirmButtonText=Component.UNDEFINED, icon=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, isOpen=Component.UNDEFINED, loading=Component.UNDEFINED, isCanceled=Component.UNDEFINED, isConfirmed=Component.UNDEFINED, isClosed=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading']
+        self.available_properties = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

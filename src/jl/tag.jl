@@ -36,9 +36,10 @@ which button was changed most recently.
 n_clicks_remove
 - `rightIcon` (String; optional): Name of a Blueprint UI icon (or an icon element) to render after the children.
 - `round` (Bool; optional): Whether this tag should have rounded ends.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function tag(; kwargs...)
-        available_props = Symbol[:children, :id, :active, :className, :fill, :htmlTitle, :icon, :intent, :interactive, :large, :minimal, :multiline, :n_clicks, :n_clicks_remove, :removable, :rightIcon, :round]
+        available_props = Symbol[:children, :id, :active, :className, :fill, :htmlTitle, :icon, :intent, :interactive, :large, :minimal, :multiline, :n_clicks, :n_clicks_remove, :removable, :rightIcon, :round, :style]
         wild_props = Symbol[]
         return Component("tag", "Tag", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

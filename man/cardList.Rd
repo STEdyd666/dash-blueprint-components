@@ -11,7 +11,7 @@ CardList is a lightweight wrapper around the Card component. It can be  used to 
 
 \usage{
 cardList(children=NULL, id=NULL, bordered=NULL, className=NULL,
-compact=NULL)
+compact=NULL, style=NULL)
 }
 
 \arguments{
@@ -30,6 +30,8 @@ design system. Be sure to test your UI in both light and dark theme if you modif
 \item{compact}{Logical. Whether this component should use compact styles with reduced visual padding. Note that this prop 
 affects styling for all Cards within this CardList and you do not need to set the compact prop 
 individually on those child Cards.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

@@ -15,9 +15,10 @@ Keyword arguments:
 - `contents` (Array; required): The data specifying the contents and appearance of the tree.
 - `current_contents` (Array; optional): Tree content updated after user interaction
 - `expanded_node` (Array; optional): Array of numbers representing a node's position in the tree when expanded
+- `style` (Dict; optional): CSS properties to apply to the root element.
 """
 function tree(; kwargs...)
-        available_props = Symbol[:id, :className, :clicked_node, :collapsed_node, :contents, :current_contents, :expanded_node]
+        available_props = Symbol[:id, :className, :clicked_node, :collapsed_node, :contents, :current_contents, :expanded_node, :style]
         wild_props = Symbol[]
         return Component("tree", "Tree", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

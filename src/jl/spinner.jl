@@ -13,6 +13,7 @@ Keyword arguments:
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
 - `intent` (String; optional): Visual intent color to apply to element.
 - `size` (Real; optional): Width and height of the spinner in pixels. The size cannot be less than 10px.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagName` (optional): HTML tag for the two wrapper elements. If rendering a <Spinner> inside an <svg>, 
 change this to an SVG element like "g".
 - `value` (Real; optional): A value between 0 and 1 (inclusive) representing how far along the operation is. 
@@ -20,7 +21,7 @@ Values below 0 or above 1 will be interpreted as 0 or 1 respectively. Omitting
 this prop will result in an "indeterminate" spinner where the head spins indefinitely.
 """
 function spinner(; kwargs...)
-        available_props = Symbol[:id, :className, :intent, :size, :tagName, :value]
+        available_props = Symbol[:id, :className, :intent, :size, :style, :tagName, :value]
         wild_props = Symbol[]
         return Component("spinner", "Spinner", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

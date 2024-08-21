@@ -19,10 +19,11 @@ Keyword arguments:
 - `large` (Bool; optional): Whether this control should use large buttons.
 - `options` (Array; optional): List of available options.
 - `small` (Bool; optional): Whether this control should use small buttons.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `value` (String; optional): Selected value. Mutually exclusive with defaultValue prop.
 """
 function segmentedcontrol(; kwargs...)
-        available_props = Symbol[:id, :className, :defaultValue, :fill, :inline, :intent, :large, :options, :small, :value]
+        available_props = Symbol[:id, :className, :defaultValue, :fill, :inline, :intent, :large, :options, :small, :style, :value]
         wild_props = Symbol[]
         return Component("segmentedcontrol", "SegmentedControl", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

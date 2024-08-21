@@ -87,6 +87,9 @@ Keyword arguments:
     Whether an enabled item without a submenu should automatically
     close  its parent popover when clicked.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - tagName (optional):
     Name of the HTML tag that wraps the MenuItem.
 
@@ -104,10 +107,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'MenuItem'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, href=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, label=Component.UNDEFINED, labelClassName=Component.UNDEFINED, labelElement=Component.UNDEFINED, multiline=Component.UNDEFINED, n_clicks=Component.UNDEFINED, roleStructure=Component.UNDEFINED, selected=Component.UNDEFINED, shouldDismissPopover=Component.UNDEFINED, tagName=Component.UNDEFINED, target=Component.UNDEFINED, text=Component.UNDEFINED, textClassName=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'tagName', 'target', 'text', 'textClassName']
+    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, href=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, label=Component.UNDEFINED, labelClassName=Component.UNDEFINED, labelElement=Component.UNDEFINED, multiline=Component.UNDEFINED, n_clicks=Component.UNDEFINED, roleStructure=Component.UNDEFINED, selected=Component.UNDEFINED, shouldDismissPopover=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, target=Component.UNDEFINED, text=Component.UNDEFINED, textClassName=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'style', 'tagName', 'target', 'text', 'textClassName']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'tagName', 'target', 'text', 'textClassName']
+        self.available_properties = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'style', 'tagName', 'target', 'text', 'textClassName']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

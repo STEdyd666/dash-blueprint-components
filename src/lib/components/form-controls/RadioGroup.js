@@ -110,6 +110,11 @@ RadioGroup.propTypes = {
     ]),
     
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object, 
+
+    /**
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func

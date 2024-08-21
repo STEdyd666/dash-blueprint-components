@@ -11,7 +11,7 @@ Footer of the dialog. Footer "actions" are rendered towards the right side of th
 
 \usage{
 dialogFooter(children=NULL, id=NULL, actions=NULL, className=NULL,
-minimal=NULL)
+minimal=NULL, style=NULL)
 }
 
 \arguments{
@@ -29,6 +29,8 @@ Note that this is the default behavior when using the CSS API, since that's how 
 so these styles are applied without a "modifier" class.
 When using the JS component API, minimal is false by default.
 Show the footer close from the content. Do not use with scroll body Use for small dialogs (confirm)}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

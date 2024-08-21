@@ -241,6 +241,11 @@ MultiSelect.propTypes = {
     showClearButton: PropTypes.bool,
 
     /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+
+    /**
     * Value updated when a tag is removed. Object with value and index of the tag
     */
     tagRemoved: PropTypes.object,

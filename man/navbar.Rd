@@ -10,7 +10,8 @@ Navbars present useful navigation controls at the top of an application.
 }
 
 \usage{
-navbar(children=NULL, id=NULL, className=NULL, fixedToTop=NULL)
+navbar(children=NULL, id=NULL, className=NULL, fixedToTop=NULL,
+style=NULL)
 }
 
 \arguments{
@@ -22,6 +23,8 @@ navbar(children=NULL, id=NULL, className=NULL, fixedToTop=NULL)
 
 \item{fixedToTop}{Logical. Whether this navbar should be fixed to the top of the viewport 
 (using CSS position: fixed)}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

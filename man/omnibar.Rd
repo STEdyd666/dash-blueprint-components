@@ -13,7 +13,7 @@ Omnibar is a macOS Spotlight-style typeahead component composing Overlay and Que
 omnibar(id=NULL, className=NULL, initialContent=NULL, isOpen=NULL,
 items=NULL, matchTargetWidth=NULL, minimal=NULL,
 overlayHasBackdrop=NULL, resetOnQuery=NULL,
-resetOnSelect=NULL, selectedItem=NULL)
+resetOnSelect=NULL, selectedItem=NULL, style=NULL)
 }
 
 \arguments{
@@ -40,6 +40,8 @@ behind the contents.}
 \item{resetOnSelect}{Logical. Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.}
 
 \item{selectedItem}{Named list. Selected item}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

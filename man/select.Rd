@@ -13,7 +13,8 @@ The Select component renders a UI to choose one item from a list.
 select(id=NULL, className=NULL, disabled=NULL, fill=NULL,
 filterable=NULL, initialContent=NULL, items=NULL,
 matchTargetWidth=NULL, minimal=NULL, resetOnClose=NULL,
-resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL)
+resetOnQuery=NULL, resetOnSelect=NULL, selectedItem=NULL,
+style=NULL)
 }
 
 \arguments{
@@ -45,6 +46,8 @@ If explicit null, nothing will be rendered when query is empty.}
 \item{resetOnSelect}{Logical. Whether the active item should be reset to the first matching item when an item is selected. The query will also be reset to the empty string.}
 
 \item{selectedItem}{Named list. Selected item}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

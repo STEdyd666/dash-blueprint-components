@@ -11,7 +11,7 @@ The Collapse element shows and hides content with a built-in slide in/out animat
 
 \usage{
 collapse(children=NULL, id=NULL, className=NULL, component=NULL,
-isOpen=NULL, keepChildrenMounted=NULL,
+isOpen=NULL, keepChildrenMounted=NULL, style=NULL,
 transitionDuration=NULL)
 }
 
@@ -30,6 +30,8 @@ Collapse inside a <table>, for instance.}
 \item{keepChildrenMounted}{Logical. Whether the child components will remain mounted when the Collapse is 
 closed. Setting to true may improve performance by avoiding re-mounting 
 children.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{transitionDuration}{Numeric. The length of time the transition takes, in milliseconds. This must 
 match the duration of the animation in CSS. Only set this prop if you 

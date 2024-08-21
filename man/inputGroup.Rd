@@ -10,12 +10,11 @@ Input groups are a basic building block used to render text inputs across many B
 }
 
 \usage{
-inputGroup(id=NULL, addOnBlur=NULL, className=NULL, debounce=NULL,
-defaultValue=NULL, disabled=NULL, fill=NULL,
-inputClassName=NULL, intent=NULL, large=NULL,
-leftElement=NULL, leftIcon=NULL, placeholder=NULL,
-rightElement=NULL, round=NULL, small=NULL, text=NULL,
-type=NULL, value=NULL)
+inputGroup(id=NULL, addOnBlur=NULL, className=NULL, defaultValue=NULL,
+disabled=NULL, fill=NULL, inputClassName=NULL, intent=NULL,
+large=NULL, leftElement=NULL, leftIcon=NULL,
+placeholder=NULL, rightElement=NULL, round=NULL, small=NULL,
+style=NULL, text=NULL, type=NULL, value=NULL)
 }
 
 \arguments{
@@ -25,11 +24,6 @@ type=NULL, value=NULL)
 is only invoked when enter is pressed.}
 
 \item{className}{Character. A space-delimited list of class names to pass along to a child element.}
-
-\item{debounce}{Logical. If true, changes to input will be sent back to the Dash server
-only when the enter key is pressed or when the component loses
-focus.  If it's false, it will sent the value back on every
-change.}
 
 \item{defaultValue}{Character | numeric. In uncontrolled mode, this sets the default value of the input. Note that this value is 
 only used upon component instantiation and changes to this prop during the component 
@@ -57,6 +51,8 @@ Classes.LARGE via className on the parent control group and on the child input g
 \item{round}{Logical. Whether the input (and any buttons) should appear with rounded caps.}
 
 \item{small}{Logical. Whether the file input should appear with small styling.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{text}{Character. Input text updated when input loses blur or on 'Enter' key press.}
 

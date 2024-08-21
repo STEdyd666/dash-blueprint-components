@@ -29,16 +29,19 @@ Keyword arguments:
 
 - minVisibleItems (number; optional):
     The minimum number of visible breadcrumbs that should never
-    collapse into the overflow menu, regardless of DOM dimensions."""
+    collapse into the overflow menu, regardless of DOM dimensions.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Breadcrumb'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, collapseFrom=Component.UNDEFINED, items=Component.UNDEFINED, minVisibleItems=Component.UNDEFINED, alwaysRenderOverflow=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems']
+    def __init__(self, id=Component.UNDEFINED, alwaysRenderOverflow=Component.UNDEFINED, className=Component.UNDEFINED, collapseFrom=Component.UNDEFINED, items=Component.UNDEFINED, minVisibleItems=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems']
+        self.available_properties = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

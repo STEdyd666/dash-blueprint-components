@@ -141,6 +141,13 @@
         "required": false,
         "description": "Whether this button should use small styles."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "text": {
         "type": {
           "name": "node"
@@ -194,6 +201,13 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
       },
+      "alwaysRenderOverflow": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to display all the collapsed items or just the last one"
+      },
       "className": {
         "type": {
           "name": "string"
@@ -226,12 +240,12 @@
         "required": false,
         "description": "The minimum number of visible breadcrumbs that should never \ncollapse into the overflow menu, regardless of DOM dimensions."
       },
-      "alwaysRenderOverflow": {
+      "style": {
         "type": {
-          "name": "bool"
+          "name": "object"
         },
         "required": false,
-        "description": "Whether to display all the collapsed items or just the last one"
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -514,6 +528,13 @@
         "required": false,
         "description": "Whether the button group should appear with vertical styling."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -562,6 +583,13 @@
         },
         "required": false,
         "description": "Visual intent color to apply to background, title, and icon. Defining this \nprop also applies a default icon, if the icon prop is omitted."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "title": {
         "type": {
@@ -697,6 +725,13 @@
         "required": false,
         "description": "Whether this component should use compact styles with reduced visual padding. Note that this prop \naffects styling for all Cards within this CardList and you do not need to set the compact prop \nindividually on those child Cards."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -752,6 +787,13 @@
         },
         "required": false,
         "description": "Whether the child components will remain mounted when the Collapse is \nclosed. Setting to true may improve performance by avoiding re-mounting \nchildren."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "transitionDuration": {
         "type": {
@@ -906,6 +948,13 @@
         "required": false,
         "description": "Whether this tag should have rounded ends."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -926,6 +975,13 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "tagName": {
         "type": {
@@ -1086,6 +1142,13 @@
         "required": false,
         "description": "Whether the entire text field should be selected on focus. If false, \nthe cursor is placed at the end of the text. This prop is ignored on \ninputs with type other then text, search, url, tel and password. \nSee https://html.spec.whatwg.org/multipage/input.html#do-not-apply for details."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "type": {
         "type": {
           "name": "string"
@@ -1197,6 +1260,13 @@
         "required": false,
         "description": "The content to render below the title. Defaults to render muted text."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tags": {
         "type": {
           "name": "node"
@@ -1304,7 +1374,7 @@
           "name": "object"
         },
         "required": false,
-        "description": "CSS style properties."
+        "description": "CSS properties to apply to the root element."
       },
       "tagName": {
         "type": {
@@ -1375,6 +1445,13 @@
         },
         "required": false,
         "description": "A value between 0 and 1 (inclusive) representing how far along the \noperation is. Values below 0 or above 1 will be interpreted as 0 or 1, \nrespectively. Omitting this prop will result in an \"indeterminate\" \nprogress meter that fills the entire bar."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -1468,6 +1545,13 @@
         "required": false,
         "description": "Sub-title of the section. Note that the header will only be rendered if title is provided."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "title": {
         "type": {
           "name": "union",
@@ -1525,6 +1609,13 @@
         "required": false,
         "description": "Whether to apply visual padding inside the content container element."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -1580,6 +1671,13 @@
         },
         "required": false,
         "description": "A value between 0 and 1 (inclusive) representing how far along the operation is. \nValues below 0 or above 1 will be interpreted as 0 or 1 respectively. Omitting \nthis prop will result in an \"indeterminate\" spinner where the head spins indefinitely."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -1734,6 +1832,13 @@
         "required": false,
         "description": "Whether this tag should have rounded ends."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -1775,6 +1880,13 @@
         },
         "required": false,
         "description": "Indicates that this component should be truncated with an ellipsis if it \noverflows its container. The title attribute will also be added when content \noverflows to show the full text of the children on hover."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "tagName": {
         "type": {
@@ -1852,6 +1964,13 @@
         },
         "required": false,
         "description": "Tree content updated after user interaction"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -2248,6 +2367,13 @@
         "required": false,
         "description": "Whether the menu items in this menu should use a small appearance."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the menu."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -2275,6 +2401,13 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "title": {
         "type": {
@@ -2446,6 +2579,13 @@
         "required": false,
         "description": "Whether an enabled item without a submenu should automatically close \nits parent popover when clicked."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagName": {
         "type": {
           "name": "elementType"
@@ -2516,6 +2656,13 @@
         "required": false,
         "description": "Whether this navbar should be fixed to the top of the viewport \n(using CSS position: fixed)"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -2536,6 +2683,13 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       }
     }
   },
@@ -2572,6 +2726,13 @@
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -2606,6 +2767,13 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -2655,6 +2823,13 @@
         },
         "required": false,
         "description": "initial route"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -3013,6 +3188,13 @@
         "required": false,
         "description": "Whether arrows for selecting the time should be shown."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "timePrecision": {
         "type": {
           "name": "string"
@@ -3173,6 +3355,13 @@
         },
         "required": false,
         "description": "Whether to show week numbers"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "timePrecision": {
         "type": {
@@ -3393,6 +3582,13 @@
         "required": false,
         "description": "Whether arrows for selecting the time should be shown."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "timePrecision": {
         "type": {
           "name": "string"
@@ -3540,6 +3736,13 @@
         "required": false,
         "description": "Whether to show week numbers"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "timePrecision": {
         "type": {
           "name": "string"
@@ -3638,6 +3841,13 @@
         "required": false,
         "description": "Whether to show arrows buttons for changing the time."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "useAmPm": {
         "type": {
           "name": "bool"
@@ -3714,6 +3924,13 @@
         },
         "required": false,
         "description": "Whether to show the local timezone at the top of the list of initial timezone suggestions."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "value": {
         "type": {
@@ -3834,6 +4051,13 @@
         "required": false,
         "description": "Whether this control should use large styles."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagName": {
         "type": {
           "name": "string"
@@ -3882,6 +4106,13 @@
         },
         "required": false,
         "description": "Whether the control group should take up the full width of its container."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "vertical": {
         "type": {
@@ -4184,6 +4415,13 @@
         "required": false,
         "description": "Whether this control should use large styles."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagName": {
         "type": {
           "name": "string"
@@ -4290,6 +4528,13 @@
         "required": false,
         "description": "Value of the selected radio. The child with this value will be :checked."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -4366,6 +4611,13 @@
         },
         "required": false,
         "description": "Whether this control should use small buttons."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "value": {
         "type": {
@@ -4479,6 +4731,13 @@
         "required": false,
         "description": "Whether this control should use large styles."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagName": {
         "type": {
           "name": "string"
@@ -4544,6 +4803,13 @@
         },
         "required": false,
         "description": "Increment between successive labels. Must be greater than zero."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "trackStyleAfter": {
         "type": {
@@ -4732,6 +4998,13 @@
         "required": false,
         "description": "Increment between successive values; amount by which the handle\nmoves. Must be greater than zero."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "vertical": {
         "type": {
           "name": "bool"
@@ -4876,6 +5149,13 @@
         },
         "required": false,
         "description": "Increment between successive values; amount by which the handle moves. \nMust be greater than zero."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "value": {
         "type": {
@@ -5029,6 +5309,13 @@
         "required": false,
         "description": "Increment between successive values; amount by which the handle moves. \nMust be greater than zero."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "value": {
         "type": {
           "name": "number"
@@ -5148,13 +5435,6 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
       },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A space-delimited list of class names to pass along to a child element."
-      },
       "addOnBlur": {
         "type": {
           "name": "bool"
@@ -5166,12 +5446,12 @@
           "computed": false
         }
       },
-      "debounce": {
+      "className": {
         "type": {
-          "name": "bool"
+          "name": "string"
         },
         "required": false,
-        "description": "If true, changes to input will be sent back to the Dash server\nonly when the enter key is pressed or when the component loses\nfocus.  If it's false, it will sent the value back on every\nchange."
+        "description": "A space-delimited list of class names to pass along to a child element."
       },
       "defaultValue": {
         "type": {
@@ -5279,6 +5559,13 @@
         "required": false,
         "description": "Input value that changes every time a new character is inserted."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "text": {
         "type": {
           "name": "string"
@@ -5306,6 +5593,17 @@
         },
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "addOnBlur": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd \nis only invoked when enter is pressed.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
       },
       "allowNumericCharactersOnly": {
         "type": {
@@ -5344,24 +5642,6 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
-      },
-      "addOnBlur": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd \nis only invoked when enter is pressed.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "debounce": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If true, changes to input will be sent back to the Dash server\nonly when the enter key is pressed or when the component loses\nfocus.  If it's false, it will sent the value back on every\nchange."
       },
       "defaultValue": {
         "type": {
@@ -5499,41 +5779,26 @@
         "required": false,
         "description": "The increment between successive values when no modifier keys are held."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Input value that changes every time a new character is inserted."
+      },
       "number": {
         "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "string"
-            },
-            {
-              "name": "number"
-            }
-          ]
+          "name": "string"
         },
         "required": false,
-        "description": "The value to display in the input field."
-      },
-      "type": {
-        "type": {
-          "name": "enum",
-          "value": [
-            {
-              "value": "'string'",
-              "computed": false
-            },
-            {
-              "value": "'number'",
-              "computed": false
-            }
-          ]
-        },
-        "required": false,
-        "description": "Type of the number. Either string or number. It takes effect only when debounce is set to False.\nFor debounce set to True, the type is always string.",
-        "defaultValue": {
-          "value": "'number'",
-          "computed": false
-        }
+        "description": "Input text updated when input loses blur or on 'Enter' key press."
       },
       "setProps": {
         "type": {
@@ -5651,6 +5916,13 @@
         "required": false,
         "description": "Whether to split input text into multiple values. Default value \nsplits on commas and newlines. Explicit false value disables splitting"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagAdded": {
         "type": {
           "name": "array"
@@ -5723,6 +5995,13 @@
         "required": false,
         "description": "The ID used to identify this component in Dash callbacks."
       },
+      "addOnBlur": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true, onAdd will be invoked when the input loses focus. Otherwise, onAdd \nis only invoked when enter is pressed."
+      },
       "autoResize": {
         "type": {
           "name": "bool"
@@ -5736,13 +6015,6 @@
         },
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
-      },
-      "debounce": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If true, changes to input will be sent back to the Dash server\nonly when the enter key is pressed or when the component loses\nfocus.  If it's false, it will sent the value back on every\nchange."
       },
       "disabled": {
         "type": {
@@ -5793,12 +6065,26 @@
         "required": false,
         "description": "Whether the file input should appear with small styling."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Input value that changes every time a new character is inserted."
+      },
       "text": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "Input text"
+        "description": "Input text updated when input loses blur or on 'Enter' key press."
       },
       "setProps": {
         "type": {
@@ -5923,6 +6209,13 @@
         "required": false,
         "description": "Value set when the user either confirm or cancel the alert"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -5965,6 +6258,13 @@
         "required": false,
         "description": "The content that will be displayed inside of the tooltip."
       },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether the context menu is disabled."
+      },
       "isOpen": {
         "type": {
           "name": "bool"
@@ -5972,12 +6272,12 @@
         "required": false,
         "description": "Whether the content is open."
       },
-      "disabled": {
+      "style": {
         "type": {
-          "name": "bool"
+          "name": "object"
         },
         "required": false,
-        "description": "Whether the context menu is disabled."
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -6408,6 +6708,13 @@
         "required": false,
         "description": "Whether the application should return focus to the last active element in the document after this popover closes. This is automatically set to false if \nthis is a hover interaction popover. If you are attaching a popover and a tooltip to the same target, you must take care to either disable this prop for \nthe popover or disable the tooltip's openOnTargetFocus prop."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "transitionDuration": {
         "type": {
           "name": "number"
@@ -6596,6 +6903,13 @@
         },
         "required": false,
         "description": "The position (relative to the target) at which the popover should appear. Mutually exclusive with placement prop. The default value of \n\"auto\" will choose the best position when opened and will allow the popover to reposition itself to remain onscreen as the user scrolls \naround."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "transitionDuration": {
         "type": {
@@ -6804,6 +7118,13 @@
         "required": false,
         "description": "Enable scrolling for the container"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -6853,6 +7174,13 @@
         "required": false,
         "description": "Use a \"minimal\" appearance for the footer, simply applying an HTML role and some visual padding. This is useful for small dialogs, \nand should not be used with <DialogBody useOverflowScrollContainer>.\nNote that this is the default behavior when using the CSS API, since that's how the -dialog-footer class was first introduced, \nso these styles are applied without a \"modifier\" class.\nWhen using the JS component API, minimal is false by default.\nShow the footer close from the content. Do not use with scroll body Use for small dialogs (confirm)"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -6894,6 +7222,13 @@
         },
         "required": false,
         "description": "Space-delimited string of class names applied to the Portal element if usePortal={true}."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "title": {
         "type": {
@@ -7169,6 +7504,13 @@
         "required": false,
         "description": "Whether the toaster should be rendered into a new element attached to document.body. If false, \nthen positioning will be relative to the parent element."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "setProps": {
         "type": {
           "name": "func"
@@ -7231,6 +7573,13 @@
         },
         "required": false,
         "description": "Milliseconds to wait before automatically dismissing toast. Providing a value less than or equal \nto 0 will disable the timeout (this is discouraged)."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "setProps": {
         "type": {
@@ -7363,6 +7712,13 @@
         "required": false,
         "description": "Whether to show the clear button on Input"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "tagRemoved": {
         "type": {
           "name": "object"
@@ -7468,6 +7824,13 @@
         "required": false,
         "description": "Selected item"
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "resetOnQuery": {
         "type": {
           "name": "bool"
@@ -7565,6 +7928,13 @@
         },
         "required": false,
         "description": "Selected item"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "resetOnClose": {
         "type": {
@@ -7677,6 +8047,13 @@
         },
         "required": false,
         "description": "Selected item"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
       },
       "resetOnClose": {
         "type": {

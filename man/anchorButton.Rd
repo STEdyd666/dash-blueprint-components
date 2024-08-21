@@ -14,7 +14,7 @@ anchorButton(children=NULL, id=NULL, active=NULL, alignText=NULL,
 className=NULL, disabled=NULL, fill=NULL, href=NULL,
 icon=NULL, intent=NULL, large=NULL, loading=NULL,
 minimal=NULL, n_clicks=NULL, outlined=NULL, rightIcon=NULL,
-small=NULL, text=NULL, type=NULL)
+small=NULL, style=NULL, text=NULL, type=NULL)
 }
 
 \arguments{
@@ -62,6 +62,8 @@ which button was changed most recently.}
 \item{rightIcon}{A list of or a singular dash component, string or number. Name of a Blueprint UI icon (or an icon element) to render after the text.}
 
 \item{small}{Logical. Whether this button should use small styles.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{text}{A list of or a singular dash component, string or number. Action text. Can be any single React renderable.}
 

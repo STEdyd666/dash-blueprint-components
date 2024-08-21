@@ -44,7 +44,7 @@ which button was changed most recently.}
 \item{size}{Numeric. Size of the icon, in pixels. Blueprint contains 16px and 20px SVG icon images, 
 and chooses the appropriate resolution based on this prop.}
 
-\item{style}{Named list. CSS style properties.}
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{tagName}{HTML tag to use for the rendered element.}
 

@@ -11,16 +11,19 @@ Keyword arguments:
 
 - className (string; optional):
     A space-delimited list of class names to pass along to a child
-    element."""
+    element.
+
+- style (dict; optional):
+    CSS properties to apply to the root element."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'NavbarDivider'
     @_explicitize_args
-    def __init__(self, className=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['className']
+    def __init__(self, className=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['className', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['className']
+        self.available_properties = ['className', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

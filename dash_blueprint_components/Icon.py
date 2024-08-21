@@ -51,7 +51,7 @@ Keyword arguments:
     prop.
 
 - style (dict; optional):
-    CSS style properties.
+    CSS properties to apply to the root element.
 
 - tagName (optional):
     HTML tag to use for the rendered element.

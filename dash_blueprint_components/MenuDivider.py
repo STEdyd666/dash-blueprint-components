@@ -16,6 +16,9 @@ Keyword arguments:
     A space-delimited list of class names to pass along to a child
     element.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - title (string; optional):
     Optional header title."""
     _children_props = []
@@ -23,10 +26,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'MenuDivider'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'title']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, style=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'style', 'title']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'title']
+        self.available_properties = ['id', 'className', 'style', 'title']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

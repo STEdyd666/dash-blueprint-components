@@ -62,15 +62,20 @@ ContextMenu.propTypes = {
     content: PropTypes.node,
 
     /**
+    * Whether the context menu is disabled.
+    */
+    disabled: PropTypes.bool,
+    
+    /**
     * Whether the content is open.
     */
     isOpen: PropTypes.bool,
 
     /**
-    * Whether the context menu is disabled.
+    * CSS properties to apply to the root element.
     */
-    disabled: PropTypes.bool,
-    
+    style: PropTypes.object, 
+
     /**
     * Dash-assigned callback that gets fired when the value changes.
     */

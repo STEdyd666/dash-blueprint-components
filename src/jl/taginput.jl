@@ -37,6 +37,7 @@ Classes.LARGE via className on the parent control group and on the child input g
 - `placeholder` (String; optional): Placeholder text in the absence of any value.
 - `separator` (Bool; optional): Whether to split input text into multiple values. Default value 
 splits on commas and newlines. Explicit false value disables splitting
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagAdded` (Array; optional): Value updated when a new tag is added. Object with value and index of the tag
 - `tagIntents` (Bool; optional): cycle tag intent
 - `tagLarge` (Bool; optional): Apply large style to tags
@@ -45,7 +46,7 @@ splits on commas and newlines. Explicit false value disables splitting
 - `values` (a list of or a singular dash component, string or number; optional): Controlled tag values. Each value will be rendered inside a Tag.
 """
 function taginput(; kwargs...)
-        available_props = Symbol[:children, :id, :addOnBlur, :addOnPaste, :autoResize, :className, :disabled, :fill, :intent, :large, :leftIcon, :placeholder, :separator, :tagAdded, :tagIntents, :tagLarge, :tagMinimal, :tagRemoved, :values]
+        available_props = Symbol[:children, :id, :addOnBlur, :addOnPaste, :autoResize, :className, :disabled, :fill, :intent, :large, :leftIcon, :placeholder, :separator, :style, :tagAdded, :tagIntents, :tagLarge, :tagMinimal, :tagRemoved, :values]
         wild_props = Symbol[]
         return Component("taginput", "TagInput", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -37,12 +37,13 @@ the right of the year menu.
 no shortcuts will be displayed.
 - `showTimeArrowButtons` (Bool; optional): Whether arrows for selecting the time should be shown.
 - `singleMonthOnly` (Bool; optional): Whether to show only a single month calendar.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `timePrecision` (String; optional): The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'
 - `useAmPm` (Bool; optional): Whether the time should be displayed as AM/PM
 """
 function daterangeinput(; kwargs...)
-        available_props = Symbol[:id, :allowSingleDayRange, :className, :closeOnSelection, :contiguousCalendarMonths, :dateFnsFormat, :defaultValue, :disabled, :fill, :footerElement, :highlightCurrentDay, :initialMonth, :invalidDateMessage, :locale, :outOfRangeMessage, :overlappingDatesMessage, :placeholder, :range, :reverseMonthAndYearMenus, :selectAllOnFocus, :selectedShortcutIndex, :shortcuts, :showTimeArrowButtons, :singleMonthOnly, :timePrecision, :useAmPm]
+        available_props = Symbol[:id, :allowSingleDayRange, :className, :closeOnSelection, :contiguousCalendarMonths, :dateFnsFormat, :defaultValue, :disabled, :fill, :footerElement, :highlightCurrentDay, :initialMonth, :invalidDateMessage, :locale, :outOfRangeMessage, :overlappingDatesMessage, :placeholder, :range, :reverseMonthAndYearMenus, :selectAllOnFocus, :selectedShortcutIndex, :shortcuts, :showTimeArrowButtons, :singleMonthOnly, :style, :timePrecision, :useAmPm]
         wild_props = Symbol[]
         return Component("daterangeinput", "DateRangeInput", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

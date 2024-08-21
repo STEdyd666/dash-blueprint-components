@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-segmentedControl <- function(id=NULL, className=NULL, defaultValue=NULL, fill=NULL, inline=NULL, intent=NULL, large=NULL, options=NULL, small=NULL, value=NULL) {
+segmentedControl <- function(id=NULL, className=NULL, defaultValue=NULL, fill=NULL, inline=NULL, intent=NULL, large=NULL, options=NULL, small=NULL, style=NULL, value=NULL) {
     
-    props <- list(id=id, className=className, defaultValue=defaultValue, fill=fill, inline=inline, intent=intent, large=large, options=options, small=small, value=value)
+    props <- list(id=id, className=className, defaultValue=defaultValue, fill=fill, inline=inline, intent=intent, large=large, options=options, small=small, style=style, value=value)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ segmentedControl <- function(id=NULL, className=NULL, defaultValue=NULL, fill=NU
         props = props,
         type = 'SegmentedControl',
         namespace = 'dash_blueprint_components',
-        propNames = c('id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'value'),
+        propNames = c('id', 'className', 'defaultValue', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value'),
         package = 'dashBlueprintComponents'
         )
 

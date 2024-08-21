@@ -21,7 +21,8 @@ placeholder=NULL, reverseMonthAndYearMenus=NULL,
 rightElement=NULL, selectedShortcutIndex=NULL,
 shortcuts=NULL, showActionsBar=NULL,
 showTimeArrowButtons=NULL, showTimezoneSelect=NULL,
-timePrecision=NULL, todayButtonText=NULL, useAmPm=NULL)
+style=NULL, timePrecision=NULL, todayButtonText=NULL,
+useAmPm=NULL)
 }
 
 \arguments{
@@ -84,6 +85,8 @@ no shortcuts will be displayed.}
 \item{showTimeArrowButtons}{Logical. Whether arrows for selecting the time should be shown.}
 
 \item{showTimezoneSelect}{Logical. Whether to show the timezone select dropdown on the right side of the input. If timePrecision is undefined, this will always be false.}
+
+\item{style}{Named list. CSS properties to apply to the root element.}
 
 \item{timePrecision}{Character. The precision of time selection that accompanies the calendar. Passing a TimePrecision value
 shows a TimePicker below the calendar. Time is preserved across date changes. Either 'minute', 'second', 'millisecond'}
