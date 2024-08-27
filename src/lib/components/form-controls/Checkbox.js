@@ -26,7 +26,8 @@ const Checkbox = props => {
     }
 
     return (
-        <BPCheckbox 
+        <BPCheckbox
+          checked={checked}
           disabled={disabled}
           onChange={handleOnChange} 
           indeterminate={indeterminate} 
