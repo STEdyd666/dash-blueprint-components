@@ -26,7 +26,11 @@ const FileInput = props => {
     }
 
     return (
-        <BPFileInput onInputChange={(e) => handleOnInputChange(e.target.files[0])} {...others}/>
+        <BPFileInput 
+          onInputChange={(e) => handleOnInputChange(e.target.files[0])} 
+          disabled={disabled}
+          {...others}
+        />
     )
 }
 
@@ -79,6 +83,11 @@ FileInput.propTypes = {
     */
     small: PropTypes.bool,
 
+    /**
+    * CSS properties to apply to the root element.
+    */
+    style: PropTypes.object,
+    
     /**
     * The text to display.
     */
