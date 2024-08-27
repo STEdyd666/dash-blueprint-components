@@ -5407,6 +5407,13 @@
         "required": false,
         "description": "Whether the file input should appear with small styling."
       },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "CSS properties to apply to the root element."
+      },
       "text": {
         "type": {
           "name": "string"

@@ -40,6 +40,9 @@ Keyword arguments:
 - small (boolean; optional):
     Whether the file input should appear with small styling.
 
+- style (dict; optional):
+    CSS properties to apply to the root element.
+
 - text (string; optional):
     The text to display."""
     _children_props = []
@@ -47,10 +50,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'FileInput'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, buttonText=Component.UNDEFINED, content=Component.UNDEFINED, filename=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, hasSelection=Component.UNDEFINED, large=Component.UNDEFINED, small=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'text']
+    def __init__(self, id=Component.UNDEFINED, buttonText=Component.UNDEFINED, content=Component.UNDEFINED, filename=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, hasSelection=Component.UNDEFINED, large=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'style', 'text']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'text']
+        self.available_properties = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'style', 'text']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

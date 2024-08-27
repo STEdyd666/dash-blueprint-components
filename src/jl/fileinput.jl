@@ -20,10 +20,11 @@ the component's text styling. Make sure to set a non-empty value for
 the text prop as well.
 - `large` (Bool; optional): Whether the file input should appear with large styling.
 - `small` (Bool; optional): Whether the file input should appear with small styling.
+- `style` (Dict; optional): CSS properties to apply to the root element.
 - `text` (String; optional): The text to display.
 """
 function fileinput(; kwargs...)
-        available_props = Symbol[:id, :buttonText, :content, :disabled, :filename, :fill, :hasSelection, :large, :small, :text]
+        available_props = Symbol[:id, :buttonText, :content, :disabled, :filename, :fill, :hasSelection, :large, :small, :style, :text]
         wild_props = Symbol[]
         return Component("fileinput", "FileInput", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end
