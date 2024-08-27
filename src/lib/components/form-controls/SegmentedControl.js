@@ -44,14 +44,6 @@ SegmentedControl.propTypes = {
     className: PropTypes.string,
 
     /**
-     * Initial value when using component in uncontrolled mode. If value prop is
-     * also defined, this value is ignored. Setting this prop, does not initialize
-     * the value prop. Use the value prop if you need to listen or read the value
-     * of the component in a callback, i.e. use the value in a State or Input.
-     */
-    defaultValue: PropTypes.string,
-
-    /**
      * If true, the option buttons are non-interactive. The value can still
      * controllable via callback if disabled is true. Default is false.
      */
