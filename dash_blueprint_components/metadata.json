@@ -4545,7 +4545,7 @@
     }
   },
   "src/lib/components/form-controls/SegmentedControl.js": {
-    "description": "A SegmentedControl is a linear collection of buttons which allows a user to choose an option from multiple choices, \nsimilar to a Radio group. Compared to the ButtonGroup component, SegmentedControl has affordances to signify a \nselection UI and a reduced visual weight which is appropriate for forms.",
+    "description": "A SegmentedControl is a linear collection of buttons which allows a user to choose an option from multiple choices,\n similar to a Radio group. Compared to the ButtonGroup component, SegmentedControl has affordances to signify a\n selection UI and a reduced visual weight which is appropriate for forms.",
     "displayName": "SegmentedControl",
     "methods": [],
     "props": {
@@ -4568,7 +4568,18 @@
           "name": "string"
         },
         "required": false,
-        "description": "Initial value. Mutually exclusive with value prop."
+        "description": "Initial value when using component in uncontrolled mode. If value prop is\nalso defined, this value is ignored. Setting this prop, does not initialize\nthe value prop. Use the value prop if you need to listen or read the value\nof the component in a callback, i.e. use the value in a State or Input."
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If true, the option buttons are non-interactive. The value can still\ncontrollable via callback if disabled is true. Default is false.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
       },
       "fill": {
         "type": {
@@ -4624,7 +4635,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "Selected value. Mutually exclusive with defaultValue prop."
+        "description": "Selected value. When a value is given to this prop, the defaultValue is ignored.\nWhen using the value of this component as a state or input in a callback,\nuse this property instead of defaultValue."
       },
       "setProps": {
         "type": {
