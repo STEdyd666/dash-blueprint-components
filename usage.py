@@ -25,13 +25,11 @@ app.layout = html.Div(
         dbpc.SegmentedControl(
             id="segmented-control",
             options=options,
-            defaultValue="list",
             value="list",
         ),
         dbpc.SegmentedControl(
             id="segmented-control_2",
             options=options,
-            value=None,
             disabled=True,
         ),
         dbpc.Button(
@@ -74,12 +72,15 @@ def show_value(value, read_value):
     Output("input-group_2", "value"),
     Input("read_control_2_value", "n_clicks"),
     State("segmented-control", "value"),
+    State("segmented-control", "value"),
 )
-def show_control_1_value(read_value, value):
+def show_control_1_value(read_value, value1, value2):
     if not read_value:
         raise dash.exceptions.PreventUpdate
-    if value is None:
-        value = "No value detected"
-    return value
+    if value1 is None:
+        value1 = "No value detected for control 1"
+    if value2 is None:
+        value2 = "No value detected for control 2"
+    return f"Control 1 value: {value1}, Control 2 value: {value2}"
 
 app.run(debug=True)
