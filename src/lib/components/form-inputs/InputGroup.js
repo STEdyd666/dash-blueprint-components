@@ -12,7 +12,6 @@ const InputGroup = props => {
 
     const {
       addOnBlur,
-      debounce,
       disabled,
       value,
       text,
