@@ -4563,13 +4563,6 @@
         "required": false,
         "description": "A space-delimited list of class names to pass along to a child element."
       },
-      "defaultValue": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Initial value when using component in uncontrolled mode. If value prop is\nalso defined, this value is ignored. Setting this prop, does not initialize\nthe value prop. Use the value prop if you need to listen or read the value\nof the component in a callback, i.e. use the value in a State or Input."
-      },
       "disabled": {
         "type": {
           "name": "bool"

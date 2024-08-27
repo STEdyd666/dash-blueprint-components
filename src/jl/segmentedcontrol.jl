@@ -12,10 +12,6 @@ A SegmentedControl is a linear collection of buttons which allows a user to choo
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
-- `defaultValue` (String; optional): Initial value when using component in uncontrolled mode. If value prop is
-also defined, this value is ignored. Setting this prop, does not initialize
-the value prop. Use the value prop if you need to listen or read the value
-of the component in a callback, i.e. use the value in a State or Input.
 - `disabled` (Bool; optional): If true, the option buttons are non-interactive. The value can still
 controllable via callback if disabled is true. Default is false.
 - `fill` (Bool; optional): Whether the control group should take up the full width of its container.
@@ -30,7 +26,7 @@ When using the value of this component as a state or input in a callback,
 use this property instead of defaultValue.
 """
 function segmentedcontrol(; kwargs...)
-        available_props = Symbol[:id, :className, :defaultValue, :disabled, :fill, :inline, :intent, :large, :options, :small, :style, :value]
+        available_props = Symbol[:id, :className, :disabled, :fill, :inline, :intent, :large, :options, :small, :style, :value]
         wild_props = Symbol[]
         return Component("segmentedcontrol", "SegmentedControl", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

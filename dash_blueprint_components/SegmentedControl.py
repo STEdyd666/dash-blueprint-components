@@ -18,13 +18,6 @@ Keyword arguments:
     A space-delimited list of class names to pass along to a child
     element.
 
-- defaultValue (string; optional):
-    Initial value when using component in uncontrolled mode. If value
-    prop is also defined, this value is ignored. Setting this prop,
-    does not initialize the value prop. Use the value prop if you need
-    to listen or read the value of the component in a callback, i.e.
-    use the value in a State or Input.
-
 - disabled (boolean; default False):
     If True, the option buttons are non-interactive. The value can
     still controllable via callback if disabled is True. Default is
@@ -62,10 +55,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'SegmentedControl'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, options=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'defaultValue', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, options=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'defaultValue', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
+        self.available_properties = ['id', 'className', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

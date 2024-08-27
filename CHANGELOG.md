@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [UNRELEASED]
+## [0.1.1]
 
 ### Added
 - [#4](https://github.com/STEdyd666/dash-blueprint-components/pull/4) `SegmentedControl` now has a `disabled` prop that allows the user to disable interaction of the component.

@@ -1,6 +1,6 @@
 {
   "name": "dash_blueprint_components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dash plotly porting of BlueprintJS",
   "main": "build/index.js",
   "scripts": {
