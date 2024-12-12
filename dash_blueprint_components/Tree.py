@@ -16,13 +16,8 @@ Keyword arguments:
     A space-delimited list of class names to pass along to a child
     element.
 
-- clicked_node (list; optional):
-    Array of numbers representing a node's position in the tree when
-    clicked.
-
-- collapsed_node (list; optional):
-    Array of numbers representing a node's position in the tree when
-    collapsed.
+- clicked_node (dict; optional):
+    Node info when clicked.
 
 - contents (list; required):
     The data specifying the contents and appearance of the tree.
@@ -30,9 +25,8 @@ Keyword arguments:
 - current_contents (list; optional):
     Tree content updated after user interaction.
 
-- expanded_node (list; optional):
-    Array of numbers representing a node's position in the tree when
-    expanded.
+- expanded_node (dict; optional):
+    Node info when expanded/collapsed.
 
 - style (dict; optional):
     CSS properties to apply to the root element."""
@@ -41,10 +35,10 @@ Keyword arguments:
     _namespace = 'dash_blueprint_components'
     _type = 'Tree'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, contents=Component.REQUIRED, clicked_node=Component.UNDEFINED, collapsed_node=Component.UNDEFINED, expanded_node=Component.UNDEFINED, current_contents=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'clicked_node', 'collapsed_node', 'contents', 'current_contents', 'expanded_node', 'style']
+    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, contents=Component.REQUIRED, clicked_node=Component.UNDEFINED, expanded_node=Component.UNDEFINED, current_contents=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'clicked_node', 'contents', 'current_contents', 'expanded_node', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'clicked_node', 'collapsed_node', 'contents', 'current_contents', 'expanded_node', 'style']
+        self.available_properties = ['id', 'className', 'clicked_node', 'contents', 'current_contents', 'expanded_node', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

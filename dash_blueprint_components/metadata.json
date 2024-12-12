@@ -1939,24 +1939,17 @@
       },
       "clicked_node": {
         "type": {
-          "name": "array"
+          "name": "object"
         },
         "required": false,
-        "description": "Array of numbers representing a node's position in the tree when clicked"
-      },
-      "collapsed_node": {
-        "type": {
-          "name": "array"
-        },
-        "required": false,
-        "description": "Array of numbers representing a node's position in the tree when collapsed"
+        "description": "Node info when clicked."
       },
       "expanded_node": {
         "type": {
-          "name": "array"
+          "name": "object"
         },
         "required": false,
-        "description": "Array of numbers representing a node's position in the tree when expanded"
+        "description": "Node info when expanded/collapsed."
       },
       "current_contents": {
         "type": {

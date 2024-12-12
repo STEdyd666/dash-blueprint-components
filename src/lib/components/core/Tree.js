@@ -23,17 +23,6 @@ const Tree = props => {
         ...others
     } = props
     
-    const renderContents = (children) => {
-        // return contents.map((node) => {
-        //     console.log(node)
-        //     return <TreeNode {...node.props._dashprivate_layout.props}/>
-        // })
-        return contents.map((node) => {
-            // console.log(node.props)
-            return <TreeNode label={'sono io'}/>
-        })
-    }
-
 
     const [nodes, dispatch] = useReducer(treeReducer, contents)
 
@@ -84,29 +73,49 @@ const Tree = props => {
                 type: "SET_IS_SELECTED",
             })
             setProps({
-                clicked_node: nodePath,
+                clicked_node: {
+                    depth: node.depth,
+                    icon: node.icon,
+                    label: node.label,
+                    path: node.path,
+                    isSelected: !node.isSelected
+                },
             })
         },
         [],
     )
     
-    const handleNodeExpand = React.useCallback((_node, nodePath) => {
+    const handleNodeExpand = React.useCallback((node, nodePath) => {
         dispatch({
             payload: { path: nodePath, isExpanded: true },
             type: "SET_IS_EXPANDED",
         })
+        
         setProps({
-            expanded_node: nodePath,
+            expanded_node: {
+                depth: node.depth,
+                icon: node.icon,
+                label: node.label,
+                path: node.path,
+                isExpanded: true
+            }
         })
     }, [])
 
-    const handleNodeCollapse = React.useCallback((_node, nodePath) => {
+    const handleNodeCollapse = React.useCallback((node, nodePath) => {
         dispatch({
             payload: { path: nodePath, isExpanded: false },
             type: "SET_IS_EXPANDED",
         })
+
         setProps({
-            collapsed_node: nodePath,
+            expanded_node: {
+                depth: node.depth,
+                icon: node.icon,
+                label: node.label,
+                path: node.path,
+                isExpanded: false
+            }
         })
     }, [])
 
@@ -152,19 +161,14 @@ Tree.propTypes = {
     contents: PropTypes.array.isRequired,
 
     /**
-    * Array of numbers representing a node's position in the tree when clicked
+    * Node info when clicked.
     */
-    clicked_node: PropTypes.array,
+    clicked_node: PropTypes.object,
 
     /**
-    * Array of numbers representing a node's position in the tree when collapsed
+    * Node info when expanded/collapsed.
     */
-    collapsed_node: PropTypes.array,
-
-    /**
-    * Array of numbers representing a node's position in the tree when expanded
-    */
-    expanded_node: PropTypes.array,
+    expanded_node: PropTypes.object,
 
     /**
     * Tree content updated after user interaction
