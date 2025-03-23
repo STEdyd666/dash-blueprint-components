@@ -1,6 +1,6 @@
 {
   "name": "dash_blueprint_components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Dash plotly porting of BlueprintJS",
   "main": "build/index.js",
   "scripts": {
@@ -41,9 +41,9 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-react": "^7.14.2",
     "prop-types": "^15.8.1",
-    "react": "^16.8.6",
+    "react": "^16.14.0",
     "react-docgen": "^5.4.3",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.14.0",
     "style-loader": "^3.3.3",
     "styled-jsx": "^3.2.1",
     "webpack": "^5.84.1",

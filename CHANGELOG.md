@@ -30,3 +30,9 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Removed `collapsed_node` prop in `Tree` component. Its functionality it has been integrated in the `expanded_node` prop.
+
+## [0.2.1] - 2025-03-25
+
+### Added
+
+- Pinned dash version below 3.
