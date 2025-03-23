@@ -39,7 +39,7 @@ Classes.LARGE via className on the parent control group and on the child input g
 splits on commas and newlines. Explicit false value disables splitting
 - `style` (Dict; optional): CSS properties to apply to the root element.
 - `tagAdded` (Array; optional): Value updated when a new tag is added. Object with value and index of the tag
-- `tagIntents` (Bool; optional): cycle tag intent
+- `tagIntents` (Bool; optional): cycle tags intents
 - `tagLarge` (Bool; optional): Apply large style to tags
 - `tagMinimal` (Bool; optional): Apply minimal style to tags
 - `tagRemoved` (Dict; optional): Value updated when a tag is removed. Object with value and index of the tag

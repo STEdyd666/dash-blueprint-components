@@ -9,7 +9,6 @@ import { Toast2 as BPToast} from "@blueprintjs/core";
 const Toast = props => {
 
     const {
-      setProps,
       ...others
     } = props;
     

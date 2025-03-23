@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Toast(Component):
@@ -29,9 +36,6 @@ Keyword arguments:
 - message (a list of or a singular dash component, string or number; optional):
     Message to display in the body of the toast.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - timeout (number; optional):
     Milliseconds to wait before automatically dismissing toast.
     Providing a value less than or equal  to 0 will disable the
@@ -40,8 +44,20 @@ Keyword arguments:
     _base_nodes = ['message', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Toast'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, isCloseButtonShown=Component.UNDEFINED, message=Component.UNDEFINED, timeout=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        icon: typing.Optional[str] = None,
+        intent: typing.Optional[str] = None,
+        isCloseButtonShown: typing.Optional[bool] = None,
+        message: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        timeout: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'style', 'timeout']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'icon', 'intent', 'isCloseButtonShown', 'message', 'style', 'timeout']

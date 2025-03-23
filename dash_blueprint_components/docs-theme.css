@@ -114,6 +114,26 @@
 .bp5-docs-code-block{
   overflow:auto;
 }
+
+.docs-code-example-frame{
+  display:flex;
+  flex-direction:column;
+  margin-top:20px;
+  position:relative;
+  width:100%;
+}
+
+.docs-code-example{
+  align-items:center;
+  background:#ffffff;
+  border-radius:4px;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+.bp5-dark .docs-code-example{
+  background:#111418;
+}
 .docs-title{
   margin:40px 0 20px;
   position:relative;
@@ -265,7 +285,7 @@
   padding:20px;
 }
 .bp5-dark .docs-example{
-  background:#1c2127;
+  background:#111418;
 }
 .docs-example > *{
   margin:20px;
@@ -290,10 +310,10 @@
   margin-bottom:0;
 }
 .bp5-dark .docs-example-options{
-  background-color:#2f343c;
+  background-color:#252a31;
 }
 .bp5-dark .docs-example-options .bp5-segmented-control{
-  background-color:#252a31;
+  background-color:#1c2127;
 }
 
 .docs-example-markup{
@@ -308,7 +328,7 @@
 }
 .bp5-dark .docs-example-markup .editor,
 .bp5-dark .docs-example-markup .bp5-docs-code-block{
-  background:#2f343c;
+  background:#252a31;
   border:none;
   box-shadow:none;
 }
@@ -323,11 +343,11 @@
   height:40px;
   transition:background-color 100ms cubic-bezier(0.4, 1, 0.75, 0.9);
 }
-.docs-example-view-source:not(:hover):not(:active){
+.docs-example-view-source:not(:hover, :active){
   background-color:#edeff2;
 }
-.bp5-dark .docs-example-view-source:not(:hover):not(:active){
-  background-color:#2f343c;
+.bp5-dark .docs-example-view-source:not(:hover, :active){
+  background-color:#252a31;
 }
 
 .bp5-code[data-modifier^=":"]{
@@ -369,7 +389,7 @@ body{
   background-color:#f6f7f9;
 }
 .docs-root.bp5-dark{
-  background-color:#252a31;
+  background-color:#1c2127;
 }
 
 .docs-app{
@@ -406,7 +426,7 @@ body{
   width:1269px;
 }
 .bp5-dark .docs-nav{
-  background-color:#383e47;
+  background-color:#2f343c;
   box-shadow:1px 0 0 rgba(17, 20, 24, 0.4);
 }
 .docs-nav > *{
@@ -421,7 +441,7 @@ body{
   outline:none;
 }
 .bp5-dark .docs-content-wrapper{
-  background-color:#252a31;
+  background-color:#1c2127;
 }
 
 .docs-page{
@@ -530,7 +550,7 @@ body{
   color:inherit;
 }
 .bp5-dark .docs-nav-button:hover{
-  background-image:linear-gradient(to right, rgba(37, 42, 49, 0) 0%, #252a31 40%);
+  background-image:linear-gradient(to right, rgba(28, 33, 39, 0) 0%, #1c2127 40%);
 }
 
 .docs-nav-divider{

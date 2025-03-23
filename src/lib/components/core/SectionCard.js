@@ -11,7 +11,6 @@ const SectionCard = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 

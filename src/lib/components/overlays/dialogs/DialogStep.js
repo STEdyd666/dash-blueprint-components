@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Fragment } from 'react';
 
 
 /**
@@ -10,7 +9,6 @@ const DialogStep = props => {
 
     const {
       panel,
-      setProps,
       ...others
     } = props;
     

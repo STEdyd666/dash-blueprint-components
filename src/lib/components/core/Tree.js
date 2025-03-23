@@ -1,10 +1,7 @@
-import React from 'react';
+import React, { useReducer, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cloneDeep from 'lodash/cloneDeep';
-import { useReducer } from 'react';
-import { useEffect } from 'react';
 import { Tree as BPTree } from "@blueprintjs/core";
-import { TreeNode } from '@blueprintjs/core';
 
 
 /**
@@ -14,11 +11,6 @@ const Tree = props => {
 
     const {
         contents,
-        current_contents,
-        clicked_node,
-        collapsed_node,
-        expanded_node,
-        current_nodes,
         setProps,
         ...others
     } = props
@@ -45,18 +37,21 @@ const Tree = props => {
         switch (action.type) {
             case "UPDATE":
                 return action.payload
-            case "DESELECT_ALL":
+            case "DESELECT_ALL": {
                 const newState1 = cloneDeep(state);
                 forEachNode(newState1, node => (node.isSelected = false))
                 return newState1
-            case "SET_IS_EXPANDED":
+            }
+            case "SET_IS_EXPANDED": {
                 const newState2 = cloneDeep(state);
                 forNodeAtPath(newState2, action.payload.path, node => (node.isExpanded = action.payload.isExpanded))
                 return newState2
-            case "SET_IS_SELECTED":
+            }
+            case "SET_IS_SELECTED": {
                 const newState3 = cloneDeep(state);
                 forNodeAtPath(newState3, action.payload.path, node => (node.isSelected = action.payload.isSelected))
                 return newState3
+            }
             default:
                 return state
         }
@@ -69,7 +64,7 @@ const Tree = props => {
                 dispatch({ type: "DESELECT_ALL" });
             }
             dispatch({
-                payload: { path: nodePath, isSelected: originallySelected == null ? true : !originallySelected },
+                payload: { path: nodePath, isSelected: originallySelected === null ? true : !originallySelected },
                 type: "SET_IS_SELECTED",
             })
             setProps({

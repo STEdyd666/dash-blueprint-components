@@ -12,7 +12,6 @@ const CardList = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 
@@ -65,7 +64,5 @@ CardList.propTypes = {
     */
     setProps: PropTypes.func
 };
-
-CardList.defaultProps = {};
 
 export default CardList;

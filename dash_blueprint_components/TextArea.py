@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class TextArea(Component):
@@ -49,9 +56,6 @@ Keyword arguments:
 - small (boolean; optional):
     Whether the file input should appear with small styling.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - text (string; optional):
     Input text updated when input loses blur or on 'Enter' key press.
 
@@ -61,8 +65,26 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'TextArea'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, autoResize=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, placeholder=Component.UNDEFINED, readOnly=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        addOnBlur: typing.Optional[bool] = None,
+        autoResize: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        intent: typing.Optional[str] = None,
+        large: typing.Optional[bool] = None,
+        placeholder: typing.Optional[str] = None,
+        readOnly: typing.Optional[bool] = None,
+        small: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        value: typing.Optional[str] = None,
+        text: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'addOnBlur', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'placeholder', 'readOnly', 'small', 'style', 'text', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'addOnBlur', 'autoResize', 'className', 'disabled', 'fill', 'intent', 'large', 'placeholder', 'readOnly', 'small', 'style', 'text', 'value']

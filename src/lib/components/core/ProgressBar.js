@@ -9,7 +9,6 @@ import { ProgressBar as BPProgressBar } from "@blueprintjs/core";
 const ProgressBar = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

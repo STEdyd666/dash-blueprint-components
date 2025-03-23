@@ -21,6 +21,9 @@ Keyword arguments:
 - `elevation` (Real; optional): Controls the intensity of the drop shadow beneath the card: the higher 
 the elevation, the higher the drop shadow. At elevation 0, no drop 
 shadow is applied.
+- `interactive` (Bool; optional): Whether the card should respond to user interactions. If set to true, 
+hovering over the card will increase the card's elevation and change the
+ mouse cursor to a pointer.
 - `label` (String; optional): Text label for the control.
 - `n_clicks` (Real; optional): An integer that represents the time (in ms since 1970)
 at which n_clicks changed. This can be used to tell
@@ -30,7 +33,7 @@ which button was changed most recently.
 - `style` (Dict; optional): CSS styles to apply to the card.
 """
 function switchcard(; kwargs...)
-        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :compact, :disabled, :elevation, :label, :n_clicks, :selected, :showAsSelectedWhenChecked, :style]
+        available_props = Symbol[:children, :id, :alignIndicator, :checked, :className, :compact, :disabled, :elevation, :interactive, :label, :n_clicks, :selected, :showAsSelectedWhenChecked, :style]
         wild_props = Symbol[]
         return Component("switchcard", "SwitchCard", "dash_blueprint_components", available_props, wild_props; kwargs...)
 end

@@ -6,12 +6,7 @@ import { MenuDivider as BPMenuDivider } from "@blueprintjs/core";
 /**
 * Use MenuDivider to separate menu sections. Optionally, add a title to the divider.
 */
-const MenuDivider = props => {
-
-    const {
-        setProps,
-        ...others
-    } = props;
+const MenuDivider = ({...others}) => {
 
     return (
         <BPMenuDivider {...others}/>

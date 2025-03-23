@@ -10,7 +10,6 @@ const DialogBody = props => {
 
     const {
       children,
-      setProps,
       ...others
     } = props;
     

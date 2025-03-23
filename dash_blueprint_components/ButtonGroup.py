@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class ButtonGroup(Component):
@@ -36,17 +43,27 @@ Keyword arguments:
 - minimal (boolean; optional):
     Whether this button should use minimal styles.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - vertical (boolean; optional):
     Whether the button group should appear with vertical styling."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'ButtonGroup'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, alignText=Component.UNDEFINED, className=Component.UNDEFINED, fill=Component.UNDEFINED, large=Component.UNDEFINED, minimal=Component.UNDEFINED, vertical=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        alignText: typing.Optional[Literal["left", "right", "center"]] = None,
+        className: typing.Optional[str] = None,
+        fill: typing.Optional[bool] = None,
+        large: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        vertical: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'alignText', 'className', 'fill', 'large', 'minimal', 'style', 'vertical']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'alignText', 'className', 'fill', 'large', 'minimal', 'style', 'vertical']

@@ -10,50 +10,46 @@ except ImportError:
     ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
-class SideBar(Component):
-    """A SideBar component.
-Component for creating interactive Sidebars
+class NavMenu(Component):
+    """A NavMenu component.
+Menus display lists of interactive items.
 
 Keyword arguments:
 
-- id (string; optional):
-    The ID used to identify this component in Dash callbacks.
+- activeSectionId (number; optional):
+    active section id.
 
 - className (string; optional):
     A space-delimited list of class names to pass along to a child
     element.
 
-- initialRoute (string; optional):
-    initial route.
-
 - items (list; optional):
-    items to be displayed in the menu.
+    Menu entries.
 
-- route (string; optional):
-    current selected route."""
+- level (number; optional):
+    Level of the menu."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
-    _type = 'SideBar'
+    _type = 'NavMenu'
 
     @_explicitize_args
     def __init__(
         self,
-        id: typing.Optional[typing.Union[str, dict]] = None,
+        activeSectionId: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
         className: typing.Optional[str] = None,
         items: typing.Optional[typing.Sequence] = None,
-        route: typing.Optional[str] = None,
-        initialRoute: typing.Optional[str] = None,
-        style: typing.Optional[typing.Any] = None,
+        level: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        onItemClick: typing.Optional[typing.Any] = None,
         **kwargs
     ):
-        self._prop_names = ['id', 'className', 'initialRoute', 'items', 'route', 'style']
+        self._prop_names = ['activeSectionId', 'className', 'items', 'level']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'initialRoute', 'items', 'route', 'style']
+        self.available_properties = ['activeSectionId', 'className', 'items', 'level']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
         _locals.update(kwargs)  # For wildcard attrs and excess named props
         args = {k: _locals[k] for k in _explicit_args}
 
-        super(SideBar, self).__init__(**args)
+        super(NavMenu, self).__init__(**args)

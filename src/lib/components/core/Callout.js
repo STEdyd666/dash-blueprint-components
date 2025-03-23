@@ -12,7 +12,6 @@ const Callout = props => {
     const {
         children,
         title,
-        setProps,
         ...others
     } = props;
 

@@ -8,17 +8,15 @@ import { CompoundTag as BPCompoundTag } from "@blueprintjs/core";
 * The content on the left and right is visually segmented to signify the pairwise relationship. Just like Tag, this component 
 * supports a range of visual modifiers for many different situations and its colors are designed to be accessible in almost any context.
 */
-const CompoundTag = props => {
-
-    const {
-        children,
-        interactive,
-        n_clicks,
-        n_clicks_remove,
-        removable,
-        setProps,
-        ...others
-    } = props;
+const CompoundTag = ({
+    children,
+    interactive,
+    n_clicks,
+    n_clicks_remove,
+    removable = false,
+    setProps,
+    ...others
+} ) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -38,7 +36,7 @@ const CompoundTag = props => {
         <BPCompoundTag
             interactive={interactive}
             onClick={handleOnClick}
-            onRemove={removable ? handleOnRemove : undefined}
+            onRemove={removable ? handleOnRemove : () => {}}
             {...others}
         >
             {children}
@@ -149,10 +147,6 @@ CompoundTag.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-CompoundTag.defaultProps = {
-    removable: false
 };
 
 export default CompoundTag;

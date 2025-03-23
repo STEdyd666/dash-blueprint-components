@@ -6,17 +6,16 @@ import { RadioCard as BPRadioCard } from "@blueprintjs/core";
 /**
 * Card with an embedded Radio control (left-aligned by default).
 */
-const RadioCard = props => {
-
-    const {
-        children,
-        checked,
-        disabled,
-        n_clicks,
-        interactive,
-        setProps,
-        ...others
-    } = props;
+const RadioCard = ({
+    children,
+    checked,
+    disabled,
+    elevation = 0,
+    n_clicks = 0,
+    interactive,
+    setProps,
+    ...others
+}) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -37,6 +36,7 @@ const RadioCard = props => {
     return (
         <BPRadioCard
           disabled={disabled}
+          elevation={elevation}
           onClick={handleOnClick}
           onChange={handleOnChange}
           interactive={interactive} 
@@ -92,6 +92,13 @@ RadioCard.propTypes = {
     elevation: PropTypes.number,
     
     /**
+    * Whether the card should respond to user interactions. If set to true, 
+    * hovering over the card will increase the card's elevation and change the
+    *  mouse cursor to a pointer.
+    */
+    interactive: PropTypes.bool,
+
+    /**
     * Text label for the control.
     */
     label: PropTypes.string,
@@ -129,9 +136,5 @@ RadioCard.propTypes = {
     setProps: PropTypes.func
 };
 
-RadioCard.defaultProps = {
-    elevation: 0,
-    n_clicks: 0,
-};
 
 export default RadioCard;

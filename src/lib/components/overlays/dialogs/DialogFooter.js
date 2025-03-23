@@ -11,7 +11,6 @@ const DialogFooter = props => {
     const {
       children,
       actions,
-      setProps,
       ...others
     } = props;
     

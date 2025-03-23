@@ -6,17 +6,15 @@ import { MultiSlider as BPMultiSlider } from "@blueprintjs/core";
 /**
 * MultiSlider is a flexible solution for picking arbitrary values on a number line.
 */
-const MultiSlider = props => {
-
-    const {
-        disabled,
-        handles,
-        format,
-        n_changes,
-        n_releases,
-        setProps,
-        ...others
-    } = props;
+const MultiSlider = ({
+    disabled,
+    handles,
+    format,
+    n_changes = 0,
+    n_releases = 0,
+    setProps,
+    ...others
+}) => {
 
     const handleOnChange = (val) => {
         const updatedHandles = handles.map((hand, index) => (
@@ -62,13 +60,9 @@ const MultiSlider = props => {
             else if (format.hasOwnProperty('after')) {
                 return `${val}${format.after}`
             }
-            else {
-                return val
-            }
-        }
-        else {
             return val
         }
+        return val
     }
 
     return (
@@ -203,11 +197,6 @@ MultiSlider.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-MultiSlider.defaultProps = {
-    n_changes: 0,
-    n_releases: 0,
 };
 
 export default MultiSlider;

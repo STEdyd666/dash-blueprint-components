@@ -6,17 +6,16 @@ import { CheckboxCard as BPCheckboxCard } from "@blueprintjs/core";
 /**
 * Card with an embedded Checkbox control (left-aligned by default).
 */
-const CheckboxCard = props => {
-
-    const {
-        children,
-        checked,
-        disabled,
-        n_clicks,
-        interactive,
-        setProps,
-        ...others
-    } = props;
+const CheckboxCard = ({
+    children,
+    checked,
+    disabled,
+    elevation = 0,
+    n_clicks  = 0,
+    interactive,
+    setProps,
+    ...others
+}) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -37,6 +36,7 @@ const CheckboxCard = props => {
     return (
         <BPCheckboxCard
           disabled={disabled}
+          elevation={elevation}
           onClick={handleOnClick}
           onChange={handleOnChange}
           interactive={interactive} 
@@ -92,6 +92,13 @@ CheckboxCard.propTypes = {
     elevation: PropTypes.number,
     
     /**
+    * Whether the card should respond to user interactions. If set to true, 
+    * hovering over the card will increase the card's elevation and change the
+    *  mouse cursor to a pointer.
+    */
+    interactive: PropTypes.bool,
+
+    /**
     * Text label for the control.
     */
     label: PropTypes.string,
@@ -122,11 +129,6 @@ CheckboxCard.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-CheckboxCard.defaultProps = {
-    elevation: 0,
-    n_clicks: 0,
 };
 
 export default CheckboxCard;

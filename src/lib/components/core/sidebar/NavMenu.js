@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import PropTypes from 'prop-types';
 import classNames from "classnames";
-import { useCallback } from 'react';
-import { Classes } from "@blueprintjs/core";
+import { Classes, Icon } from "@blueprintjs/core";
 import { NavMenuItem } from '@blueprintjs/docs-theme';
-import { Icon } from "@blueprintjs/core";
 
 
 function isParentOfRoute(parent, route) {
     if (route) {
         return route.indexOf(parent + "/") === 0 || route.indexOf(parent + ".") === 0;
-    } else {
-        return undefined
     }
-
+    return false
 }
 
 /**
@@ -26,7 +23,6 @@ const NavMenu = props => {
         items,
         level,
         onItemClick,
-        setProps,
         ...others
     } = props;
 
@@ -50,34 +46,31 @@ const NavMenu = props => {
                         </a>
                     </div>
                 )
-            } else {
-                return (
-                    <div 
-                      className={classNames(
-                        "docs-nav-package", {
-                        "docs-nav-expanded": isExpanded,}
-                      )} 
-                      data-route={section.route}
-                    >
-                        <a className={Classes.MENU_ITEM} onClick={() => onItemClick(section.route)} >
-                            <span>{section.title}</span>
-                        </a>
-                    </div>
-                )
-            }
-        }
-        else {
-           return (
-                <NavMenuItem
-                    className={itemClasses}
-                    isActive={isActive}
-                    isExpanded={isExpanded}
-                    onClick={() => onItemClick(section.route)}
-                    section={section}
-                    title={section.title}
-                />
+            } 
+            return (
+                <div 
+                    className={classNames(
+                    "docs-nav-package", {
+                    "docs-nav-expanded": isExpanded,}
+                    )} 
+                    data-route={section.route}
+                >
+                    <a className={Classes.MENU_ITEM} onClick={() => onItemClick(section.route)} >
+                        <span>{section.title}</span>
+                    </a>
+                </div>
             )
         }
+        return (
+            <NavMenuItem
+                className={itemClasses}
+                isActive={isActive}
+                isExpanded={isExpanded}
+                onClick={() => onItemClick(section.route)}
+                section={section}
+                title={section.title}
+            />
+        )
     }, [])
 
     const menu = items.map(section => {
@@ -104,6 +97,38 @@ const NavMenu = props => {
             {menu}
         </ul>
     )
+}
+
+NavMenu.propTypes = {    
+    /**
+    * active section id
+    */
+    activeSectionId: PropTypes.number,
+
+    /**
+    * A space-delimited list of class names to pass along to a child element.
+    */
+    className: PropTypes.string,
+    
+    /**
+    * Menu entries
+    */
+    items: PropTypes.array,
+
+    /**
+    * Level of the menu
+    */
+    level: PropTypes.number,
+
+    /**
+    * Callback invoked when the user click on the menu item
+    */
+    onItemClick: PropTypes.func,
+
+    /**
+    * Dash-assigned callback that gets fired when the value changes.
+    */
+    setProps: PropTypes.func
 }
 
 export default NavMenu;

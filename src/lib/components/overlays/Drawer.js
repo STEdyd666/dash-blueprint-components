@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DrawerSize } from '@blueprintjs/core';
-import { Drawer as BPDrawer} from "@blueprintjs/core";
+import { DrawerSize, Drawer as BPDrawer } from '@blueprintjs/core';
 
 
 const SIZE_MAP = {
@@ -13,17 +12,15 @@ const SIZE_MAP = {
 /**
 * Drawers overlay content over existing parts of the UI and are anchored to the edge of the screen.
 */
-const Drawer = props => {
-
-    const {
-      children,
-      isOpen,
-      size,
-      setProps,
-      ...others
-    } = props;
+const Drawer = ({
+  children,
+  isOpen = false,
+  size,
+  setProps,
+  ...others
+}) => {
     
-    const handleOnClose = (e) => {
+    const handleOnClose = (_e) => {
       setProps({
         isOpen: false
       })
@@ -189,10 +186,6 @@ Drawer.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Drawer.defaultProps = {
-  isOpen: false
 };
 
 export default Drawer;

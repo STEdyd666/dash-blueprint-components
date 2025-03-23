@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EntityTitle as BPEntityTitle } from "@blueprintjs/core";
 import {
+    EntityTitle as BPEntityTitle, 
     H1,
     H2,
     H3,
@@ -15,13 +15,10 @@ import {
 /**
 * EntityTitle is a component that handles rendering a common UI pattern consisting of title, icon, subtitle and tag.
 */
-const EntityTitle = props => {
-
-    const {
-        heading,
-        setProps,
-        ...others
-    } = props;
+const EntityTitle = ({
+    heading = 'Text',
+    ...others
+}) => {
 
     const getHeading = (heading) => {
         switch (heading) {
@@ -112,10 +109,6 @@ EntityTitle.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-EntityTitle.defaultProps = {
-    heading: 'Text',
 };
 
 export default EntityTitle;

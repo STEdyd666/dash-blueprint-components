@@ -6,17 +6,16 @@ import { SwitchCard as BPSwitchCard } from "@blueprintjs/core";
 /**
 * Card with an embedded Switch control (right-aligned by default).
 */
-const SwitchCard = props => {
-
-    const {
-        children,
-        checked,
-        disabled,
-        n_clicks,
-        interactive,
-        setProps,
-        ...others
-    } = props;
+const SwitchCard = ({
+    children,
+    checked,
+    disabled,
+    elevation,
+    n_clicks = 0,
+    interactive = 0,
+    setProps,
+    ...others
+}) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -37,6 +36,7 @@ const SwitchCard = props => {
     return (
         <BPSwitchCard
           disabled={disabled}
+          elevation={elevation}
           onClick={handleOnClick}
           onChange={handleOnChange}
           interactive={interactive} 
@@ -91,6 +91,13 @@ SwitchCard.propTypes = {
     */
     elevation: PropTypes.number,
     
+    /**
+    * Whether the card should respond to user interactions. If set to true, 
+    * hovering over the card will increase the card's elevation and change the
+    *  mouse cursor to a pointer.
+    */
+    interactive: PropTypes.bool,
+
     /**
     * Text label for the control.
     */

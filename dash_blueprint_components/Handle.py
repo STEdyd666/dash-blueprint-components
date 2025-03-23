@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Handle(Component):
@@ -26,9 +33,6 @@ Keyword arguments:
 - labelStepSize (number; optional):
     Increment between successive labels. Must be greater than zero.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - trackStyleAfter (dict; optional):
     Style to use for the track segment immediately after this handle,
     taking priority over trackStyleBefore.
@@ -45,8 +49,22 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Handle'
+
     @_explicitize_args
-    def __init__(self, className=Component.UNDEFINED, intentAfter=Component.UNDEFINED, intentBefore=Component.UNDEFINED, interactionKind=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, style=Component.UNDEFINED, trackStyleAfter=Component.UNDEFINED, trackStyleBefore=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.REQUIRED, **kwargs):
+    def __init__(
+        self,
+        className: typing.Optional[str] = None,
+        intentAfter: typing.Optional[str] = None,
+        intentBefore: typing.Optional[str] = None,
+        interactionKind: typing.Optional[Literal["lock", "push"]] = None,
+        labelStepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        trackStyleAfter: typing.Optional[dict] = None,
+        trackStyleBefore: typing.Optional[dict] = None,
+        type: typing.Optional[Literal["full", "start", "end"]] = None,
+        value: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        **kwargs
+    ):
         self._prop_names = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'style', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['className', 'intentAfter', 'intentBefore', 'interactionKind', 'labelStepSize', 'style', 'trackStyleAfter', 'trackStyleBefore', 'type', 'value']

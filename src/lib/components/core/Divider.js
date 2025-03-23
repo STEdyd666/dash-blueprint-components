@@ -11,7 +11,6 @@ import { Divider as BPDivider } from "@blueprintjs/core";
 const Divider = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

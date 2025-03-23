@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Spinner(Component):
@@ -24,9 +31,6 @@ Keyword arguments:
     Width and height of the spinner in pixels. The size cannot be less
     than 10px.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - tagName (optional):
     HTML tag for the two wrapper elements. If rendering a <Spinner>
     inside an <svg>,  change this to an SVG element like \"g\".
@@ -40,8 +44,19 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Spinner'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, intent=Component.UNDEFINED, size=Component.UNDEFINED, tagName=Component.UNDEFINED, value=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        intent: typing.Optional[str] = None,
+        size: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        tagName: typing.Optional[typing.Any] = None,
+        value: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'intent', 'size', 'style', 'tagName', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'intent', 'size', 'style', 'tagName', 'value']

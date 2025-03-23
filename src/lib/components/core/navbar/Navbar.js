@@ -9,7 +9,6 @@ import { Navbar as BPNavbar } from "@blueprintjs/core";
 const Navbar = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

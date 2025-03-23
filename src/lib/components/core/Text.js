@@ -11,7 +11,6 @@ const Text = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 

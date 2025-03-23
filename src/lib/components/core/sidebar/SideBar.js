@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import NavMenu from './NavMenu';
 
 
@@ -11,7 +9,6 @@ import NavMenu from './NavMenu';
 const SideBar = props => {
 
     const {
-        route,
         initialRoute,
         items,
         setProps,

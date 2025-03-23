@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { RadioGroup as BPRadioGroup } from "@blueprintjs/core";
-import { RadioCard } from '@blueprintjs/core';
-import { Radio } from '@blueprintjs/core';
+import { RadioGroup as BPRadioGroup, RadioCard, Radio } from "@blueprintjs/core";
+import { getChildProps } from "../../utils/dash3"
 
 
 /**
@@ -31,11 +30,9 @@ const RadioGroup = props => {
     const renderRadioChildren = (children) => {
         return children.map((radio) => {
             if (asCard) {
-                return <RadioCard {...radio.props._dashprivate_layout.props}/>
-            } else {
-                return <Radio {...radio.props._dashprivate_layout.props}/>
+                return <RadioCard {...getChildProps(radio)}/>
             }
-
+            return <Radio {...getChildProps(radio)}/>
         })
     }
 

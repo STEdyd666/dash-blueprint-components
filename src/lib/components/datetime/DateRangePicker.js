@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Classes } from "@blueprintjs/core";
 import { DateRangePicker3 as BPDateRangePicker} from "@blueprintjs/datetime2";
-import { TimePrecision } from "@blueprintjs/datetime2";
 import { formatISO, parseISO } from 'date-fns'
 
 
 const TIMEPRECISION_MAP = {
-  'minute': TimePrecision.MINUTE,
-  'second': TimePrecision.SECOND,
-  'millisecond': TimePrecision.MILLISECOND
+  'minute': 'MINUTE',
+  'second': 'SECOND',
+  'millisecond': 'MILLISECOND'
 }
 
 /**
@@ -21,11 +20,9 @@ const DateRangePicker = props => {
       defaultValue,
       minDate,
       maxDate,
-      range,
       showTimeArrowButtons,
       timePrecision,
       useAmPm,
-      selectedShortcutIndex,
       showOutsideDays,
       showWeekNumber,
       setProps,
@@ -59,18 +56,16 @@ const DateRangePicker = props => {
           showArrowButtons: showTimeArrowButtons,
           useAmPm,
         }
-      } else {
-        return undefined
       }
+      return undefined
     }
 
     const handleDate = (strDate) => {
       if (strDate && strDate !== 'none') {
         const date = parseISO(strDate)
         return date
-      } else {
-        return undefined
       }
+      return undefined
     }
 
     return (

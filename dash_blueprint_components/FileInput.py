@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class FileInput(Component):
@@ -40,17 +47,29 @@ Keyword arguments:
 - small (boolean; optional):
     Whether the file input should appear with small styling.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - text (string; optional):
     The text to display."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'FileInput'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, buttonText=Component.UNDEFINED, content=Component.UNDEFINED, filename=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, hasSelection=Component.UNDEFINED, large=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, text=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        buttonText: typing.Optional[str] = None,
+        content: typing.Optional[str] = None,
+        filename: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        hasSelection: typing.Optional[bool] = None,
+        large: typing.Optional[bool] = None,
+        small: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        text: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'style', 'text']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'buttonText', 'content', 'disabled', 'filename', 'fill', 'hasSelection', 'large', 'small', 'style', 'text']

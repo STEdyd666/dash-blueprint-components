@@ -5,15 +5,14 @@ import { Button as BPButton } from "@blueprintjs/core";
 /**
 * Buttons trigger actions when clicked. Button and AnchorButton components generate different HTML tags.
 */
-const Button = props => {
-
-    const {
-        children,
-        n_clicks,
-        disabled,
-        setProps,
-        ...others
-    } = props;
+const Button = ({
+    children,
+    n_clicks = 0,
+    disabled,
+    type = 'button',
+    setProps,
+    ...others
+}) => {
 
     const increment = () => {
         if (!disabled) {
@@ -24,7 +23,12 @@ const Button = props => {
     }
 
     return (
-        <BPButton onClick={increment} disabled={disabled} {...others}>
+        <BPButton 
+          onClick={increment} 
+          disabled={disabled}
+          type={type}
+          {...others}
+        >
             {children}
         </BPButton>
     )
@@ -153,11 +157,6 @@ Button.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Button.defaultProps = {
-    n_clicks: 0,
-    type: 'button'
 };
 
 export default Button;

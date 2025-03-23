@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Icon(Component):
@@ -50,9 +57,6 @@ Keyword arguments:
     icon images,  and chooses the appropriate resolution based on this
     prop.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - tagName (optional):
     HTML tag to use for the rendered element.
 
@@ -67,8 +71,24 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Icon'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, color=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.REQUIRED, n_clicks=Component.UNDEFINED, intent=Component.UNDEFINED, size=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, title=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        color: typing.Optional[str] = None,
+        htmlTitle: typing.Optional[str] = None,
+        icon: typing.Optional[str] = None,
+        n_clicks: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        intent: typing.Optional[str] = None,
+        size: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        tagName: typing.Optional[typing.Any] = None,
+        title: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'className', 'color', 'htmlTitle', 'icon', 'intent', 'n_clicks', 'size', 'style', 'tagName', 'title']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'className', 'color', 'htmlTitle', 'icon', 'intent', 'n_clicks', 'size', 'style', 'tagName', 'title']

@@ -8,17 +8,27 @@ import { InputGroup as BPInputGroup} from "@blueprintjs/core";
 * This component allows you to optionally add icons and buttons within a text input to expand its appearance 
 * and functionality. For example, you might use an input group to build a visibility toggle for a password field.
 */
-const InputGroup = props => {
-
-    const {
-      addOnBlur,
-      disabled,
-      value,
-      text,
-      setProps,
-      ...others
-    } = props;
+const InputGroup = ({
+  addOnBlur = false,
+  disabled,
+  value,
+  text,
+  setProps,
+  ...others
+})  => {
     
+  const handleValue = (value) => {
+    setProps({
+      value: value,
+    })
+  };
+
+  const handleText = (value) => {
+    setProps({
+      text: value,
+    })
+  };
+
     const handleOnChange = (e) => {
       if (!disabled) {
         handleValue(e.target.value);
@@ -35,18 +45,6 @@ const InputGroup = props => {
       if (e.key === 'Enter') {
         handleText(e.target.value);
       }
-    };
-
-    const handleValue = (value) => {
-      setProps({
-        value: value,
-      })
-    };
-
-    const handleText = (value) => {
-      setProps({
-        text: value,
-      })
     };
 
     return (
@@ -86,7 +84,7 @@ InputGroup.propTypes = {
     */
     defaultValue: PropTypes.oneOfType([
       PropTypes.string, 
-      PropTypes.number
+      PropTypes.number,
     ]),
     
     /**
@@ -169,10 +167,6 @@ InputGroup.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-InputGroup.defaultProps = {
-  addOnBlur: false,
 };
 
 export default InputGroup;

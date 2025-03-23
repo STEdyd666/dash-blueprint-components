@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class MultistepDialog(Component):
@@ -93,9 +100,6 @@ Keyword arguments:
     the button will appear regardless of the value of
     isCloseButtonShown.
 
-- style (dict; optional):
-    CSS styles to apply to the dialog.
-
 - title (a list of or a singular dash component, string or number; optional):
     Title of the dialog. If provided, an element with
     Classes.DIALOG_HEADER will be rendered inside the dialog before
@@ -125,8 +129,37 @@ Keyword arguments:
     _base_nodes = ['portalContainer', 'title', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'MultistepDialog'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, backdropClassName=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, canOutsideClickClose=Component.UNDEFINED, className=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, icon=Component.UNDEFINED, initialStepIndex=Component.UNDEFINED, isCloseButtonShown=Component.UNDEFINED, isOpen=Component.UNDEFINED, currentStepId=Component.UNDEFINED, lazy=Component.UNDEFINED, navigationPosition=Component.UNDEFINED, portalClassName=Component.UNDEFINED, portalContainer=Component.UNDEFINED, resetOnClose=Component.UNDEFINED, shouldReturnFocusOnClose=Component.UNDEFINED, showCloseButtonInFooter=Component.UNDEFINED, style=Component.UNDEFINED, title=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, transitionName=Component.UNDEFINED, usePortal=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        autoFocus: typing.Optional[bool] = None,
+        backdropClassName: typing.Optional[str] = None,
+        canEscapeKeyClose: typing.Optional[bool] = None,
+        canOutsideClickClose: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        enforceFocus: typing.Optional[bool] = None,
+        icon: typing.Optional[str] = None,
+        initialStepIndex: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        isCloseButtonShown: typing.Optional[bool] = None,
+        isOpen: typing.Optional[bool] = None,
+        currentStepId: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        lazy: typing.Optional[bool] = None,
+        navigationPosition: typing.Optional[str] = None,
+        portalClassName: typing.Optional[str] = None,
+        portalContainer: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        resetOnClose: typing.Optional[bool] = None,
+        shouldReturnFocusOnClose: typing.Optional[bool] = None,
+        showCloseButtonInFooter: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        title: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        transitionDuration: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        transitionName: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        usePortal: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'autoFocus', 'backdropClassName', 'canEscapeKeyClose', 'canOutsideClickClose', 'className', 'currentStepId', 'enforceFocus', 'icon', 'initialStepIndex', 'isCloseButtonShown', 'isOpen', 'lazy', 'navigationPosition', 'portalClassName', 'portalContainer', 'resetOnClose', 'shouldReturnFocusOnClose', 'showCloseButtonInFooter', 'style', 'title', 'transitionDuration', 'transitionName', 'usePortal']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'autoFocus', 'backdropClassName', 'canEscapeKeyClose', 'canOutsideClickClose', 'className', 'currentStepId', 'enforceFocus', 'icon', 'initialStepIndex', 'isCloseButtonShown', 'isOpen', 'lazy', 'navigationPosition', 'portalClassName', 'portalContainer', 'resetOnClose', 'shouldReturnFocusOnClose', 'showCloseButtonInFooter', 'style', 'title', 'transitionDuration', 'transitionName', 'usePortal']

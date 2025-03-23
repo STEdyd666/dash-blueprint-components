@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Tree(Component):
@@ -26,16 +33,24 @@ Keyword arguments:
     Tree content updated after user interaction.
 
 - expanded_node (dict; optional):
-    Node info when expanded/collapsed.
-
-- style (dict; optional):
-    CSS properties to apply to the root element."""
+    Node info when expanded/collapsed."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Tree'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, contents=Component.REQUIRED, clicked_node=Component.UNDEFINED, expanded_node=Component.UNDEFINED, current_contents=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        contents: typing.Optional[typing.Sequence] = None,
+        clicked_node: typing.Optional[dict] = None,
+        expanded_node: typing.Optional[dict] = None,
+        current_contents: typing.Optional[typing.Sequence] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'clicked_node', 'contents', 'current_contents', 'expanded_node', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'clicked_node', 'contents', 'current_contents', 'expanded_node', 'style']

@@ -7,18 +7,16 @@ import { Slider as BPSlider } from "@blueprintjs/core";
 * A slider is a numeric input for choosing numbers between lower and upper bounds. It also has a 
 * labeled axis that supports custom formatting.
 */
-const Slider = props => {
-
-    const {
-        disabled,
-        format,
-        initialValue,
-        n_changes,
-        n_releases,
-        value,  
-        setProps,
-        ...others
-    } = props;
+const Slider = ({
+    disabled,
+    format,
+    initialValue,
+    n_changes = 0,
+    n_releases = 0,
+    value,  
+    setProps,
+    ...others
+}) => {
 
     const handleOnChange = (val) => {
         if (!disabled) {
@@ -56,14 +54,10 @@ const Slider = props => {
             } 
             else if (format.hasOwnProperty('after')) {
                 return `${val}${format.after}`
-            }
-            else {
-                return val
-            }
-        }
-        else {
+            }            
             return val
         }
+        return val
     }
 
     return (
@@ -194,11 +188,6 @@ Slider.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Slider.defaultProps = {
-    n_changes: 0,
-    n_releases: 0
 };
 
 export default Slider;

@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Radio(Component):
@@ -48,9 +55,6 @@ Keyword arguments:
 - large (boolean; optional):
     Whether this control should use large styles.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - tagName (string; optional):
     Name of the HTML tag that wraps the checkbox. By default a <label>
     is used,  which effectively enlarges the click target to include
@@ -64,8 +68,26 @@ Keyword arguments:
     _base_nodes = ['labelElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Radio'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, alignIndicator=Component.UNDEFINED, checked=Component.UNDEFINED, className=Component.UNDEFINED, defaultChecked=Component.UNDEFINED, disabled=Component.UNDEFINED, inline=Component.UNDEFINED, label=Component.UNDEFINED, labelElement=Component.UNDEFINED, large=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        alignIndicator: typing.Optional[str] = None,
+        checked: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        defaultChecked: typing.Optional[bool] = None,
+        disabled: typing.Optional[bool] = None,
+        inline: typing.Optional[bool] = None,
+        label: typing.Optional[str] = None,
+        labelElement: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        large: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        tagName: typing.Optional[str] = None,
+        value: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'label', 'labelElement', 'large', 'style', 'tagName', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'alignIndicator', 'checked', 'className', 'defaultChecked', 'disabled', 'inline', 'label', 'labelElement', 'large', 'style', 'tagName', 'value']

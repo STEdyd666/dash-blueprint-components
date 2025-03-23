@@ -1,9 +1,7 @@
 import React from "react";
-import { useCallback } from "react";
 import PropTypes from 'prop-types';
 import { MultiSelect as BPMultiSelect } from "@blueprintjs/select";
-import { MenuItem } from "@blueprintjs/core";
-import { Intent } from "@blueprintjs/core";
+import { MenuItem, Intent } from "@blueprintjs/core";
 
 
 const INTENTS = [
@@ -17,23 +15,20 @@ const INTENTS = [
 /**
 * MultiSelect renders a UI to choose multiple items from a list. It renders a TagInput wrapped in a Popover
 */
-const MultiSelect = props => {
-
-    const {
-      changedActiveItem,
-      matchTargetWidth,
-      minimal,
-      initialContent,
-      items,
-      selectedItems,
-      showClearButton,
-      tagRemoved,
-      tagLarge,
-      tagMinimal,
-      tagIntents,
-      setProps,
-      ...others
-    } = props;
+const MultiSelect = ({
+  matchTargetWidth,
+  minimal,
+  initialContent,
+  items = [],
+  selectedItems = [],
+  showClearButton,
+  tagLarge,
+  tagMinimal,
+  tagIntents,
+  resetOnQuery = false,
+  setProps,
+  ...others
+}) => {
     
     const getTagProps = (_v, index) => ({
       intent: tagIntents ? INTENTS[index % INTENTS.length] : Intent.NONE,
@@ -48,15 +43,23 @@ const MultiSelect = props => {
       return false
     };
 
+    const getSelectedItemIndex = (item) => {
+      const JSONselectedItems = selectedItems.map(i => JSON.stringify(i))
+      return JSONselectedItems.indexOf(JSON.stringify(item));
+    }
+
+    const isItemSelected = (item) => {
+      return getSelectedItemIndex(item) !== -1;
+    }
+
     const handleItemPredicate = (query, item, _index, exactMatch) => {
       const normalizedLabel = item.label.toLowerCase();
       const normalizedQuery = query.toLowerCase();
   
       if (exactMatch) {
           return normalizedLabel === normalizedQuery;
-      } else {
-          return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
       }
+      return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
     };
 
     const handleItemRenderer = (item, { handleClick, handleFocus, modifiers, ref}) => {
@@ -78,6 +81,7 @@ const MultiSelect = props => {
               onFocus={handleFocus}
               roleStructure="listoption"
               text={item.label}
+              resetOnQuery={resetOnQuery}
           />
       );
     };
@@ -90,27 +94,19 @@ const MultiSelect = props => {
       })
     };
     
-    const getSelectedItemIndex = (item) => {
-      let JSONselectedItems = selectedItems.map(i => JSON.stringify(i))
-      return JSONselectedItems.indexOf(JSON.stringify(item));
-    }
-
-    const isItemSelected = (item) => {
-      return getSelectedItemIndex(item) !== -1;
-    }
-
-    const selectItem = (item) => {
-      selectItems([item]);
-    }
-
     const selectItems = (itemsToSelect) => {
       setProps({
         selectedItems: [...selectedItems, ...itemsToSelect]
       })
     }
 
+
+    const selectItem = (item) => {
+      selectItems([item]);
+    }
+
     const deselectItem = (index) => {
-      let newItems = selectedItems.filter((_item, i) => i !== index)
+      const newItems = selectedItems.filter((_item, i) => i !== index)
       setProps({
         selectedItems: newItems
       })
@@ -159,7 +155,7 @@ const MultiSelect = props => {
         />
     )
 }
-//<Button text="Open popover"/>
+
 MultiSelect.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
@@ -269,12 +265,6 @@ MultiSelect.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-MultiSelect.defaultProps = {
-  items: [],
-  selectedItems: [],
-  resetOnQuery: false
 };
 
 export default MultiSelect;

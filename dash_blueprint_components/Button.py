@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Button(Component):
@@ -73,9 +80,6 @@ Keyword arguments:
 - small (boolean; optional):
     Whether this button should use small styles.
 
-- style (dict; optional):
-    CSS styles to apply to the button.
-
 - target (string; optional):
     Target.
 
@@ -90,8 +94,33 @@ Keyword arguments:
     _base_nodes = ['icon', 'rightIcon', 'text', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Button'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, alignText=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, loading=Component.UNDEFINED, minimal=Component.UNDEFINED, n_clicks=Component.UNDEFINED, href=Component.UNDEFINED, outlined=Component.UNDEFINED, rightIcon=Component.UNDEFINED, small=Component.UNDEFINED, text=Component.UNDEFINED, type=Component.UNDEFINED, target=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        active: typing.Optional[bool] = None,
+        alignText: typing.Optional[Literal["left", "right", "center"]] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        icon: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        intent: typing.Optional[str] = None,
+        large: typing.Optional[bool] = None,
+        loading: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        n_clicks: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        href: typing.Optional[str] = None,
+        outlined: typing.Optional[bool] = None,
+        rightIcon: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        small: typing.Optional[bool] = None,
+        text: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        type: typing.Optional[Literal["submit", "reset", "button"]] = None,
+        target: typing.Optional[str] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'active', 'alignText', 'className', 'disabled', 'fill', 'href', 'icon', 'intent', 'large', 'loading', 'minimal', 'n_clicks', 'outlined', 'rightIcon', 'small', 'style', 'target', 'text', 'type']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'active', 'alignText', 'className', 'disabled', 'fill', 'href', 'icon', 'intent', 'large', 'loading', 'minimal', 'n_clicks', 'outlined', 'rightIcon', 'small', 'style', 'target', 'text', 'type']

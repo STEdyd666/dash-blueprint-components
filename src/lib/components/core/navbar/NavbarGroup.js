@@ -10,7 +10,6 @@ const NavbarGroup = props => {
 
     const {
         align,
-        setProps,
         ...others
     } = props;
 

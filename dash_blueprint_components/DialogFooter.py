@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class DialogFooter(Component):
@@ -33,16 +40,23 @@ Keyword arguments:
     applied without a \"modifier\" class. When using the JS component
     API, minimal is False by default. Show the footer close from the
     content. Do not use with scroll body Use for small dialogs
-    (confirm).
-
-- style (dict; optional):
-    CSS properties to apply to the root element."""
+    (confirm)."""
     _children_props = ['actions']
     _base_nodes = ['actions', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'DialogFooter'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, actions=Component.UNDEFINED, className=Component.UNDEFINED, minimal=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        actions: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        className: typing.Optional[str] = None,
+        minimal: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'actions', 'className', 'minimal', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'actions', 'className', 'minimal', 'style']

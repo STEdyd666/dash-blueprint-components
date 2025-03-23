@@ -1,6 +1,6 @@
 {
   "name": "dash_blueprint_components",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Dash plotly porting of BlueprintJS",
   "main": "build/index.js",
   "scripts": {
@@ -16,14 +16,16 @@
   "author": "Stefano Fanizzi <ste.fanizzi@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "@blueprintjs/core": "^5.10.4",
-    "@blueprintjs/datetime": "^5.3.6",
-    "@blueprintjs/datetime2": "^2.3.6",
-    "@blueprintjs/docs-theme": "^5.3.6",
-    "@blueprintjs/icons": "^5.10.0",
-    "@blueprintjs/select": "^5.2.0",
+    "@blueprintjs/core": "^5.16.6",
+    "@blueprintjs/datetime2": "^2.3.23",
+    "@blueprintjs/docs-theme": "^5.3.23",
+    "@blueprintjs/icons": "^5.18.1",
+    "@blueprintjs/select": "^5.3.11",
     "dateutil": "^0.1.0",
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-jsx": "^5.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
@@ -41,11 +43,8 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-react": "^7.14.2",
     "prop-types": "^15.8.1",
-    "react": "^16.8.6",
     "react-docgen": "^5.4.3",
-    "react-dom": "^16.8.6",
     "style-loader": "^3.3.3",
-    "styled-jsx": "^3.2.1",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"

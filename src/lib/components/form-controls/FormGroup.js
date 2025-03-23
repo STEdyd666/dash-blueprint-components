@@ -11,7 +11,6 @@ const FormGroup = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 

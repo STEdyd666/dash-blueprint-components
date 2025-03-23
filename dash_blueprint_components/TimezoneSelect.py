@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class TimezoneSelect(Component):
@@ -53,8 +60,22 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'TimezoneSelect'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, placeholder=Component.UNDEFINED, showLocalTimezone=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, valueDisplayFormat=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[str] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        placeholder: typing.Optional[str] = None,
+        showLocalTimezone: typing.Optional[bool] = None,
+        style: typing.Optional[dict] = None,
+        value: typing.Optional[str] = None,
+        valueDisplayFormat: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'style', 'value', 'valueDisplayFormat']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'className', 'disabled', 'fill', 'placeholder', 'showLocalTimezone', 'style', 'value', 'valueDisplayFormat']

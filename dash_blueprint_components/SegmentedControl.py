@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class SegmentedControl(Component):
@@ -42,9 +49,6 @@ Keyword arguments:
 - small (boolean; optional):
     Whether this control should use small buttons.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - value (string; optional):
     Selected value. When a value is given to this prop, the
     defaultValue is ignored. When using the value of this component as
@@ -54,8 +58,23 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'SegmentedControl'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, options=Component.UNDEFINED, small=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        inline: typing.Optional[bool] = None,
+        intent: typing.Optional[str] = None,
+        large: typing.Optional[bool] = None,
+        options: typing.Optional[typing.Sequence] = None,
+        small: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        value: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'disabled', 'fill', 'inline', 'intent', 'large', 'options', 'small', 'style', 'value']

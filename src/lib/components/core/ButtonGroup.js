@@ -10,7 +10,6 @@ const ButtonGroup = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 

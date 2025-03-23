@@ -1,11 +1,8 @@
-import { Icon } from "@blueprintjs/core";
-import { Breadcrumbs as BPBreadcrumbs} from "@blueprintjs/core";
-import { Breadcrumb as BPBreadcrumb} from "@blueprintjs/core";
+import { Breadcrumbs as BPBreadcrumbs, Boundary} from "@blueprintjs/core";
 import PropTypes from 'prop-types';
 import * as React from "react";
  
 import { FolderClose } from "@blueprintjs/icons";
-import { Boundary } from "@blueprintjs/core";
 
 
 const BOUNDARY = {
@@ -16,16 +13,13 @@ const BOUNDARY = {
 /**
 * Breadcrumbs identify the path to the current resource in an application.
 */
-const Breadcrumb = props => {
-
-    const {
-        items,
-        collapseFrom,
-        minVisibleItems,
-        alwaysRenderOverflow,
-        setProps,
-        ...others
-    } = props;
+const Breadcrumb = ({
+    items = [],
+    collapseFrom,
+    minVisibleItems,
+    alwaysRenderOverflow,
+    ...others
+}) => {
 
     const renderOnlyLastItem = (items) => {
         const lastItem = [
@@ -90,9 +84,5 @@ Breadcrumb.propTypes = {
     */
     setProps: PropTypes.func,
 }
-
-Breadcrumb.defaultProps = {
-    items: [],
-};
 
 export default Breadcrumb;

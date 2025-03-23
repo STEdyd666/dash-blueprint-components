@@ -10,10 +10,8 @@ import { MenuItem } from "@blueprintjs/core";
 const Omnibar = props => {
 
     const {
-      changedActiveItem,
       matchTargetWidth, 
       minimal,
-      selectedItem,
       isOpen,
       overlayHasBackdrop,
       setProps,
@@ -33,9 +31,8 @@ const Omnibar = props => {
   
       if (exactMatch) {
           return normalizedLabel === normalizedQuery;
-      } else {
-          return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
       }
+      return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
     };
 
     const handleItemRenderer = (item, { handleClick, handleFocus, modifiers, ref }) => {
@@ -87,7 +84,6 @@ const Omnibar = props => {
     )
 }
 
-//<Button text="Open popover"/>
 Omnibar.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.

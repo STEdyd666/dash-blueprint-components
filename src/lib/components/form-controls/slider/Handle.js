@@ -9,8 +9,7 @@ import { MultiSlider } from "@blueprintjs/core"
 const Handle = props => {
 
     const {
-        value,  
-        setProps,
+        value,
         ...others
     } = props;
 
@@ -81,7 +80,5 @@ Handle.propTypes = {
     */
     setProps: PropTypes.func
 };
-
-Handle.defaultProps = {};
 
 export default Handle;

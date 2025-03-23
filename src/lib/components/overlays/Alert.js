@@ -6,19 +6,17 @@ import { Alert as BPAlert} from "@blueprintjs/core";
 /**
 * Alerts notify users of important information and force them to acknowledge the alert content before continuing.
 */
-const Alert = props => {
+const Alert = ({
+  children,
+  isOpen = false,
+  isConfirmed,
+  isCanceled,
+  isClosed,
+  loading,
+  setProps,
+  ...others
+}) => {
 
-    const {
-      children,
-      isOpen,
-      isConfirmed,
-      isCanceled,
-      isClosed,
-      loading,
-      setProps,
-      ...others
-    } = props;
-    
     const handleOnConfirm = () => {
       setProps({
         isConfirmed: true,
@@ -46,6 +44,9 @@ const Alert = props => {
           onCancel={handleOnCancel}
           onConfirm={handleOnConfirm}
           onClose={handleOnClose}
+          isConfirmed={isConfirmed}
+          isClosed={isClosed}
+          isCanceled={isCanceled}
           loading={loading}
           {...others}
         >
@@ -144,10 +145,6 @@ Alert.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Alert.defaultProps = {
-  isOpen: false
 };
 
 export default Alert;

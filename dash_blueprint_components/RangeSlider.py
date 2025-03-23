@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class RangeSlider(Component):
@@ -70,9 +77,6 @@ Keyword arguments:
     Increment between successive values; amount by which the handle
     moves.  Must be greater than zero.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - value (list; optional):
     Value of slider.
 
@@ -82,8 +86,30 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'RangeSlider'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, initialValue=Component.UNDEFINED, intent=Component.UNDEFINED, labelPrecision=Component.UNDEFINED, format=Component.UNDEFINED, labelStepSize=Component.UNDEFINED, labelValues=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_releases=Component.UNDEFINED, showTrackFill=Component.UNDEFINED, stepSize=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        initialValue: typing.Optional[typing.Sequence] = None,
+        intent: typing.Optional[str] = None,
+        labelPrecision: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        format: typing.Optional[typing.Union[bool, str, dict]] = None,
+        labelStepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        labelValues: typing.Optional[typing.Sequence] = None,
+        max: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        min: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        n_changes: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        n_releases: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        showTrackFill: typing.Optional[bool] = None,
+        stepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        value: typing.Optional[typing.Sequence] = None,
+        vertical: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'value', 'vertical']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'disabled', 'format', 'initialValue', 'intent', 'labelPrecision', 'labelStepSize', 'labelValues', 'max', 'min', 'n_changes', 'n_releases', 'showTrackFill', 'stepSize', 'style', 'value', 'vertical']

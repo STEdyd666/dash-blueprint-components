@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class EntityTitle(Component):
@@ -32,9 +39,6 @@ Keyword arguments:
 - loading (boolean; optional):
     Whether to render as loading state.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - subtitle (a list of or a singular dash component, string or number; optional):
     The content to render below the title. Defaults to render muted
     text.
@@ -52,8 +56,23 @@ Keyword arguments:
     _base_nodes = ['subtitle', 'tags', 'title', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'EntityTitle'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, ellipsize=Component.UNDEFINED, heading=Component.UNDEFINED, icon=Component.UNDEFINED, loading=Component.UNDEFINED, subtitle=Component.UNDEFINED, style=Component.UNDEFINED, tags=Component.UNDEFINED, title=Component.REQUIRED, titleURL=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        ellipsize: typing.Optional[bool] = None,
+        heading: typing.Optional[Literal["Text", "H1", "H2", "H3", "H4", "H5", "H6"]] = None,
+        icon: typing.Optional[str] = None,
+        loading: typing.Optional[bool] = None,
+        subtitle: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        style: typing.Optional[typing.Any] = None,
+        tags: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        title: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        titleURL: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'style', 'subtitle', 'tags', 'title', 'titleURL']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'ellipsize', 'heading', 'icon', 'loading', 'style', 'subtitle', 'tags', 'title', 'titleURL']

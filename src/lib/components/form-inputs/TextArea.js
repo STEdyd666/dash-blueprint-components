@@ -12,10 +12,21 @@ const TextArea = props => {
       addOnBlur,
       disabled,
       value,
-      text,
       setProps,
       ...others
     } = props;
+    
+    const handleText = (value) => {
+      setProps({
+        text: value,
+      })
+    };
+    
+    const handleValue = (value) => {
+      setProps({
+        value: value,
+      })
+    };
     
     const handleOnChange = (e) => {
       if (!disabled) {
@@ -33,18 +44,6 @@ const TextArea = props => {
       if (e.key === 'Enter') {
         handleText(e.target.value);
       }
-    };
-
-    const handleText = (value) => {
-      setProps({
-        text: value,
-      })
-    };
-    
-    const handleValue = (value) => {
-      setProps({
-        value: value,
-      })
     };
 
     return (

@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef }  from 'react';
 import PropTypes from 'prop-types';
-import { useRef } from 'react';
-import { useEffect } from 'react';
-import { Position } from '@blueprintjs/core';
-import { OverlayToaster as BPOverlayToaster } from "@blueprintjs/core";
+import { Position, OverlayToaster as BPOverlayToaster} from '@blueprintjs/core';
 
 
 const POSITION_MAP = {
@@ -18,19 +15,16 @@ const POSITION_MAP = {
 /**
 * The OverlayToaster component (previously named Toaster) is a stateful container for a single list of toasts.
 */
-const OverlayToaster = props => {
-
-    const {
-      toasts,
-      position,
-      setProps,
-      ...others
-    } = props;
+const OverlayToaster = ({
+  toasts = [],
+  position,
+  ...others
+}) => {
     
     const ref = useRef(null)
 
     useEffect(() => {
-      if (! toasts.length == 0) {
+      if (toasts.length) {
         toasts.map((toast) => (
           ref.current.show( {...toast.props} )
         ))
@@ -103,10 +97,6 @@ OverlayToaster.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-OverlayToaster.defaultProps = {
-  toasts: []
 };
 
 export default OverlayToaster;

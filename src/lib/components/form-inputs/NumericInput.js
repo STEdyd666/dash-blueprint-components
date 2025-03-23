@@ -6,17 +6,26 @@ import { NumericInput as BPNumericInput} from "@blueprintjs/core";
 /**
 * The NumericInput component provides controls for easily inputting, incrementing, and decrementing numeric values.
 */
-const NumericInput = props => {
-
-    const {
-      addOnBlur,
-      disabled,
-      number,
-      setProps,
-      value,
-      ...others
-    } = props;
+const NumericInput = ({
+  addOnBlur = false,
+  disabled,
+  setProps,
+  value,
+  ...others
+}) => {
     
+    const handleNumber = (value) => {
+      setProps({
+        number: value,
+      })
+    };
+    
+    const handleValue = (value) => {
+      setProps({
+        value: value,
+      })
+    };
+
     const handleOnValueChange = (...[, valueAsString]) => {
       if (!disabled) {
         handleValue(valueAsString);
@@ -39,18 +48,6 @@ const NumericInput = props => {
       if (e.key === 'Enter') {
         handleNumber(e.target.value);
       }
-    };
-
-    const handleNumber = (value) => {
-      setProps({
-        number: value,
-      })
-    };
-    
-    const handleValue = (value) => {
-      setProps({
-        value: value,
-      })
     };
 
     return (
@@ -106,9 +103,9 @@ NumericInput.propTypes = {
     * only used upon component instantiation and changes to this prop during the component 
     * lifecycle will be ignored.
     */
-    defaultValue: PropTypes.oneOf([
+    defaultValue: PropTypes.oneOfType([
       PropTypes.string, 
-      PropTypes.number
+      PropTypes.number,
     ]),
     
     /**
@@ -217,10 +214,6 @@ NumericInput.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-NumericInput.defaultProps = {
-  addOnBlur: false,
 };
 
 export default NumericInput;

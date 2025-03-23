@@ -22,7 +22,7 @@ Keyword arguments:
 - `options` (Array; optional): Shorthand for supplying options: an array of { label?, value } objects. If no label is supplied, 
 value will be used as the label.
 - `style` (Dict; optional): CSS properties to apply to the root element.
-- `value` (a value equal to: PropTypes.number, PropTypes.string; optional): Controlled value of this component.
+- `value` (Real | String; optional): Controlled value of this component.
 """
 function htmlselect(; kwargs...)
         available_props = Symbol[:children, :id, :disabled, :fill, :iconName, :large, :minimal, :options, :style, :value]

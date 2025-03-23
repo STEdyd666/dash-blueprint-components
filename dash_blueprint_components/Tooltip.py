@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Tooltip(Component):
@@ -115,9 +122,6 @@ Keyword arguments:
     allow the popover to reposition itself to remain onscreen as the
     user scrolls  around.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - transitionDuration (number; optional):
     Indicates how long (in milliseconds) the tooltip's
     appear/disappear transition takes. This is used by React
@@ -129,8 +133,37 @@ Keyword arguments:
     _base_nodes = ['content', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Tooltip'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, captureDismiss=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, content=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, fill=Component.UNDEFINED, hoverCloseDelay=Component.UNDEFINED, hoverOpenDelay=Component.UNDEFINED, inheritDarkTheme=Component.UNDEFINED, intent=Component.UNDEFINED, interactionKind=Component.UNDEFINED, isOpen=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnTargetFocus=Component.UNDEFINED, placement=Component.UNDEFINED, popoverClassName=Component.UNDEFINED, position=Component.UNDEFINED, style=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        canEscapeKeyClose: typing.Optional[bool] = None,
+        captureDismiss: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        compact: typing.Optional[bool] = None,
+        content: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        defaultIsOpen: typing.Optional[bool] = None,
+        disabled: typing.Optional[bool] = None,
+        enforceFocus: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        hoverCloseDelay: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        hoverOpenDelay: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        inheritDarkTheme: typing.Optional[bool] = None,
+        intent: typing.Optional[bool] = None,
+        interactionKind: typing.Optional[str] = None,
+        isOpen: typing.Optional[bool] = None,
+        matchTargetWidth: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        openOnTargetFocus: typing.Optional[bool] = None,
+        placement: typing.Optional[str] = None,
+        popoverClassName: typing.Optional[str] = None,
+        position: typing.Optional[str] = None,
+        style: typing.Optional[typing.Any] = None,
+        transitionDuration: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'style', 'transitionDuration']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'canEscapeKeyClose', 'captureDismiss', 'className', 'compact', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'intent', 'interactionKind', 'isOpen', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'position', 'style', 'transitionDuration']

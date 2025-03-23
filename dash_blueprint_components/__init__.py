@@ -121,14 +121,6 @@ _css_dist = [
         'namespace': package_name
     },
     {
-        'relative_package_path': 'blueprint-datetime.css',
-        'namespace': package_name
-    },
-    {
-        'relative_package_path': 'blueprint-datetime.css.map',
-        'namespace': package_name
-    },
-    {
         'relative_package_path': 'blueprint-datetime2.css',
         'namespace': package_name
     },

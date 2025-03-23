@@ -6,16 +6,14 @@ import { Dialog as BPDialog} from "@blueprintjs/core";
 /**
 * Dialogs present content overlaid over other parts of the UI.
 */
-const Dialog = props => {
-
-    const {
-      children,
-      isOpen,
-      setProps,
-      ...others
-    } = props;
+const Dialog = ({
+  children,
+  isOpen = false,
+  setProps,
+  ...others
+}) => {
     
-    const handleOnClose = (e) => {
+    const handleOnClose = (_e) => {
       setProps({
         isOpen: false
       })
@@ -153,10 +151,6 @@ Dialog.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Dialog.defaultProps = {
-  isOpen: false
 };
 
 export default Dialog;

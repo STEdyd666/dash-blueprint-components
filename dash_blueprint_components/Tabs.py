@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Tabs(Component):
@@ -57,8 +64,22 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Tabs'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, animate=Component.UNDEFINED, className=Component.UNDEFINED, defaultSelectedTabId=Component.UNDEFINED, fill=Component.UNDEFINED, large=Component.UNDEFINED, renderActiveTabPanelOnly=Component.UNDEFINED, selectedTabId=Component.UNDEFINED, vertical=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        animate: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        defaultSelectedTabId: typing.Optional[str] = None,
+        fill: typing.Optional[bool] = None,
+        large: typing.Optional[bool] = None,
+        renderActiveTabPanelOnly: typing.Optional[bool] = None,
+        selectedTabId: typing.Optional[str] = None,
+        vertical: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'animate', 'className', 'defaultSelectedTabId', 'fill', 'large', 'renderActiveTabPanelOnly', 'selectedTabId', 'vertical']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'animate', 'className', 'defaultSelectedTabId', 'fill', 'large', 'renderActiveTabPanelOnly', 'selectedTabId', 'vertical']

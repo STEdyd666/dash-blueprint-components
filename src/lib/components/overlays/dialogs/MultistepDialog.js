@@ -1,22 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MultistepDialog as BPMultistepDialog} from "@blueprintjs/core";
-import { DialogStep as BPDialogStep } from '@blueprintjs/core';
+import { MultistepDialog as BPMultistepDialog, DialogStep as BPDialogStep} from "@blueprintjs/core";
+import { getChildProps } from "../../../utils/dash3"
 
 
 /**
 * MultistepDialog is a wrapper around Dialog that displays a dialog with multiple steps.
 Each step has a corresponding panel.
 */
-const MultistepDialog = props => {
-
-    const {
-      children,
-      currentStepId,
-      isOpen,
-      setProps,
-      ...others
-    } = props;
+const MultistepDialog = ({
+  children,
+  isOpen = false,
+  setProps,
+  ...others
+}) => {
     
     const handleOnClose = (_v) => {
       setProps({
@@ -46,9 +43,10 @@ const MultistepDialog = props => {
         >
         {children.map((stepchildren) => {
           const {
-              className,
-              portalClassName,
-              title} = stepchildren.props._dashprivate_layout.props
+            className,
+            portalClassName,
+            title
+          } = getChildProps(stepchildren)
           return <BPDialogStep
               id={stepchildren.key}
               className={className}
@@ -210,11 +208,7 @@ MultistepDialog.propTypes = {
     /**
     * Dash-assigned callback that gets fired when the value changes.
     */
-    setProps: PropTypes.func
-};
-
-MultistepDialog.defaultProps = {
-  isOpen: false
+    setProps: PropTypes.func,  
 };
 
 export default MultistepDialog;

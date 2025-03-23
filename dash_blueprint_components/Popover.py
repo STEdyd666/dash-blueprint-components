@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Popover(Component):
@@ -162,9 +169,6 @@ Keyword arguments:
     target, you must take care to either disable this prop for  the
     popover or disable the tooltip's openOnTargetFocus prop.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - transitionDuration (number; optional):
     Indicates how long (in milliseconds) the overlay's enter/leave
     transition takes. This is used by React CSSTransition to know when
@@ -186,8 +190,45 @@ Keyword arguments:
     _base_nodes = ['content', 'portalContainer', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Popover'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, boundary=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, captureDismiss=Component.UNDEFINED, className=Component.UNDEFINED, content=Component.UNDEFINED, defaultIsOpen=Component.UNDEFINED, disabled=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, fill=Component.UNDEFINED, hasBackdrop=Component.UNDEFINED, hoverCloseDelay=Component.UNDEFINED, hoverOpenDelay=Component.UNDEFINED, inheritDarkTheme=Component.UNDEFINED, interactionKind=Component.UNDEFINED, isOpen=Component.UNDEFINED, lazy=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, openOnTargetFocus=Component.UNDEFINED, placement=Component.UNDEFINED, popoverClassName=Component.UNDEFINED, popupKind=Component.UNDEFINED, portalClassName=Component.UNDEFINED, portalContainer=Component.UNDEFINED, position=Component.UNDEFINED, positioningStrategy=Component.UNDEFINED, shouldReturnFocusOnClose=Component.UNDEFINED, style=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, usePortal=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        autoFocus: typing.Optional[bool] = None,
+        boundary: typing.Optional[str] = None,
+        canEscapeKeyClose: typing.Optional[bool] = None,
+        captureDismiss: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        content: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        defaultIsOpen: typing.Optional[bool] = None,
+        disabled: typing.Optional[bool] = None,
+        enforceFocus: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        hasBackdrop: typing.Optional[bool] = None,
+        hoverCloseDelay: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        hoverOpenDelay: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        inheritDarkTheme: typing.Optional[bool] = None,
+        interactionKind: typing.Optional[str] = None,
+        isOpen: typing.Optional[bool] = None,
+        lazy: typing.Optional[bool] = None,
+        matchTargetWidth: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        openOnTargetFocus: typing.Optional[str] = None,
+        placement: typing.Optional[str] = None,
+        popoverClassName: typing.Optional[str] = None,
+        popupKind: typing.Optional[str] = None,
+        portalClassName: typing.Optional[str] = None,
+        portalContainer: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        position: typing.Optional[str] = None,
+        positioningStrategy: typing.Optional[str] = None,
+        shouldReturnFocusOnClose: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        transitionDuration: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        usePortal: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'autoFocus', 'boundary', 'canEscapeKeyClose', 'captureDismiss', 'className', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hasBackdrop', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'interactionKind', 'isOpen', 'lazy', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'popupKind', 'portalClassName', 'portalContainer', 'position', 'positioningStrategy', 'shouldReturnFocusOnClose', 'style', 'transitionDuration', 'usePortal']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'autoFocus', 'boundary', 'canEscapeKeyClose', 'captureDismiss', 'className', 'content', 'defaultIsOpen', 'disabled', 'enforceFocus', 'fill', 'hasBackdrop', 'hoverCloseDelay', 'hoverOpenDelay', 'inheritDarkTheme', 'interactionKind', 'isOpen', 'lazy', 'matchTargetWidth', 'minimal', 'openOnTargetFocus', 'placement', 'popoverClassName', 'popupKind', 'portalClassName', 'portalContainer', 'position', 'positioningStrategy', 'shouldReturnFocusOnClose', 'style', 'transitionDuration', 'usePortal']

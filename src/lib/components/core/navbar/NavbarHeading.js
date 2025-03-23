@@ -9,7 +9,6 @@ import { NavbarHeading as BPNavbarHeading } from "@blueprintjs/core";
 const NavbarHeading = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

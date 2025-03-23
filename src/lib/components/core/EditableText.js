@@ -6,16 +6,13 @@ import { EditableText as BPEditableText } from "@blueprintjs/core";
 /**
 * EditableText appears as normal UI text but transforms into a text input field when the user focuses it.
 */
-const EditableText = props => {
-
-    const {
-        lastOnCancel,
-        n_changes,
-        n_confirms,
-        n_edits,
-        setProps,
-        ...others
-    } = props;
+const EditableText = ({
+    n_changes = 0,
+    n_confirms = 0,
+    n_edits = 0,
+    setProps,
+    ...others
+}) => {
 
     const handleOnCancel = (lastValue) => {
         setProps({
@@ -175,12 +172,6 @@ EditableText.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-EditableText.defaultProps = {
-    n_changes: 0,
-    n_confirms: 0,
-    n_edits: 0
 };
 
 export default EditableText;

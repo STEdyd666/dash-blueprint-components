@@ -13,7 +13,6 @@ const Collapse = props => {
     const {
         children,
         isOpen,
-        setProps,
         ...others
     } = props;
 

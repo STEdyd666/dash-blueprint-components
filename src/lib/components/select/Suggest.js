@@ -32,9 +32,8 @@ const Suggest = props => {
   
       if (exactMatch) {
           return normalizedLabel === normalizedQuery;
-      } else {
-          return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
       }
+      return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
     };
 
     const handleItemRenderer = (item, { handleClick, handleFocus, modifiers, ref }) => {
@@ -71,7 +70,7 @@ const Suggest = props => {
         return initialContent;
       }
 
-      const renderedItems = items.map(renderItem).filter(item => item != null);
+      const renderedItems = items.map(renderItem).filter(item => item !== null);
       return (
         <Menu role="listbox" ulRef={itemsParentRef} {...menuProps}>
             <MenuItem
@@ -98,7 +97,7 @@ const Suggest = props => {
         />
     )
 }
-//<Button text="Open popover"/>
+
 Suggest.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.

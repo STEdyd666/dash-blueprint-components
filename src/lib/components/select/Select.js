@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { Select as BPSelect } from "@blueprintjs/select";
-import { Button } from "@blueprintjs/core";
-import { Menu, MenuItem } from "@blueprintjs/core";
+import { Button, Menu, MenuItem } from "@blueprintjs/core";
 
 
 /**
@@ -11,7 +10,6 @@ import { Menu, MenuItem } from "@blueprintjs/core";
 const Select = props => {
 
     const {
-      changedActiveItem,
       disabled,
       initialContent,
       fill,
@@ -35,9 +33,8 @@ const Select = props => {
   
       if (exactMatch) {
           return normalizedLabel === normalizedQuery;
-      } else {
-          return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
       }
+      return `${normalizedLabel}`.indexOf(normalizedQuery) >= 0;
     };
 
     const handleItemRenderer = (item, { handleClick, handleFocus, modifiers, ref }) => {
@@ -72,7 +69,7 @@ const Select = props => {
         return initialContent;
       }
 
-      const renderedItems = items.map(renderItem).filter(item => item != null);
+      const renderedItems = items.map(renderItem).filter(item => item !== null);
       return (
           <Menu role="listbox" ulRef={itemsParentRef} {...menuProps}>
               <MenuItem
@@ -102,7 +99,7 @@ const Select = props => {
         </BPSelect>
     )
 }
-//<Button text="Open popover"/>
+
 Select.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.

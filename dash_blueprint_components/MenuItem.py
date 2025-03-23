@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class MenuItem(Component):
@@ -87,9 +94,6 @@ Keyword arguments:
     Whether an enabled item without a submenu should automatically
     close  its parent popover when clicked.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - tagName (optional):
     Name of the HTML tag that wraps the MenuItem.
 
@@ -106,8 +110,34 @@ Keyword arguments:
     _base_nodes = ['labelElement', 'text', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'MenuItem'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, active=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, href=Component.UNDEFINED, htmlTitle=Component.UNDEFINED, icon=Component.UNDEFINED, intent=Component.UNDEFINED, label=Component.UNDEFINED, labelClassName=Component.UNDEFINED, labelElement=Component.UNDEFINED, multiline=Component.UNDEFINED, n_clicks=Component.UNDEFINED, roleStructure=Component.UNDEFINED, selected=Component.UNDEFINED, shouldDismissPopover=Component.UNDEFINED, style=Component.UNDEFINED, tagName=Component.UNDEFINED, target=Component.UNDEFINED, text=Component.UNDEFINED, textClassName=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        active: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        href: typing.Optional[str] = None,
+        htmlTitle: typing.Optional[str] = None,
+        icon: typing.Optional[typing.Union[str, typing.Any]] = None,
+        intent: typing.Optional[str] = None,
+        label: typing.Optional[str] = None,
+        labelClassName: typing.Optional[str] = None,
+        labelElement: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        multiline: typing.Optional[bool] = None,
+        n_clicks: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        roleStructure: typing.Optional[Literal["menuitem", "listoption", "listitem", "none"]] = None,
+        selected: typing.Optional[bool] = None,
+        shouldDismissPopover: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        tagName: typing.Optional[typing.Any] = None,
+        target: typing.Optional[str] = None,
+        text: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        textClassName: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'style', 'tagName', 'target', 'text', 'textClassName']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'active', 'className', 'disabled', 'href', 'htmlTitle', 'icon', 'intent', 'label', 'labelClassName', 'labelElement', 'multiline', 'n_clicks', 'roleStructure', 'selected', 'shouldDismissPopover', 'style', 'tagName', 'target', 'text', 'textClassName']

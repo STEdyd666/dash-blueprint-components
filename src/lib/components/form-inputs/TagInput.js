@@ -1,6 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { useCallback } from 'react';
+import { React, useCallback } from 'react';
 import { TagInput as BPTagInput, Intent} from "@blueprintjs/core";
 
 
@@ -17,20 +16,16 @@ const INTENTS = [
 * The container is styled to look like a Blueprint input; the actual editable element appears 
 * after the last tag. Clicking anywhere on the container will focus the text input.
 */
-const TagInput = props => {
-
-    const {
-      children,
-      disabled,
-      values,
-      tagLarge,
-      tagMinimal,
-      tagIntents,
-      tagAdded,
-      tagRemoved,
-      setProps,
-      ...others
-    } = props;
+const TagInput = ({
+  children,
+  disabled,
+  values = [],
+  tagLarge = false,
+  tagMinimal = false,
+  tagIntents = false,
+  setProps,
+  ...others
+}) => {
     
     const getTagProps = useCallback((_v, index) => ({
       intent: tagIntents ? INTENTS[index % INTENTS.length] : Intent.NONE,
@@ -38,16 +33,16 @@ const TagInput = props => {
       minimal: tagMinimal,
     }), [tagMinimal, tagIntents, tagLarge]);
 
-    const handleOnChange = (e) => {
-      if (!disabled) {
-        handleConfirm(e);
-      }
-    };
-
     const handleConfirm = (e) => {
       setProps({
         values: e,
       })
+    };
+    
+    const handleOnChange = (e) => {
+      if (!disabled) {
+        handleConfirm(e);
+      }
     };
 
     const handleOnAdd = (value) => {
@@ -120,11 +115,6 @@ TagInput.propTypes = {
     */
     className: PropTypes.string,
     
-    /**
-    * cycle tag intent
-    */
-    tagIntents: PropTypes.bool,
-
     /**
     * Whether the input is non-interactive.
     */
@@ -204,11 +194,7 @@ TagInput.propTypes = {
 };
 
 TagInput.defaultProps = {
-  values: [],
-  tagRemoved: {},
-  tagLarge: false,
-  tagMinimal: false,
-  tagIntents: false,
+
 };
 
 export default TagInput;

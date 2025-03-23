@@ -6,15 +6,13 @@ import { Popover as BPPopover } from '@blueprintjs/core';
 /**
 * Popovers display floating content next to a target element.
 */
-const Popover = props => {
-
-    const {
-      children,
-      content,
-      isOpen,
-      setProps,
-      ...others
-    } = props;
+const Popover = ({
+  children,
+  content,
+  isOpen = false,
+  setProps,
+  ...others
+} ) => {
     
     const handleOnClose = (_v) => {
       setProps({
@@ -241,10 +239,6 @@ Popover.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Popover.defaultProps = {
-  isOpen: false
 };
 
 export default Popover;

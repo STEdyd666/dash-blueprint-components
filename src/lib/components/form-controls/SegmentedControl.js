@@ -8,13 +8,11 @@ import {SegmentedControl as BPSegmentedControl} from '@blueprintjs/core';
  similar to a Radio group. Compared to the ButtonGroup component, SegmentedControl has affordances to signify a
  selection UI and a reduced visual weight which is appropriate for forms.
  */
-const SegmentedControl = props => {
-    const {
-        disabled,
-        setProps,
-        ...others
-    } = props;
-
+const SegmentedControl = ({
+    disabled = false,
+    setProps,
+    ...others
+}) => {
 
     const handleOnValueChange = (newValue, _) => {
         if (!disabled) {

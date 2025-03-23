@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class EditableText(Component):
@@ -81,9 +88,6 @@ Keyword arguments:
     https://html.spec.whatwg.org/multipage/input.html#do-not-apply for
     details.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - type (string; optional):
     The type of input that should be shown, when not multiline.
 
@@ -93,8 +97,33 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'EditableText'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, alwaysRenderInput=Component.UNDEFINED, className=Component.UNDEFINED, confirmOnEnterKey=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, intent=Component.UNDEFINED, maxLength=Component.UNDEFINED, maxLines=Component.UNDEFINED, minLines=Component.UNDEFINED, minWidth=Component.UNDEFINED, multiline=Component.UNDEFINED, lastOnCancel=Component.UNDEFINED, n_changes=Component.UNDEFINED, n_confirms=Component.UNDEFINED, n_edits=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, style=Component.UNDEFINED, type=Component.UNDEFINED, value=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        alwaysRenderInput: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        confirmOnEnterKey: typing.Optional[bool] = None,
+        defaultValue: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        intent: typing.Optional[str] = None,
+        maxLength: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        maxLines: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        minLines: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        minWidth: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        multiline: typing.Optional[bool] = None,
+        lastOnCancel: typing.Optional[str] = None,
+        n_changes: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        n_confirms: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        n_edits: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        placeholder: typing.Optional[str] = None,
+        selectAllOnFocus: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        type: typing.Optional[str] = None,
+        value: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'style', 'type', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'alwaysRenderInput', 'className', 'confirmOnEnterKey', 'defaultValue', 'disabled', 'intent', 'lastOnCancel', 'maxLength', 'maxLines', 'minLines', 'minWidth', 'multiline', 'n_changes', 'n_confirms', 'n_edits', 'placeholder', 'selectAllOnFocus', 'style', 'type', 'value']

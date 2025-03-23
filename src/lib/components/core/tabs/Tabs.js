@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
-import { Tabs as BPTabs } from "@blueprintjs/core";
-import { Tab as BPTab } from "@blueprintjs/core";
+import PropTypes from 'prop-types';
+import { Tabs as BPTabs, Tab as BPTab } from "@blueprintjs/core";
+import { getChildProps } from "../../../utils/dash3"
 
 
 /**
@@ -16,7 +16,7 @@ const Tabs = props => {
         ...others
     } = props;
 
-    const handleOnChange = (newTabId, prevTabId, event) => {
+    const handleOnChange = (newTabId, _prevTabId, _event) => {
         setProps({
             selectedTabId: newTabId
         })
@@ -33,7 +33,8 @@ const Tabs = props => {
                 disabled,
                 icon,
                 title,
-                panelClassName} = tabschildren.props._dashprivate_layout.props
+                panelClassName
+            } = getChildProps(tabschildren)
             return <BPTab
                 title={title}
                 disabled={disabled}

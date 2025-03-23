@@ -6,18 +6,16 @@ import { MenuItem as BPMenuItem } from "@blueprintjs/core";
 /**
 * A MenuItem is a single interactive item in a Menu.
 */
-const MenuItem = props => {
-
-    const {
-        children,
-        disabled,
-        intent,
-        n_clicks,
-				roleStructure,
-				selected,
-        setProps,
-        ...others
-    } = props;
+const MenuItem = ({
+    children,
+    disabled,
+    intent,
+    n_clicks = 0,
+    roleStructure,
+    selected,
+    setProps,
+    ...others
+}) => {
 
     const increment = () => {
         if (!disabled) {
@@ -30,12 +28,12 @@ const MenuItem = props => {
     return (
         <BPMenuItem 
         	onClick={increment} 
-					disabled={disabled}
-					intent={intent}
-					roleStructure={roleStructure}
-					selected={selected}
-					{...others}
-				>
+            disabled={disabled}
+            intent={intent}
+            roleStructure={roleStructure}
+            selected={selected}
+            {...others}
+        >
             {children}
         </BPMenuItem>
     )
@@ -184,10 +182,6 @@ MenuItem.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-MenuItem.defaultProps = {
-    n_clicks: 0,
 };
 
 export default MenuItem;

@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Select(Component):
@@ -59,16 +66,31 @@ Keyword arguments:
     empty string.
 
 - selectedItem (dict; optional):
-    Selected item.
-
-- style (dict; optional):
-    CSS properties to apply to the root element."""
+    Selected item."""
     _children_props = ['initialContent']
     _base_nodes = ['initialContent', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Select'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, className=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, filterable=Component.UNDEFINED, initialContent=Component.UNDEFINED, items=Component.UNDEFINED, matchTargetWidth=Component.UNDEFINED, minimal=Component.UNDEFINED, selectedItem=Component.UNDEFINED, style=Component.UNDEFINED, resetOnClose=Component.UNDEFINED, resetOnQuery=Component.UNDEFINED, resetOnSelect=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        filterable: typing.Optional[bool] = None,
+        initialContent: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        items: typing.Optional[typing.Sequence] = None,
+        matchTargetWidth: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        selectedItem: typing.Optional[dict] = None,
+        style: typing.Optional[typing.Any] = None,
+        resetOnClose: typing.Optional[bool] = None,
+        resetOnQuery: typing.Optional[bool] = None,
+        resetOnSelect: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'className', 'disabled', 'fill', 'filterable', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'className', 'disabled', 'fill', 'filterable', 'initialContent', 'items', 'matchTargetWidth', 'minimal', 'resetOnClose', 'resetOnQuery', 'resetOnSelect', 'selectedItem', 'style']

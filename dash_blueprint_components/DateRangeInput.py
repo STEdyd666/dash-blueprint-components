@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class DateRangeInput(Component):
@@ -97,9 +104,6 @@ Keyword arguments:
 - singleMonthOnly (boolean; optional):
     Whether to show only a single month calendar.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - timePrecision (string; optional):
     The precision of time selection that accompanies the calendar.
     Passing a TimePrecision value shows a TimePicker below the
@@ -112,8 +116,41 @@ Keyword arguments:
     _base_nodes = ['footerElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'DateRangeInput'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, allowSingleDayRange=Component.UNDEFINED, closeOnSelection=Component.UNDEFINED, contiguousCalendarMonths=Component.UNDEFINED, className=Component.UNDEFINED, dateFnsFormat=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, invalidDateMessage=Component.UNDEFINED, locale=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, outOfRangeMessage=Component.UNDEFINED, overlappingDatesMessage=Component.UNDEFINED, placeholder=Component.UNDEFINED, range=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, singleMonthOnly=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, style=Component.UNDEFINED, timePrecision=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        allowSingleDayRange: typing.Optional[bool] = None,
+        closeOnSelection: typing.Optional[str] = None,
+        contiguousCalendarMonths: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        dateFnsFormat: typing.Optional[str] = None,
+        defaultValue: typing.Optional[typing.Sequence] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        footerElement: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        highlightCurrentDay: typing.Optional[bool] = None,
+        initialMonth: typing.Optional[str] = None,
+        invalidDateMessage: typing.Optional[str] = None,
+        locale: typing.Optional[str] = None,
+        maxDate: typing.Optional[typing.Any] = None,
+        minDate: typing.Optional[typing.Any] = None,
+        outOfRangeMessage: typing.Optional[str] = None,
+        overlappingDatesMessage: typing.Optional[str] = None,
+        placeholder: typing.Optional[str] = None,
+        range: typing.Optional[typing.Sequence] = None,
+        reverseMonthAndYearMenus: typing.Optional[bool] = None,
+        selectAllOnFocus: typing.Optional[bool] = None,
+        selectedShortcutIndex: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        shortcuts: typing.Optional[bool] = None,
+        singleMonthOnly: typing.Optional[bool] = None,
+        showTimeArrowButtons: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        timePrecision: typing.Optional[str] = None,
+        useAmPm: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'allowSingleDayRange', 'className', 'closeOnSelection', 'contiguousCalendarMonths', 'dateFnsFormat', 'defaultValue', 'disabled', 'fill', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'invalidDateMessage', 'locale', 'outOfRangeMessage', 'overlappingDatesMessage', 'placeholder', 'range', 'reverseMonthAndYearMenus', 'selectAllOnFocus', 'selectedShortcutIndex', 'shortcuts', 'showTimeArrowButtons', 'singleMonthOnly', 'style', 'timePrecision', 'useAmPm']

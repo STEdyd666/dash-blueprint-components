@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class NumericInput(Component):
@@ -34,7 +41,7 @@ Keyword arguments:
     A space-delimited list of class names to pass along to a child
     element.
 
-- defaultValue (a value equal to: PropTypes.string, PropTypes.number; optional):
+- defaultValue (string | number; optional):
     In uncontrolled mode, this sets the default value of the input.
     Note that this value is  only used upon component instantiation
     and changes to this prop during the component  lifecycle will be
@@ -109,17 +116,45 @@ Keyword arguments:
     The increment between successive values when no modifier keys are
     held.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - value (string; optional):
     Input value that changes every time a new character is inserted."""
     _children_props = ['leftElement']
     _base_nodes = ['leftElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'NumericInput'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, addOnBlur=Component.UNDEFINED, allowNumericCharactersOnly=Component.UNDEFINED, buttonPosition=Component.UNDEFINED, clampValueOnBlur=Component.UNDEFINED, className=Component.UNDEFINED, defaultValue=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, inputClassName=Component.UNDEFINED, intent=Component.UNDEFINED, large=Component.UNDEFINED, leftElement=Component.UNDEFINED, leftIcon=Component.UNDEFINED, locale=Component.UNDEFINED, majorStepSize=Component.UNDEFINED, max=Component.UNDEFINED, min=Component.UNDEFINED, minorStepSize=Component.UNDEFINED, placeholder=Component.UNDEFINED, selectAllOnFocus=Component.UNDEFINED, selectAllOnIncrement=Component.UNDEFINED, small=Component.UNDEFINED, stepSize=Component.UNDEFINED, style=Component.UNDEFINED, value=Component.UNDEFINED, number=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        addOnBlur: typing.Optional[bool] = None,
+        allowNumericCharactersOnly: typing.Optional[bool] = None,
+        buttonPosition: typing.Optional[Literal["left", "right"]] = None,
+        clampValueOnBlur: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        defaultValue: typing.Optional[typing.Union[str, typing.Union[int, float, numbers.Number]]] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        inputClassName: typing.Optional[str] = None,
+        intent: typing.Optional[str] = None,
+        large: typing.Optional[bool] = None,
+        leftElement: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        leftIcon: typing.Optional[str] = None,
+        locale: typing.Optional[str] = None,
+        majorStepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        max: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        min: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        minorStepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        placeholder: typing.Optional[str] = None,
+        selectAllOnFocus: typing.Optional[bool] = None,
+        selectAllOnIncrement: typing.Optional[bool] = None,
+        small: typing.Optional[bool] = None,
+        stepSize: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        value: typing.Optional[str] = None,
+        number: typing.Optional[str] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'style', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'addOnBlur', 'allowNumericCharactersOnly', 'buttonPosition', 'clampValueOnBlur', 'className', 'defaultValue', 'disabled', 'fill', 'inputClassName', 'intent', 'large', 'leftElement', 'leftIcon', 'locale', 'majorStepSize', 'max', 'min', 'minorStepSize', 'number', 'placeholder', 'selectAllOnFocus', 'selectAllOnIncrement', 'small', 'stepSize', 'style', 'value']

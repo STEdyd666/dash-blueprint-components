@@ -6,17 +6,15 @@ import { Tag as BPTag } from "@blueprintjs/core";
 /**
 * Tags are great for lists of strings.
 */
-const Tag = props => {
-
-    const {
-        children,
-        interactive,
-        n_clicks,
-        n_clicks_remove,
-        removable,
-        setProps,
-        ...others
-    } = props;
+const Tag = ({
+    children,
+    interactive,
+    n_clicks,
+    n_clicks_remove,
+    removable = false,
+    setProps,
+    ...others
+}) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -36,7 +34,7 @@ const Tag = props => {
         <BPTag
             interactive={interactive}
             onClick={handleOnClick}
-            onRemove={removable ? handleOnRemove : undefined}
+            onRemove={removable ? handleOnRemove : () => {}}
             {...others}
         >
             {children}
@@ -153,10 +151,6 @@ Tag.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Tag.defaultProps = {
-    removable: false
 };
 
 export default Tag;

@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Alert(Component):
@@ -62,16 +69,33 @@ Keyword arguments:
 
 - loading (boolean; optional):
     If set to True, the confirm button will be set to its loading
-    state. The cancel button,  if visible, will be disabled.
-
-- style (dict; optional):
-    CSS properties to apply to the root element."""
+    state. The cancel button,  if visible, will be disabled."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Alert'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, cancelButtonText=Component.UNDEFINED, canEscapeKeyCancel=Component.UNDEFINED, canOutsideClickCancel=Component.UNDEFINED, className=Component.UNDEFINED, confirmButtonText=Component.UNDEFINED, icon=Component.UNDEFINED, fill=Component.UNDEFINED, intent=Component.UNDEFINED, isOpen=Component.UNDEFINED, loading=Component.UNDEFINED, isCanceled=Component.UNDEFINED, isConfirmed=Component.UNDEFINED, isClosed=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        cancelButtonText: typing.Optional[str] = None,
+        canEscapeKeyCancel: typing.Optional[bool] = None,
+        canOutsideClickCancel: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        confirmButtonText: typing.Optional[str] = None,
+        icon: typing.Optional[str] = None,
+        fill: typing.Optional[bool] = None,
+        intent: typing.Optional[str] = None,
+        isOpen: typing.Optional[bool] = None,
+        loading: typing.Optional[bool] = None,
+        isCanceled: typing.Optional[bool] = None,
+        isConfirmed: typing.Optional[bool] = None,
+        isClosed: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'canEscapeKeyCancel', 'canOutsideClickCancel', 'cancelButtonText', 'className', 'confirmButtonText', 'fill', 'icon', 'intent', 'isCanceled', 'isClosed', 'isConfirmed', 'isOpen', 'loading', 'style']

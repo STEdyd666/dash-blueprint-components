@@ -9,7 +9,6 @@ import { NavbarDivider as BPNavbarDivider } from "@blueprintjs/core";
 const NavbarDivider = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

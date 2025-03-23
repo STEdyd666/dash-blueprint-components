@@ -11,7 +11,6 @@ const Section = props => {
     const {
         children,
         defaultIsOpen,
-        setProps,
         ...others
     } = props;
 

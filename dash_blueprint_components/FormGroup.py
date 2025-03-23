@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class FormGroup(Component):
@@ -51,9 +58,6 @@ Keyword arguments:
 - labelInfo (a list of or a singular dash component, string or number; optional):
     Optional secondary text that appears after the label.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - subLabel (a list of or a singular dash component, string or number; optional):
     Optional text for label. The given content will be wrapped in
     Classes.FORM_GROUP_SUB_LABEL and displayed beneath label. The text
@@ -62,8 +66,25 @@ Keyword arguments:
     _base_nodes = ['helperText', 'label', 'labelInfo', 'subLabel', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'FormGroup'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, contentClassName=Component.UNDEFINED, disabled=Component.UNDEFINED, helperText=Component.UNDEFINED, inline=Component.UNDEFINED, intent=Component.UNDEFINED, label=Component.UNDEFINED, labelFor=Component.UNDEFINED, labelInfo=Component.UNDEFINED, style=Component.UNDEFINED, subLabel=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        contentClassName: typing.Optional[str] = None,
+        disabled: typing.Optional[bool] = None,
+        helperText: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        inline: typing.Optional[bool] = None,
+        intent: typing.Optional[str] = None,
+        label: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        labelFor: typing.Optional[str] = None,
+        labelInfo: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        style: typing.Optional[typing.Any] = None,
+        subLabel: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'className', 'contentClassName', 'disabled', 'helperText', 'inline', 'intent', 'label', 'labelFor', 'labelInfo', 'style', 'subLabel']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'className', 'contentClassName', 'disabled', 'helperText', 'inline', 'intent', 'label', 'labelFor', 'labelInfo', 'style', 'subLabel']

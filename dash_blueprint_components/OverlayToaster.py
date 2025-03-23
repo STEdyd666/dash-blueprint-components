@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class OverlayToaster(Component):
@@ -31,9 +38,6 @@ Keyword arguments:
 - position (string; optional):
     Position of Toaster within its container.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - toasts (list; optional):
     The maximum number of active toasts that can be displayed at once.
     When the limit is  about to be exceeded, the oldest active toast
@@ -47,8 +51,21 @@ Keyword arguments:
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'OverlayToaster'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, className=Component.UNDEFINED, canEscapeKeyClear=Component.UNDEFINED, toasts=Component.UNDEFINED, maxToasts=Component.UNDEFINED, position=Component.UNDEFINED, usePortal=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        autoFocus: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        canEscapeKeyClear: typing.Optional[bool] = None,
+        toasts: typing.Optional[typing.Sequence] = None,
+        maxToasts: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        position: typing.Optional[str] = None,
+        usePortal: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'style', 'toasts', 'usePortal']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'autoFocus', 'canEscapeKeyClear', 'className', 'maxToasts', 'position', 'style', 'toasts', 'usePortal']

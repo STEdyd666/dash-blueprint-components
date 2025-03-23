@@ -7,15 +7,14 @@ import { HTMLSelect as BPHTMLSelect } from "@blueprintjs/core";
 * Styling HTML <select> tags requires a wrapper element to customize the dropdown caret, 
 so Blueprint provides a HTMLSelect component to streamline this process.
 */
-const HTMLSelect = props => {
-
-    const {
-        disabled,
-        children,
-        value,
-        setProps,
-        ...others
-    } = props;
+const HTMLSelect = ({
+    disabled,
+    children,
+    iconName = "double-caret-vertical",
+    value,
+    setProps,
+    ...others
+}) => {
 
     const handleOnChange = (event) => {
         if (!disabled) {
@@ -29,7 +28,8 @@ const HTMLSelect = props => {
         <BPHTMLSelect 
             onChange={handleOnChange} 
             value={value} 
-            disabled={disabled} 
+            disabled={disabled}
+            iconName={iconName}
             {...others}
         >
             {children}
@@ -83,7 +83,7 @@ HTMLSelect.propTypes = {
     /**
     * Controlled value of this component.
     */
-    value: PropTypes.oneOf([
+    value: PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string
     ]),

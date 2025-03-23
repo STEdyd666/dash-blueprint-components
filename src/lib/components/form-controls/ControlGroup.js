@@ -10,7 +10,6 @@ const ControlGroup = props => {
 
     const {
         children,
-        setProps,
         ...others
     } = props;
 

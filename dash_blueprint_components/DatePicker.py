@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class DatePicker(Component):
@@ -74,9 +81,6 @@ Keyword arguments:
 - showWeekNumber (boolean; optional):
     Whether to show week numbers.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
 - timePrecision (string; optional):
     The precision of time selection that accompanies the calendar.
     Passing a TimePrecision value shows a TimePicker below the
@@ -92,8 +96,34 @@ Keyword arguments:
     _base_nodes = ['footerElement', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'DatePicker'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, canClearSelection=Component.UNDEFINED, className=Component.UNDEFINED, clearButtonText=Component.UNDEFINED, date=Component.UNDEFINED, defaultValue=Component.UNDEFINED, footerElement=Component.UNDEFINED, highlightCurrentDay=Component.UNDEFINED, initialMonth=Component.UNDEFINED, maxDate=Component.UNDEFINED, minDate=Component.UNDEFINED, reverseMonthAndYearMenus=Component.UNDEFINED, selectedShortcutIndex=Component.UNDEFINED, shortcuts=Component.UNDEFINED, showActionsBar=Component.UNDEFINED, showTimeArrowButtons=Component.UNDEFINED, showOutsideDays=Component.UNDEFINED, showWeekNumber=Component.UNDEFINED, style=Component.UNDEFINED, timePrecision=Component.UNDEFINED, todayButtonText=Component.UNDEFINED, useAmPm=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        canClearSelection: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        clearButtonText: typing.Optional[str] = None,
+        date: typing.Optional[str] = None,
+        defaultValue: typing.Optional[str] = None,
+        footerElement: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        highlightCurrentDay: typing.Optional[bool] = None,
+        initialMonth: typing.Optional[str] = None,
+        maxDate: typing.Optional[str] = None,
+        minDate: typing.Optional[str] = None,
+        reverseMonthAndYearMenus: typing.Optional[bool] = None,
+        selectedShortcutIndex: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        shortcuts: typing.Optional[bool] = None,
+        showActionsBar: typing.Optional[bool] = None,
+        showTimeArrowButtons: typing.Optional[bool] = None,
+        showOutsideDays: typing.Optional[bool] = None,
+        showWeekNumber: typing.Optional[bool] = None,
+        style: typing.Optional[typing.Any] = None,
+        timePrecision: typing.Optional[str] = None,
+        todayButtonText: typing.Optional[str] = None,
+        useAmPm: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'style', 'timePrecision', 'todayButtonText', 'useAmPm']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'canClearSelection', 'className', 'clearButtonText', 'date', 'defaultValue', 'footerElement', 'highlightCurrentDay', 'initialMonth', 'maxDate', 'minDate', 'reverseMonthAndYearMenus', 'selectedShortcutIndex', 'shortcuts', 'showActionsBar', 'showOutsideDays', 'showTimeArrowButtons', 'showWeekNumber', 'style', 'timePrecision', 'todayButtonText', 'useAmPm']

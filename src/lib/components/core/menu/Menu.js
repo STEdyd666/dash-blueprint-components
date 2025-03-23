@@ -6,12 +6,7 @@ import { Menu as BPMenu } from "@blueprintjs/core";
 /**
 * Menus display lists of interactive items.
 */
-const Menu = props => {
-
-    const {
-        setProps,
-        ...others
-    } = props;
+const Menu = ({...others}) => {
 
     return (
         <BPMenu {...others}/>

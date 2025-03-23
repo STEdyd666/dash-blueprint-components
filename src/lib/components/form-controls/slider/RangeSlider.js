@@ -6,18 +6,16 @@ import { RangeSlider as BPRangeSlider } from "@blueprintjs/core";
 /**
 * Use RangeSlider to choose a range between upper and lower bounds.
 */
-const RangeSlider = props => {
-
-    const {
-        disabled,
-        format,
-        initialValue,
-        n_changes,
-        n_releases,
-        value,  
-        setProps,
-        ...others
-    } = props;
+const RangeSlider = ({
+    disabled,
+    format,
+    initialValue,
+    n_changes = 0,
+    n_releases = 0,
+    value,  
+    setProps,
+    ...others
+}) => {
 
     const handleOnChange = (val) => {
         if (!disabled) {
@@ -28,7 +26,7 @@ const RangeSlider = props => {
         }
     }
 
-    const handleOnRelease = (val) => {
+    const handleOnRelease = (_) => {
         if (!disabled) {
             setProps({
                 n_releases: n_releases + 1 
@@ -56,13 +54,9 @@ const RangeSlider = props => {
             else if (format.hasOwnProperty('after')) {
                 return `${val}${format.after}`
             }
-            else {
-                return val
-            }
-        }
-        else {
             return val
         }
+        return val
     }
 
     return (
@@ -192,11 +186,6 @@ RangeSlider.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-RangeSlider.defaultProps = {
-    n_changes: 0,
-    n_releases: 0
 };
 
 export default RangeSlider;

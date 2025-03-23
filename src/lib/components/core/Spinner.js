@@ -10,7 +10,6 @@ import { Spinner as BPSpinner } from "@blueprintjs/core";
 const Spinner = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

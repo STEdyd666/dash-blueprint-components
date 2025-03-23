@@ -9,7 +9,6 @@ import { Tab as BPTab } from "@blueprintjs/core";
 const Tab = props => {
 
     const {
-        setProps,
         ...others
     } = props;
 

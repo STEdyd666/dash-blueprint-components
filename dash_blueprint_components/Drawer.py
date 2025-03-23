@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Drawer(Component):
@@ -86,9 +93,6 @@ Keyword arguments:
     sizes:   DrawerSize.SMALL = 360px   DrawerSize.STANDARD = 50%
     DrawerSize.LARGE = 90%.
 
-- style (dict; optional):
-    CSS styles to apply to the dialog.
-
 - title (a list of or a singular dash component, string or number; optional):
     Title of the dialog. If provided, an element with
     Classes.DIALOG_HEADER will be rendered inside the dialog before
@@ -118,8 +122,35 @@ Keyword arguments:
     _base_nodes = ['portalContainer', 'title', 'children']
     _namespace = 'dash_blueprint_components'
     _type = 'Drawer'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, autoFocus=Component.UNDEFINED, backdropClassName=Component.UNDEFINED, canEscapeKeyClose=Component.UNDEFINED, canOutsideClickClose=Component.UNDEFINED, className=Component.UNDEFINED, enforceFocus=Component.UNDEFINED, hasBackdrop=Component.UNDEFINED, icon=Component.UNDEFINED, isCloseButtonShown=Component.UNDEFINED, isOpen=Component.UNDEFINED, lazy=Component.UNDEFINED, portalClassName=Component.UNDEFINED, portalContainer=Component.UNDEFINED, position=Component.UNDEFINED, shouldReturnFocusOnClose=Component.UNDEFINED, size=Component.UNDEFINED, style=Component.UNDEFINED, title=Component.UNDEFINED, transitionDuration=Component.UNDEFINED, transitionName=Component.UNDEFINED, usePortal=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        autoFocus: typing.Optional[bool] = None,
+        backdropClassName: typing.Optional[str] = None,
+        canEscapeKeyClose: typing.Optional[bool] = None,
+        canOutsideClickClose: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        enforceFocus: typing.Optional[bool] = None,
+        hasBackdrop: typing.Optional[bool] = None,
+        icon: typing.Optional[str] = None,
+        isCloseButtonShown: typing.Optional[bool] = None,
+        isOpen: typing.Optional[bool] = None,
+        lazy: typing.Optional[bool] = None,
+        portalClassName: typing.Optional[str] = None,
+        portalContainer: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        position: typing.Optional[str] = None,
+        shouldReturnFocusOnClose: typing.Optional[bool] = None,
+        size: typing.Optional[typing.Union[typing.Union[int, float, numbers.Number], Literal["small", "standard", "large"]]] = None,
+        style: typing.Optional[typing.Any] = None,
+        title: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        transitionDuration: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        transitionName: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        usePortal: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'autoFocus', 'backdropClassName', 'canEscapeKeyClose', 'canOutsideClickClose', 'className', 'enforceFocus', 'hasBackdrop', 'icon', 'isCloseButtonShown', 'isOpen', 'lazy', 'portalClassName', 'portalContainer', 'position', 'shouldReturnFocusOnClose', 'size', 'style', 'title', 'transitionDuration', 'transitionName', 'usePortal']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'autoFocus', 'backdropClassName', 'canEscapeKeyClose', 'canOutsideClickClose', 'className', 'enforceFocus', 'hasBackdrop', 'icon', 'isCloseButtonShown', 'isOpen', 'lazy', 'portalClassName', 'portalContainer', 'position', 'shouldReturnFocusOnClose', 'size', 'style', 'title', 'transitionDuration', 'transitionName', 'usePortal']

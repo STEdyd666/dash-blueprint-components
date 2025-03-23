@@ -18,7 +18,7 @@ mimicking the native input[type="number"].
 to each bound only if the bound is defined. Note that native input[type="number"] controls 
 do NOT clamp on blur.
 - `className` (String; optional): A space-delimited list of class names to pass along to a child element.
-- `defaultValue` (a value equal to: PropTypes.string, PropTypes.number; optional): In uncontrolled mode, this sets the default value of the input. Note that this value is 
+- `defaultValue` (String | Real; optional): In uncontrolled mode, this sets the default value of the input. Note that this value is 
 only used upon component instantiation and changes to this prop during the component 
 lifecycle will be ignored.
 - `disabled` (Bool; optional): Whether the input is non-interactive.

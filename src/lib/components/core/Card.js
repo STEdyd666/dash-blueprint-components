@@ -6,15 +6,14 @@ import { Card as BPCard } from "@blueprintjs/core";
 /**
 * A card is a bounded unit of UI content with a solid background color.
 */
-const Card = props => {
-
-    const {
-        children,
-        n_clicks,
-        interactive,
-        setProps,
-        ...others
-    } = props;
+const Card = ({
+    children,
+    n_clicks = 0,
+    elevation = 0,
+    interactive,
+    setProps,
+    ...others
+}) => {
 
     const handleOnClick = () => {
         if (interactive) {
@@ -25,7 +24,12 @@ const Card = props => {
     }
 
     return (
-        <BPCard onClick={handleOnClick} interactive={interactive} {...others}>
+        <BPCard 
+          onClick={handleOnClick} 
+          interactive={interactive}
+          elevation={elevation}
+          {...others}
+        >
             {children}
         </BPCard>
     )
@@ -82,11 +86,6 @@ Card.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Card.defaultProps = {
-    elevation: 0,
-    n_clicks: 0,
 };
 
 export default Card;

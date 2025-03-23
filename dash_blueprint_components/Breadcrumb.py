@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Breadcrumb(Component):
@@ -29,16 +36,24 @@ Keyword arguments:
 
 - minVisibleItems (number; optional):
     The minimum number of visible breadcrumbs that should never
-    collapse into the overflow menu, regardless of DOM dimensions.
-
-- style (dict; optional):
-    CSS properties to apply to the root element."""
+    collapse into the overflow menu, regardless of DOM dimensions."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Breadcrumb'
+
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, alwaysRenderOverflow=Component.UNDEFINED, className=Component.UNDEFINED, collapseFrom=Component.UNDEFINED, items=Component.UNDEFINED, minVisibleItems=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        alwaysRenderOverflow: typing.Optional[bool] = None,
+        className: typing.Optional[str] = None,
+        collapseFrom: typing.Optional[str] = None,
+        items: typing.Optional[typing.Sequence] = None,
+        minVisibleItems: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'alwaysRenderOverflow', 'className', 'collapseFrom', 'items', 'minVisibleItems', 'style']

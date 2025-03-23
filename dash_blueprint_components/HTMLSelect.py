@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class HTMLSelect(Component):
@@ -37,17 +44,28 @@ Keyword arguments:
     objects. If no label is supplied,  value will be used as the
     label.
 
-- style (dict; optional):
-    CSS properties to apply to the root element.
-
-- value (a value equal to: PropTypes.number, PropTypes.string; optional):
+- value (number | string; optional):
     Controlled value of this component."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'HTMLSelect'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, disabled=Component.UNDEFINED, fill=Component.UNDEFINED, iconName=Component.UNDEFINED, large=Component.UNDEFINED, minimal=Component.UNDEFINED, options=Component.UNDEFINED, value=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        disabled: typing.Optional[bool] = None,
+        fill: typing.Optional[bool] = None,
+        iconName: typing.Optional[str] = None,
+        large: typing.Optional[bool] = None,
+        minimal: typing.Optional[bool] = None,
+        options: typing.Optional[typing.Sequence] = None,
+        value: typing.Optional[typing.Union[typing.Union[int, float, numbers.Number], str]] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'disabled', 'fill', 'iconName', 'large', 'minimal', 'options', 'style', 'value']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'disabled', 'fill', 'iconName', 'large', 'minimal', 'options', 'style', 'value']

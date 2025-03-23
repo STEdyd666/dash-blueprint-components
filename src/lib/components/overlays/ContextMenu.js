@@ -11,18 +11,17 @@ const ContextMenu = props => {
     const {
       children,
       content,
-      isOpen,
       setProps,
       ...others
     } = props;
     
-    const handleOnContextMenu = (e) => {
+    const handleOnContextMenu = (_e) => {
       setProps({
         isOpen: true
       })
     };
 
-    const handleOnClose = (e) => {
+    const handleOnClose = (_e) => {
       setProps({
         isOpen: false
       })
@@ -39,7 +38,7 @@ const ContextMenu = props => {
         </BPContextMenu>
     )
 }
-//<Button text="Open popover"/>
+
 ContextMenu.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.

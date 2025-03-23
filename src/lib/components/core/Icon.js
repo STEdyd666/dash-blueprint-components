@@ -6,13 +6,11 @@ import { Icon as BPIcon } from "@blueprintjs/core";
 /**
 * Use the <Icon> component to easily render SVG icons in React
 */
-const Icon = props => {
-
-    const {
-        setProps,
-        n_clicks,
-        ...others
-    } = props;
+const Icon = ({
+    setProps,
+    n_clicks = 0,
+    ...others
+}) => {
 
     const increment = () => {
         setProps({
@@ -108,10 +106,6 @@ Icon.propTypes = {
     * Dash-assigned callback that gets fired when the value changes.
     */
     setProps: PropTypes.func
-};
-
-Icon.defaultProps = {
-    n_clicks: 0,
 };
 
 export default Icon;

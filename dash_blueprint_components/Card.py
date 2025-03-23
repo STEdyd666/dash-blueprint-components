@@ -1,6 +1,13 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+import numbers # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+try:
+    from dash.development.base_component import ComponentType # noqa: F401
+except ImportError:
+    ComponentType = typing.TypeVar("ComponentType", bound=Component)
 
 
 class Card(Component):
@@ -36,16 +43,25 @@ Keyword arguments:
 - n_clicks (number; default 0):
     An integer that represents the time (in ms since 1970) at which
     n_clicks changed. This can be used to tell which button was
-    changed most recently.
-
-- style (dict; optional):
-    CSS styles to apply to the card."""
+    changed most recently."""
     _children_props = []
     _base_nodes = ['children']
     _namespace = 'dash_blueprint_components'
     _type = 'Card'
+
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, className=Component.UNDEFINED, compact=Component.UNDEFINED, elevation=Component.UNDEFINED, interactive=Component.UNDEFINED, n_clicks=Component.UNDEFINED, style=Component.UNDEFINED, **kwargs):
+    def __init__(
+        self,
+        children: typing.Optional[typing.Union[str, int, float, ComponentType, typing.Sequence[typing.Union[str, int, float, ComponentType]]]] = None,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        className: typing.Optional[str] = None,
+        compact: typing.Optional[bool] = None,
+        elevation: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        interactive: typing.Optional[bool] = None,
+        n_clicks: typing.Optional[typing.Union[int, float, numbers.Number]] = None,
+        style: typing.Optional[typing.Any] = None,
+        **kwargs
+    ):
         self._prop_names = ['children', 'id', 'className', 'compact', 'elevation', 'interactive', 'n_clicks', 'style']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['children', 'id', 'className', 'compact', 'elevation', 'interactive', 'n_clicks', 'style']
