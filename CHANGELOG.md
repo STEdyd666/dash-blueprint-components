@@ -36,3 +36,9 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Pinned dash version below 3.
+
+## [0.3.0] - 2025-03-25
+
+### Added
+
+- Compatibility with Dash version 3.
